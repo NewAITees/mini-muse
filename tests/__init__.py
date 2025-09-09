@@ -1,0 +1,1 @@
+"""Test package for mini_muse application."""
