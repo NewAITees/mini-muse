@@ -20,9 +20,9 @@ models:
   sd_device: "auto"
   sd_dtype: "float16"
   
-  # Default Generation Parameters
-  default_width: 1024
-  default_height: 1024
+  # Default Generation Parameters  
+  default_width: 1048
+  default_height: 1048
   default_steps: 28
   default_guidance: 7.0
 
@@ -65,3 +65,55 @@ user:
   output_directory: "./outputs"
   image_format: "png"
   compress_history: true
+  
+  # Upscaling Preferences
+  auto_upscale: false
+  upscale_only_favorites: true
+
+# Upscaling Configuration
+upscaling:
+  # Model Settings
+  default_model: "realesrgan-x4plus"
+  default_scale_factor: 4
+  
+  # Performance Settings
+  tile_size: 400
+  tile_padding: 32
+  pre_padding: 10
+  use_half_precision: true
+  
+  # Feature Settings
+  enable_face_enhancement: false
+  auto_face_enhance: false
+  
+  # Memory Management
+  max_memory_usage_mb: 4096
+  clear_cache_after_use: true
+
+# Video Generation Configuration
+video_generation:
+  # HuggingFace Settings
+  hf_token: null  # Set your HuggingFace token here
+  
+  # Stable Diffusion 3.5 Settings
+  sd35_version: "3.5-large"
+  sd35_steps: 30
+  sd35_guidance_scale: 3.5
+  
+  # Stable Video Diffusion Settings
+  svd_version: "svd-xt-1.1"
+  svd_frames: 25
+  svd_steps: 25
+  
+  # Performance Settings
+  use_tensorrt: true
+  use_cuda_graph: true
+  default_precision: "fp8"
+  
+  # Memory Settings
+  max_batch_size: 1
+  offload_to_cpu: false
+  
+  # Output Settings
+  video_format: "mp4"
+  video_quality: "high"
