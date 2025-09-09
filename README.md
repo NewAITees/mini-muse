@@ -20,7 +20,7 @@ AI-powered image generation and feedback application using Stable Diffusion 3.5 
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/NewAITees/mini-muse.git
 cd mini_muse
 ```
 
