@@ -9,6 +9,17 @@ mini_muse is an AI-powered image generation and feedback application using Stabl
 ## Development Commands
 
 ### Installation and Setup
+
+#### Quick Start with Mounts
+```bash
+# Setup project with Windows D: drive mount (recommended)
+./scripts/start_with_mounts.sh
+
+# Or setup mounts manually
+./scripts/setup_mounts.sh
+```
+
+#### Standard Installation
 ```bash
 # Install the package in development mode
 pip install -e .
@@ -87,7 +98,38 @@ Tests are organized in `tests/` with subdirectories:
 - `integration/`: Integration tests for component interaction
 - `e2e/`: End-to-end tests for full application workflow
 
+## Stable Diffusion Data Storage
+
+The application uses symbolic links to Windows D: drive for Stable Diffusion models and outputs:
+
+### Storage Configuration
+- **Windows Path**: `D:\python\stablediffusion`
+- **Symbolic Link**: `./stable_diffusion_data -> /mnt/d/python/stablediffusion`
+- **Subdirectories**:
+  - `models/` - Stable Diffusion model files
+  - `outputs/` - Generated images and outputs
+  - `cache/` - HuggingFace cache files
+
+### Setup Options
+
+1. **Dev Container** (VS Code): Symbolic link is automatically configured in `.devcontainer/devcontainer.json`
+
+2. **Docker Compose**: Use `docker-compose up` with the provided configuration
+
+3. **Manual Setup**: Symbolic link is created automatically during setup
+
+4. **Full Project Setup**: Run `./scripts/start_with_mounts.sh` for complete environment setup
+
+### Usage
+After setup, the stable diffusion data is available at:
+```bash
+ls ./stable_diffusion_data/stablediffusion/models    # Model files
+ls ./stable_diffusion_data/stablediffusion/outputs   # Generated images
+ls ./stable_diffusion_data/stablediffusion/cache     # Cache files
+```
+
 ## Notes
 - The TUI implementation is not yet complete (see TODO in main.py:62)
 - Application requires Python 3.9+ and CUDA-compatible GPU recommended
+- Windows D: drive mount requires WSL2 with properly mounted Windows drives
 - Uses MIT license

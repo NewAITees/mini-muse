@@ -225,3 +225,7 @@ huggingface/
 # Configuration (user-specific)
 config.yaml
 config.toml
+
+# TensorRT (external repository)
+TensorRT/
+.docker_gpu_tested
