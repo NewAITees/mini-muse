@@ -28,6 +28,7 @@ ComfyUI 画像バッチ生成スクリプト
 """
 
 import argparse
+import csv
 import sys
 import time
 from datetime import datetime
@@ -138,6 +139,33 @@ def parse_arguments():
     return parser.parse_args()
 
 
+def write_csv_log(csv_path, data, is_new_file):
+    """CSVログファイルに生成情報を書き込む"""
+    fieldnames = [
+        "filename",
+        "template",
+        "positive_prompt",
+        "negative_prompt",
+        "seed",
+        "steps",
+        "cfg",
+        "width",
+        "height",
+        "image_size_bytes",
+        "generation_time_seconds",
+        "timestamp"
+    ]
+
+    with open(csv_path, 'a', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+
+        # 新規ファイルの場合はヘッダーを書き込む
+        if is_new_file:
+            writer.writeheader()
+
+        writer.writerow(data)
+
+
 def main():
     """メイン処理"""
     args = parse_arguments()
@@ -147,8 +175,8 @@ def main():
     print("=" * 70)
 
     # 出力ディレクトリの確認
-    output_dir = Path(args.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    base_output_dir = Path(args.output_dir)
+    base_output_dir.mkdir(parents=True, exist_ok=True)
 
     # ComfyUIクライアント初期化
     print(f"\n[1] ComfyUIクライアントを初期化中...")
@@ -172,7 +200,7 @@ def main():
     print(f"  CFGスケール: {args.cfg}")
     print(f"  解像度: {args.width}x{args.height}")
     print(f"  シード: {args.seed if args.seed else 'ランダム'}")
-    print(f"  出力先: {output_dir}")
+    print(f"  出力先: {base_output_dir}")
 
     # バッチ生成開始
     print(f"\n[5] 画像生成を開始...")
@@ -181,11 +209,23 @@ def main():
     success_count = 0
     failed_count = 0
     start_time = time.time()
+    current_date = None
+    current_date_dir = None
+    current_csv_path = None
 
     for i in range(args.count):
         print(f"\n[{i+1}/{args.count}] 画像生成中...")
 
         try:
+            # 日付をチェックして、変わっていたら新しいフォルダを作成
+            generation_date = datetime.now().strftime("%Y%m%d")
+            if generation_date != current_date:
+                current_date = generation_date
+                current_date_dir = base_output_dir / current_date
+                current_date_dir.mkdir(parents=True, exist_ok=True)
+                current_csv_path = current_date_dir / f"generation_log_{current_date}.csv"
+                print(f"  日付フォルダ作成: {current_date_dir}")
+
             # プロンプト生成
             print(f"  プロンプト生成中...")
             prompt = prompt_gen.generate_prompt(args.template)
@@ -199,7 +239,11 @@ def main():
 
             # 出力パス生成
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_path = output_dir / f"{args.template}_{timestamp}_{i+1:04d}.png"
+            filename = f"{args.template}_{timestamp}_{i+1:04d}.png"
+            output_path = current_date_dir / filename
+
+            # 画像生成開始時刻
+            gen_start_time = time.time()
 
             # 画像生成
             print(f"  画像生成中...")
@@ -215,8 +259,33 @@ def main():
                 save_path=str(output_path)
             )
 
-            print(f"  ✓ 成功: {output_path.name}")
+            # 生成時間を計算
+            gen_time = time.time() - gen_start_time
+
+            # CSVログに記録
+            csv_data = {
+                "filename": filename,
+                "template": args.template,
+                "positive_prompt": prompt,
+                "negative_prompt": args.negative_prompt,
+                "seed": seed if seed is not None else "random",
+                "steps": args.steps,
+                "cfg": args.cfg,
+                "width": args.width,
+                "height": args.height,
+                "image_size_bytes": len(image_data),
+                "generation_time_seconds": f"{gen_time:.2f}",
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            }
+
+            # CSVファイルが新規かどうかをチェック
+            is_new_csv = not current_csv_path.exists()
+            write_csv_log(current_csv_path, csv_data, is_new_csv)
+
+            print(f"  ✓ 成功: {filename}")
             print(f"  画像サイズ: {len(image_data):,} bytes")
+            print(f"  生成時間: {gen_time:.1f}秒")
+            print(f"  CSVログ: {current_csv_path.name}")
             success_count += 1
 
         except Exception as e:
@@ -235,7 +304,9 @@ def main():
     print(f"合計時間: {elapsed_time:.1f}秒")
     if success_count > 0:
         print(f"平均生成時間: {elapsed_time/success_count:.1f}秒/枚")
-    print(f"出力先: {output_dir}")
+    print(f"出力先: {base_output_dir}")
+    if current_csv_path:
+        print(f"CSVログ: {current_csv_path}")
     print("=" * 70)
 
     return 0 if failed_count == 0 else 1
