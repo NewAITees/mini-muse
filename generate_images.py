@@ -35,7 +35,7 @@ from datetime import datetime
 from pathlib import Path
 
 from mini_muse.comfyui_client import ComfyUIClient
-from mini_muse.prompt_generator import PromptGenerator
+from mini_muse.prompt_generator import PromptGenerator, list_available_template_files
 
 
 def parse_arguments():
@@ -59,13 +59,27 @@ def parse_arguments():
         help="生成する画像の枚数（デフォルト: 1）"
     )
 
+    # テンプレートファイル選択
+    parser.add_argument(
+        "--template-file",
+        type=str,
+        default=None,
+        help="使用するテンプレートファイル名（例: prompt_templates_Tシャツデザイン_20250127.json）"
+    )
+
     # テンプレート選択
     parser.add_argument(
         "--template", "-t",
         type=str,
         default="abstract_art",
-        choices=["abstract_art", "detailed_diorama", "imaginative_world", "miniature_world"],
-        help="使用するプロンプトテンプレート（デフォルト: abstract_art）"
+        help="使用するプロンプトテンプレート名（デフォルト: abstract_art）"
+    )
+
+    # テンプレートファイル一覧表示
+    parser.add_argument(
+        "--list-templates",
+        action="store_true",
+        help="利用可能なテンプレートファイル一覧を表示して終了"
     )
 
     # ComfyUIサーバー
@@ -170,6 +184,20 @@ def main():
     """メイン処理"""
     args = parse_arguments()
 
+    # テンプレートファイル一覧表示モード
+    if args.list_templates:
+        print("=" * 70)
+        print("利用可能なテンプレートファイル")
+        print("=" * 70)
+        template_files = list_available_template_files()
+        if template_files:
+            for i, filename in enumerate(template_files, 1):
+                print(f"{i:2d}. {filename}")
+        else:
+            print("テンプレートファイルが見つかりません。")
+        print("=" * 70)
+        return 0
+
     print("=" * 70)
     print("ComfyUI バッチ画像生成")
     print("=" * 70)
@@ -190,7 +218,11 @@ def main():
 
     # プロンプト生成器初期化
     print(f"\n[3] プロンプト生成器を初期化中...")
-    prompt_gen = PromptGenerator()
+    if args.template_file:
+        print(f"  テンプレートファイル: {args.template_file}")
+        prompt_gen = PromptGenerator(elements_file=args.template_file)
+    else:
+        prompt_gen = PromptGenerator()
 
     # 生成設定表示
     print(f"\n[4] 生成設定:")

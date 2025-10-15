@@ -228,6 +228,24 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 
+def list_available_template_files() -> List[str]:
+    """
+    promptsフォルダ内の利用可能なテンプレートファイルを一覧表示します。
+
+    Returns:
+        List[str]: テンプレートファイル名のリスト
+    """
+    project_root = Path(__file__).parent.parent
+    prompts_dir = project_root / "prompts"
+
+    if not prompts_dir.exists():
+        return []
+
+    # .jsonファイルのみを取得
+    json_files = sorted([f.name for f in prompts_dir.glob("*.json")])
+    return json_files
+
+
 class PromptGenerator:
     """
     プロンプト生成エンジン
@@ -242,12 +260,19 @@ class PromptGenerator:
 
         Args:
             elements_file: プロンプト要素のJSONファイルパス
-                          Noneの場合はデフォルトパスを使用
+                          Noneの場合はデフォルトパス（prompt_elements.json）を使用
+                          ファイル名のみの場合はpromptsフォルダから検索
         """
         if elements_file is None:
             # デフォルトパス: prompts/prompt_elements.json
             project_root = Path(__file__).parent.parent
             elements_file = project_root / "prompts" / "prompt_elements.json"
+        else:
+            # ファイル名のみの場合はpromptsフォルダから検索
+            elements_path = Path(elements_file)
+            if not elements_path.is_absolute() and elements_path.parent == Path('.'):
+                project_root = Path(__file__).parent.parent
+                elements_file = project_root / "prompts" / elements_file
 
         self.elements_file = Path(elements_file)
         self.elements: Dict = {}
@@ -255,6 +280,7 @@ class PromptGenerator:
 
         self._load_elements()
         print(f"PromptGeneratorの初期化が完了しました。")
+        print(f"読み込んだファイル: {self.elements_file.name}")
         print(f"要素カテゴリ数: {len(self.elements)}")
         print(f"テンプレート数: {len(self.templates)}")
 
