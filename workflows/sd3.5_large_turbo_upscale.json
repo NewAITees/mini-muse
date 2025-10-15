@@ -1,0 +1,166 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 604041042441062,
+      "steps": 30,
+      "cfg": 5.45,
+      "sampler_name": "euler",
+      "scheduler": "sgm_uniform",
+      "denoise": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "16",
+        0
+      ],
+      "negative": [
+        "54",
+        0
+      ],
+      "latent_image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "Kサンプラー"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "sd3.5_large_turbo.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "チェックポイントを読み込む"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAEデコード"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "画像を保存"
+    }
+  },
+  "16": {
+    "inputs": {
+      "text": "The painting is a vibrant explosion of colors and textures, where the boundaries between chaos and order seem to blur. At its center lies a swirling mass of deep purples and blues, almost resembling galaxies in motion, while streaks of gold and silver cut through the turbulence like cosmic rays. The edges of these forms are jagged and unpredictable, as if frozen moments of movement.\n\nSurrounding this central vortex are scattered patches of warm oranges, pinks, and reds, which contrast sharply with the cooler tones at the heart of the piece. These hues seem to radiate outward, creating a sense of expansion and growth. Along the edges of the canvas, faint lines and dots suggest a delicate network of connections, almost like a hidden nervous system.\n\nThe texture of the paint is thick in some areas, with visible brushstrokes that add a dynamic quality to the work. In other parts, the layers are thin and ethereal, allowing glimpses of the underpainting beneath. This interplay between opacity and transparency adds depth and complexity to the overall composition.\n\nDespite its abstract nature, the painting evokes a sense of movement and transformation. It feels alive, as though it could shift and evolve if you were to look away for even a moment. The interplay of color, line, and texture creates a visual symphony that challenges the viewer to interpret its meaning in their own way.",
+      "clip": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive Prompt"
+    }
+  },
+  "41": {
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "sd3",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIPを読み込む"
+    }
+  },
+  "42": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2": "clip_g.safetensors",
+      "type": "sd3",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "デュアルCLIPを読み込む"
+    }
+  },
+  "43": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "clip_g.safetensors",
+      "clip_name3": "t5xxl_fp8_e4m3fn.safetensors"
+    },
+    "class_type": "TripleCLIPLoader",
+    "_meta": {
+      "title": "トリプルCLIPを読み込む"
+    }
+  },
+  "53": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空のSD3潜在画像"
+    }
+  },
+  "54": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "58": {
+    "inputs": {
+      "model_name": "RealESRGAN_x2plus.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "拡大モデルを読み込む"
+    }
+  },
+  "59": {
+    "inputs": {
+      "upscale_model": [
+        "58",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "モデルを使用して画像を拡大"
+    }
+  }
+}
