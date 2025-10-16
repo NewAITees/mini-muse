@@ -1,0 +1,202 @@
+{
+    "elements": {
+        "emotional_distortions": {
+            "description": "感情の歪み表現",
+            "values": [
+                "dissolving human forms twisted by anxiety",
+                "violent brushstrokes of raw emotion",
+                "crystallized fragments of despair",
+                "torn soul fragments floating in void",
+                "shadows cast by existential doubt",
+                "chaotic remnants of broken memories",
+                "primal forms rising from subconscious depths",
+                "explosive color bursts of inner screams",
+                "solidified moments of isolation",
+                "abstract landscapes of trauma",
+                "fluctuations born from uncertainty",
+                "echoes of light from inner darkness",
+                "accumulated shards of fractured psyche",
+                "frozen moments of emotional intensity",
+                "geometric patterns of subconscious fear",
+                "melting faces of forgotten identity",
+                "spiraling vortexes of paranoia",
+                "crystalline structures of pure dread",
+                "pulsating forms of primal terror",
+                "shattered mirrors of self-reflection",
+                "writhing masses of emotional turmoil",
+                "fossilized remnants of lost hope",
+                "distorted echoes of human essence",
+                "fragmented layers of consciousness",
+                "abstract manifestations of inner demons"
+            ]
+        },
+        "artistic_techniques": {
+            "description": "芸術技法",
+            "values": [
+                "violent dripping like blood rain",
+                "layered color fields of decay",
+                "canvas torn to reveal void",
+                "gestural traces like ancient scars",
+                "neurotic lines scratched in panic",
+                "blurred boundaries of reality",
+                "minimal points in vast emptiness",
+                "pure geometric horror",
+                "rhythmic lines of madness",
+                "biomorphic forms in agony",
+                "musical abstraction of screams",
+                "rigid composition of chaos",
+                "pointillist texture of decay",
+                "vertical splits in consciousness",
+                "interactive color fields of dread",
+                "impasto layers of visceral pain",
+                "sfumato technique revealing nightmares",
+                "aggressive scraping revealing void",
+                "textural buildup of psychological debris",
+                "automatic drawing guided by fear",
+                "chaotic splatter patterns of anxiety",
+                "controlled accidents of horror",
+                "destructive mark-making techniques",
+                "experimental medium combinations",
+                "ritualistic repetitive patterns"
+            ]
+        },
+        "nightmare_spaces": {
+            "description": "悪夢的空間",
+            "values": [
+                "infinite corridors of anxiety",
+                "labyrinthine memory chambers",
+                "rooms manifesting trauma",
+                "depths hiding primal fears",
+                "voids born from existential doubt",
+                "spaces echoing with silent screams",
+                "compressed chambers of solitude",
+                "landscapes of deep-seated terror",
+                "floating fragments of broken minds",
+                "dissolving boundaries of sanity",
+                "ruins of psychological decay",
+                "manifestations of inner chaos",
+                "spaces filled with existential dread",
+                "crystallized caves of emotion",
+                "realms dominated by unconscious fears",
+                "non-euclidean nightmare geometries",
+                "impossible architectures of madness",
+                "twisted corridors of memory",
+                "chambers of perpetual torment",
+                "void spaces of absolute isolation",
+                "dimensional rifts of consciousness",
+                "psychological mazes of despair",
+                "abstract territories of fear",
+                "realms of eternal suffering",
+                "spaces warped by mental anguish"
+            ]
+        },
+        "dark_matter": {
+            "description": "暗黒物質表現",
+            "values": [
+                "writhing shadows of distorted humanity",
+                "mechanical remnants of lost souls",
+                "textures of organic decay",
+                "veins pulsing with dark energy",
+                "skeletal structures of dead dreams",
+                "eyes peering from dimensional rifts",
+                "traces of severed connections",
+                "clockwork mechanisms of mortality",
+                "tentacular forms of cosmic horror",
+                "stitched fragments of reality",
+                "memories bound by rusted chains",
+                "corroded surfaces of existence",
+                "dripping essences of life force",
+                "shadows of twisted crucifixes",
+                "dismembered fragments of identity",
+                "biomechanical horror fusions",
+                "parasitic forms consuming reality",
+                "cancerous growths of consciousness",
+                "viral patterns of spreading fear",
+                "necrotic tissue transformations",
+                "ossified remnants of sanity",
+                "crystallized forms of suffering",
+                "calcified emotional residue",
+                "fossilized nightmares in stone",
+                "petrified moments of terror"
+            ]
+        },
+        "psychological_elements": {
+            "description": "心理的要素",
+            "values": [
+                "repressed memories surfacing",
+                "subconscious fears materializing",
+                "childhood traumas emerging",
+                "buried emotions erupting",
+                "psychological defense mechanisms",
+                "mental barriers dissolving",
+                "ego death manifestations",
+                "identity fragmentation patterns",
+                "consciousness dissolution forms",
+                "memory decay processes",
+                "thought disorder visualizations",
+                "paranoid delusion structures",
+                "anxiety attack geometries",
+                "depression void formations",
+                "psychotic break patterns",
+                "dissociative state textures",
+                "panic attack rhythms",
+                "trauma response cycles",
+                "phobia manifestation forms",
+                "obsessive thought spirals",
+                "compulsive behavior traces",
+                "neurosis crystallization",
+                "psychosis emergence patterns",
+                "memory corruption artifacts",
+                "consciousness erosion marks"
+            ]
+        },
+        "cosmic_horror": {
+            "description": "宇宙的恐怖",
+            "values": [
+                "lovecraftian geometries",
+                "non-euclidean nightmares",
+                "cosmic horror manifestations",
+                "elder god anatomies",
+                "impossible color spectrums",
+                "reality-bending formations",
+                "dimensional bleeding effects",
+                "cosmic void emanations",
+                "otherworldly entity traces",
+                "eldritch horror patterns",
+                "cosmic madness structures",
+                "reality corruption forms",
+                "interdimensional breach effects",
+                "cosmic consciousness fragments",
+                "universal horror aspects",
+                "deep space aberrations",
+                "cosmic dread geometries",
+                "dimensional horror leakage",
+                "void entity signatures",
+                "reality dissolution patterns",
+                "cosmic chaos emergences",
+                "universal nightmare forms",
+                "dimensional horror bleeds",
+                "cosmic insanity traces",
+                "void horror manifestations"
+            ]
+        }
+    },
+    "templates": {
+        "psychological_abyss": {
+            "description": "心理的深淵表現",
+            "text": "Create a psychological horror landscape where {emotional_distortions} emerge through {nightmare_spaces}, as {dark_matter} consumes the composition. The piece should utilize {artistic_techniques} to express the depths of human consciousness torn apart by existential terror, while {psychological_elements} manifest in the background."
+        },
+        "existential_decay": {
+            "description": "実存的崩壊表現",
+            "text": "Generate an abstract nightmare where {nightmare_spaces} are corrupted by {dark_matter}, while {emotional_distortions} dissolve into chaos. The artwork should incorporate {artistic_techniques} to manifest the decay of human psyche into cosmic horror, as {cosmic_horror} emerges from the depths."
+        },
+        "inner_apocalypse": {
+            "description": "内なる終末表現",
+            "text": "Create a visceral abstraction where {emotional_distortions} are consumed by {dark_matter}, transforming {nightmare_spaces} into realms of pure horror. {artistic_techniques} should be employed to visualize the apocalyptic dissolution of consciousness, while {psychological_elements} and {cosmic_horror} merge into ultimate destruction."
+        },
+        "cosmic_dissolution": {
+            "description": "宇宙的溶解表現",
+            "text": "Generate a cosmic horror abstraction where {cosmic_horror} tears through {nightmare_spaces}, while {psychological_elements} dissolve into {dark_matter}. The composition should utilize {artistic_techniques} to depict the complete dissolution of human consciousness into infinite cosmic void."
+        }
+    }
+} 

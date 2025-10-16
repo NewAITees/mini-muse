@@ -1,0 +1,202 @@
+{
+    "elements": {
+        "abstract_forms": {
+            "description": "抽象的な形態表現",
+            "values": [
+                "twisted geometric shapes morphing into organic forms",
+                "fractalized human silhouettes dissolving into chaos",
+                "non-euclidean architecture bending reality",
+                "flowing liquid metal structures defying gravity",
+                "crystalline formations shattering into void",
+                "biomechanical patterns emerging from darkness",
+                "quantum mathematical visualizations in motion",
+                "dimensional rifts tearing through space",
+                "kaleidoscopic mirrors reflecting infinite nightmares",
+                "neural network patterns forming conscious structures",
+                "möbius strip corridors folding into themselves",
+                "hypercube structures phasing through dimensions",
+                "fractal mandelbrot patterns becoming sentient",
+                "tesseract chambers with impossible geometry",
+                "klein bottle spaces warping perception",
+                "DNA helixes mutating into cosmic horrors",
+                "quantum probability clouds taking form",
+                "topological nightmares breaking euclidean space",
+                "4D projections casting impossible shadows",
+                "reality-warping mathematical equations",
+                "crystalline thought structures fragmenting",
+                "time-crystal formations growing backwards",
+                "hyperbolic space manifolds twisting",
+                "quantum entangled nightmare geometries",
+                "self-replicating fractal organisms"
+            ]
+        },
+        "emotional_elements": {
+            "description": "感情的要素",
+            "values": {
+                "primal": [
+                    "deep existential dread",
+                    "cosmic horror realization",
+                    "infinite void anxiety",
+                    "reality-breaking fear",
+                    "consciousness dissolution terror",
+                    "primordial chaos awakening",
+                    "eternal recurrence horror",
+                    "quantum uncertainty panic",
+                    "void recognition trauma",
+                    "dimensional displacement fear",
+                    "time dissolution anxiety",
+                    "reality rejection syndrome",
+                    "infinite regression terror",
+                    "existence paradox dread",
+                    "cosmic insignificance horror"
+                ],
+                "psychological": [
+                    "memory fragmentation",
+                    "identity dissolution",
+                    "reality distortion",
+                    "temporal displacement",
+                    "cognitive dissonance",
+                    "consciousness fragmentation",
+                    "ego death experience",
+                    "reality tunnel collapse",
+                    "quantum consciousness split",
+                    "memory loop recursion",
+                    "personality quantum superposition",
+                    "timeline convergence anxiety",
+                    "reality anchor dissolution",
+                    "existential paradox realization",
+                    "self-reference recursive loop"
+                ],
+                "abstract": [
+                    "mathematical horror comprehension",
+                    "infinite set theory dread",
+                    "non-euclidean geometry fear",
+                    "quantum superposition anxiety",
+                    "recursive self-reference terror",
+                    "algorithmic pattern recognition horror",
+                    "fractal infinity awareness",
+                    "topological impossibility dread",
+                    "dimensional transcendence fear",
+                    "reality computation error",
+                    "logical paradox manifestation",
+                    "abstract concept materialization",
+                    "mathematical impossibility horror",
+                    "information entropy dread",
+                    "quantum uncertainty manifestation"
+                ]
+            }
+        },
+        "visual_effects": {
+            "description": "視覚効果",
+            "values": [
+                "quantum tunneling distortions",
+                "fractal recursion patterns",
+                "glitch reality artifacts",
+                "dimensional bleeding effects",
+                "consciousness visualization waves",
+                "neural network hallucinations",
+                "time dilation warps",
+                "reality corruption glitches",
+                "void absorption effects",
+                "psychedelic reality breaks",
+                "quantum foam visualization",
+                "probability wave collapse",
+                "entropy visualization patterns",
+                "quantum entanglement effects",
+                "timeline interference patterns",
+                "reality phase transitions",
+                "consciousness interference patterns",
+                "quantum decoherence effects",
+                "dimensional fold artifacts",
+                "reality parsing errors",
+                "quantum superposition blur",
+                "timeline convergence artifacts",
+                "consciousness diffraction patterns",
+                "reality buffer overflow",
+                "quantum noise manifestation"
+            ]
+        },
+        "composition": {
+            "description": "構図要素",
+            "values": [
+                "infinite recursive frames",
+                "impossible perspective angles",
+                "multi-dimensional viewpoints",
+                "reality-bending compositions",
+                "nested reality layers",
+                "fractal space arrangements",
+                "void-centered formations",
+                "consciousness flow patterns",
+                "quantum superposition layouts",
+                "temporal paradox structures",
+                "hyperbolic space compositions",
+                "möbius strip perspectives",
+                "klein bottle viewpoints",
+                "tesseract cross-sections",
+                "non-euclidean arrangements",
+                "quantum probability layouts",
+                "dimensional intersection views",
+                "reality fold compositions",
+                "time crystal structures",
+                "quantum entanglement patterns",
+                "consciousness lattice arrangements",
+                "void geometry formations",
+                "reality glitch compositions",
+                "paradox visualization layouts",
+                "infinite regression structures"
+            ]
+        },
+        "color_schemes": {
+            "description": "色彩効果",
+            "values": [
+                "void-touched color spectrums",
+                "quantum chromatic aberrations",
+                "non-euclidean color spaces",
+                "reality-bleeding gradients",
+                "consciousness-altering hues",
+                "impossible color combinations",
+                "dimensional shift chromas",
+                "entropy visualization palettes",
+                "time-warped color schemes",
+                "paradox-inducing spectrums",
+                "void absorption gradients",
+                "quantum interference patterns",
+                "reality glitch colorations",
+                "hyperdimensional color bleeds",
+                "consciousness diffraction colors"
+            ]
+        }
+    },
+    "templates": {
+        "abstract_nightmare": {
+            "description": "抽象的な悪夢シーン",
+            "text": "Create a masterpiece of abstract horror featuring {abstract_forms} emerging from a dimension of pure nightmare. The scene radiates {emotional_elements} through its very essence, manifesting as {visual_effects} that defy conventional reality. Compose the image using {composition} to maximize psychological impact. The artwork should pulse with a sense of living consciousness, where every element seems to breathe with its own twisted life. Incorporate subtle mathematical patterns that suggest deeper, unknowable truths lurking just beyond comprehension. Layer multiple levels of reality that bleed and merge into each other, creating a sense of infinite depth and recursive horror. Add microscopic details that reveal new horrors upon closer inspection, while maintaining an overall cohesive nightmare aesthetic. Emphasize the transformation of familiar forms into impossible geometries that hurt the mind to contemplate. Apply advanced post-processing techniques to enhance the surreal quality while maintaining photographic clarity of essential elements. Ensure the final image captures the feeling of a dream that becomes more terrifying the more you try to wake up from it."
+        }
+    },
+    "modifiers": {
+        "quality": [
+            "ultra detailed nightmare clarity",
+            "consciousness-altering quality",
+            "reality-breaking resolution",
+            "quantum-level detail",
+            "neural network perfection",
+            "dimensional bleeding precision",
+            "void-touched perfection",
+            "horror-optimized rendering",
+            "nightmare-grade accuracy",
+            "existential terror fidelity"
+        ],
+        "technical": [
+            "8k resolution hyperreality",
+            "quantum rendering engine",
+            "neural network enhancement",
+            "reality distortion processing",
+            "consciousness visualization filter",
+            "void absorption shader",
+            "temporal paradox anti-aliasing",
+            "dimensional bleeding correction",
+            "reality corruption stabilization",
+            "nightmare frequency optimization"
+        ]
+    }
+} 

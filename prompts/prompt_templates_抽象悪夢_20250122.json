@@ -1,0 +1,724 @@
+{
+    "elements": {
+        "abstract_elements": {
+            "description": "抽象的要素",
+            "values": [
+                "geometric shapes",
+                "color fields",
+                "lines",
+                "textures",
+                "patterns",
+                "forms",
+                "spaces",
+                "fractals",
+                "pixels",
+                "glitches",
+                "vectors",
+                "3D primitives",
+                "particle systems",
+                "noise patterns",
+                "mathematical curves",
+                "suprematist shapes",
+                "constructivist forms",
+                "de stijl grid",
+                "color field expanses",
+                "action painting strokes",
+                "automatic drawing lines",
+                "spiritual geometry",
+                "rhythmic composition",
+                "mathematical harmony",
+                "zen minimalism",
+                "gutai energy",
+                "monochromes",
+                "spatial concept cuts",
+                "drip patterns",
+                "color interactions",
+                "pure abstraction",
+                "floating forms"
+            ]
+        },
+        "facial_elements": {
+            "description": "顔の要素",
+            "values": [
+                "eye",
+                "brow",
+                "iris",
+                "pupil"
+            ]
+        },
+        "subjects": {
+            "description": "主題",
+            "values": [
+                "human face",
+                "abstract shape",
+                "natural form",
+                "technological object",
+                "symbolic representation",
+                "conceptual idea",
+                "emotional expression"
+            ]
+        },
+        "colors": {
+            "description": "色彩",
+            "values": [
+                "vibrant",
+                "muted",
+                "monochromatic",
+                "complementary",
+                "analogous",
+                "triadic",
+                "pastel",
+                "neon",
+                "iridescent",
+                "holographic",
+                "gradient",
+                "glitch-inspired"
+            ]
+        },
+        "techniques": {
+            "description": "技法",
+            "values": [
+                "layering",
+                "blending",
+                "dripping",
+                "splattering",
+                "scraping",
+                "collage",
+                "digital manipulation",
+                "generative algorithms",
+                "procedural texturing",
+                "3D rendering",
+                "voxel art",
+                "pixel sorting",
+                "data moshing",
+                "glitch art"
+            ]
+        },
+        "art_movements": {
+            "description": "芸術運動",
+            "values": [
+                "suprematism",
+                "de stijl",
+                "bauhaus",
+                "abstract expressionism",
+                "color field painting",
+                "gutai",
+                "mono-ha",
+                "concrete art",
+                "lyrical abstraction",
+                "geometric abstraction",
+                "minimalism",
+                "neo-plasticism",
+                "orphism",
+                "rayonism",
+                "tachisme",
+                "russian constructivism",
+                "cobra movement",
+                "art informel",
+                "spatialism",
+                "zero group",
+                "fluxus",
+                "support/surface",
+                "hard-edge painting",
+                "op art",
+                "kinetic art",
+                "neo-geo",
+                "japanese mono-ha",
+                "korean dansaekhwa",
+                "concrete art movement",
+                "neue wilde",
+                "neo-expressionism",
+                "transavanguardia",
+                "specific objects"
+            ]
+        },
+        "artistic_techniques": {
+            "description": "芸術技法",
+            "values": [
+                "kandinsky color theory",
+                "albers color interaction",
+                "mondrian grid system",
+                "pollock drip technique",
+                "rothko color layering",
+                "fontana spatial concept",
+                "shiraga foot painting",
+                "twombly gestural marks",
+                "richter abstraction",
+                "lee ufan meditation",
+                "malevich suprematist composition",
+                "klee pedagogical approach",
+                "automatic drawing",
+                "action painting",
+                "color field staining"
+            ]
+        },
+        "philosophical_concepts": {
+            "description": "哲学的概念",
+            "values": [
+                "spiritual in art",
+                "pure abstraction",
+                "universal harmony",
+                "zen emptiness",
+                "material presence",
+                "cosmic order",
+                "mathematical beauty",
+                "rhythmic unity",
+                "dynamic equilibrium",
+                "spatial consciousness",
+                "metaphysical void",
+                "eternal movement",
+                "infinite space"
+            ]
+        },
+        "artistic_materials": {
+            "description": "芸術材料表現",
+            "values": [
+                "burlap texture",
+                "canvas weave",
+                "metal oxidation",
+                "stone texture",
+                "wood grain",
+                "paper fiber",
+                "fabric fold",
+                "ceramic surface",
+                "glass reflection",
+                "rust pattern",
+                "concrete texture",
+                "sand granulation",
+                "wire mesh",
+                "rope texture",
+                "leather surface"
+            ]
+        },
+        "spatial_concepts": {
+            "description": "空間概念",
+            "values": [
+                "infinite depth",
+                "floating space",
+                "layered void",
+                "dimensional shift",
+                "spatial tension",
+                "planar division",
+                "volumetric space",
+                "negative space",
+                "atmospheric perspective",
+                "spatial rhythm",
+                "depth illusion",
+                "spatial compression",
+                "void concept",
+                "spatial harmony",
+                "dimensional play"
+            ]
+        },
+        "dark_elements": {
+            "description": "暗部表現要素",
+            "values": [
+                "dystopian structures",
+                "biomechanical forms",
+                "decaying architecture",
+                "skeletal frameworks",
+                "rusted machinery",
+                "gothic elements",
+                "industrial ruins",
+                "post-apocalyptic scenes",
+                "mechanical hybrids",
+                "twisted forms",
+                "haunted spaces",
+                "shadow masses",
+                "deteriorating surfaces",
+                "organic mutations",
+                "mechanical decay"
+            ]
+        },
+        "memorial_elements": {
+            "description": "記憶と追悼表現",
+            "values": [
+                "archival photographs",
+                "shadow projections",
+                "memory traces",
+                "forgotten objects",
+                "personal artifacts",
+                "lost portraits",
+                "cloth installations",
+                "tin boxes",
+                "candlelight effects",
+                "memorial shadows",
+                "scattered documents",
+                "fading memories",
+                "historical remnants",
+                "identity fragments",
+                "time-worn materials"
+            ]
+        },
+        "atmospheric_qualities": {
+            "description": "雰囲気表現",
+            "values": [
+                "foreboding atmosphere",
+                "melancholic mood",
+                "haunting presence",
+                "ethereal light",
+                "mysterious shadows",
+                "somber tones",
+                "ghostly illumination",
+                "dramatic contrast",
+                "spectral glow",
+                "ominous darkness",
+                "nostalgic haze",
+                "memorial ambiance",
+                "temporal distance",
+                "spiritual presence",
+                "historical weight"
+            ]
+        },
+        "structural_elements": {
+            "description": "構造的要素",
+            "values": [
+                "decaying structure",
+                "twisted architecture",
+                "skeletal framework",
+                "industrial ruin",
+                "memorial installation",
+                "archival display",
+                "biomechanical construct",
+                "gothic architecture",
+                "mechanical assemblage",
+                "deteriorating building",
+                "haunted structure",
+                "temporal construction",
+                "dystopian edifice",
+                "organic architecture",
+                "hybrid structure"
+            ]
+        },
+        "collection_elements": {
+            "description": "収集要素",
+            "values": [
+                "portrait collection",
+                "photographic archive",
+                "document array",
+                "artifact arrangement",
+                "memorial display",
+                "historical collection",
+                "identity archive",
+                "memory compilation",
+                "temporal anthology",
+                "biographical series",
+                "documentary assembly",
+                "personal effects",
+                "archival presentation",
+                "memorial collection",
+                "historical repository"
+            ]
+        },
+        "nightmare_elements": {
+            "description": "悪夢的要素",
+            "values": [
+                "biomechanical nightmare",
+                "dystopian vision",
+                "horror construct",
+                "mechanical aberration",
+                "organic horror",
+                "structural dread",
+                "temporal horror",
+                "spatial distortion",
+                "architectural nightmare",
+                "mechanical mutation",
+                "biological decay",
+                "industrial horror",
+                "gothic nightmare",
+                "structural anomaly",
+                "dimensional horror"
+            ]
+        },
+        "musical_elements": {
+            "description": "音楽的要素",
+            "values": [
+                "inner sound",
+                "sound quality",
+                "musical rhythm",
+                "harmonic resonance",
+                "tonal vibration",
+                "sonic texture",
+                "rhythmic pattern",
+                "musical analogy",
+                "harmonic structure",
+                "acoustic space",
+                "melodic flow",
+                "rhythmic pulse",
+                "sonic movement",
+                "harmonic field",
+                "tonal progression"
+            ]
+        },
+        "geometric_elements": {
+            "description": "幾何学的要素",
+            "values": [
+                "point line plane",
+                "geometric form",
+                "linear structure",
+                "grid structure",
+                "vertical rhythm",
+                "horizontal tension",
+                "planar relationship",
+                "line weight",
+                "geometric balance",
+                "spatial arrangement",
+                "geometric reduction",
+                "square formation",
+                "rectangular forms",
+                "geometric incision",
+                "compositional grid"
+            ]
+        },
+        "color_variations": {
+            "description": "色彩変化",
+            "values": [
+                "color_1",
+                "color_2",
+                "color_3",
+                "color_scheme",
+                "color_geometry",
+                "color_absolutes",
+                "color_temperature",
+                "chromatic_intensity",
+                "color_juxtaposition",
+                "color_mathematics",
+                "surface_color",
+                "layered_color",
+                "color_vibration",
+                "color_relationship",
+                "color_harmony"
+            ]
+        },
+        "quality_aspects": {
+            "description": "質的側面",
+            "values": [
+                "emotional_quality",
+                "textural_quality",
+                "void_quality",
+                "light_quality",
+                "weightless_quality",
+                "depth_quality",
+                "movement_quality",
+                "scribble_quality",
+                "blur_quality",
+                "temporal_quality",
+                "atmospheric_quality",
+                "childlike_quality",
+                "existential_depth",
+                "philosophical_depth",
+                "spatial_depth"
+            ]
+        },
+        "brush_elements": {
+            "description": "筆致要素",
+            "values": [
+                "brush stroke",
+                "gestural energy",
+                "mark making",
+                "calligraphic mark",
+                "paint velocity",
+                "brush movement",
+                "minimal gesture",
+                "gestural freedom",
+                "paint layers",
+                "brush texture",
+                "stroke weight",
+                "ink flow",
+                "brush pressure",
+                "stroke direction",
+                "brush rhythm"
+            ]
+        },
+        "installation_elements": {
+            "description": "インスタレーション要素",
+            "values": [
+                "installation space",
+                "exhibition format",
+                "spatial composition",
+                "display arrangement",
+                "gallery setting",
+                "installation format",
+                "exhibition layout",
+                "spatial configuration",
+                "display structure",
+                "installation environment",
+                "exhibition space",
+                "spatial organization",
+                "display context",
+                "installation atmosphere",
+                "exhibition presence"
+            ]
+        },
+        "landscape_elements": {
+            "description": "風景要素",
+            "values": [
+                "dystopian landscape",
+                "haunted background",
+                "apocalyptic setting",
+                "desolate scene",
+                "nightmare terrain",
+                "industrial wasteland",
+                "ruined cityscape",
+                "mechanical landscape",
+                "organic environment",
+                "decaying vista",
+                "supernatural setting",
+                "biomechanical environment",
+                "gothic landscape",
+                "surreal backdrop",
+                "horror scenery"
+            ]
+        },
+        "shape_arrangements": {
+            "description": "形態配置",
+            "values": [
+                "shape arrangement",
+                "geometric placement",
+                "form composition",
+                "spatial distribution",
+                "structural layout",
+                "pattern organization",
+                "shape hierarchy",
+                "form arrangement",
+                "geometric order",
+                "compositional structure",
+                "shape relationship",
+                "form placement",
+                "geometric distribution",
+                "pattern arrangement",
+                "spatial ordering"
+            ]
+        },
+        "visual_elements": {
+            "description": "視覚要素",
+            "values": [
+                "visual_element",
+                "compositional_rhythm",
+                "focal_point",
+                "compositional_balance",
+                "visual_rhythm",
+                "dynamic_stability",
+                "transcendent_effect",
+                "rhythmic_field",
+                "linear_network",
+                "conceptual_space",
+                "abstract_notation",
+                "organic_geometry",
+                "visual_language",
+                "perceptual_phenomenon",
+                "visual_psychology"
+            ]
+        },
+        "texture_variations": {
+            "description": "テクスチャー変化",
+            "values": [
+                "texture_1",
+                "texture_2",
+                "texture_3",
+                "layered_texture",
+                "surface_texture",
+                "material_texture",
+                "organic_texture",
+                "mechanical_texture",
+                "geometric_texture",
+                "abstract_texture",
+                "composite_texture",
+                "dynamic_texture",
+                "structural_texture",
+                "temporal_texture",
+                "spatial_texture"
+            ]
+        },
+        "geometric_variations": {
+            "description": "幾何学的変化",
+            "values": [
+                "geometric_shape_1",
+                "geometric_shape_2",
+                "geometric_shape_3",
+                "geometric_pattern",
+                "geometric_structure",
+                "geometric_composition",
+                "geometric_rhythm",
+                "geometric_space",
+                "geometric_tension",
+                "geometric_harmony",
+                "geometric_contrast",
+                "geometric_balance",
+                "geometric_movement",
+                "geometric_order",
+                "geometric_chaos"
+            ]
+        },
+        "process_elements": {
+            "description": "プロセス要素",
+            "values": [
+                "technical_process",
+                "systematic_variation",
+                "chance_operations",
+                "compositional_development",
+                "surface_manipulation",
+                "accident_control",
+                "material_behavior",
+                "erasure_effect",
+                "scrape_technique",
+                "edge_treatment",
+                "blur_effect",
+                "layered_transparency",
+                "cut_pattern",
+                "structural_void",
+                "spatial_logic"
+            ]
+        },
+        "conceptual_pairs": {
+            "description": "概念的対比",
+            "values": [
+                "mechanical_organic",
+                "positive_negative",
+                "light_shadow",
+                "light_shadow_interplay",
+                "bone_like_forms",
+                "technological_decay",
+                "human_absence",
+                "individual_identity",
+                "collective_consciousness",
+                "personal_histories",
+                "archival_presence",
+                "historical_continuity",
+                "impossible_geometry",
+                "photographic_memory",
+                "spatial_void"
+            ]
+        },
+        "metaphysical_elements": {
+            "description": "形而上学的要素",
+            "values": [
+                "metaphysical_dynamics",
+                "spiritual_elevation",
+                "cosmic_truth",
+                "transcendent_reality",
+                "material_world",
+                "universal_truth",
+                "natural_principle",
+                "primitive_form",
+                "intuitive_logic",
+                "maximum_presence",
+                "minimal_means",
+                "gestural_economy",
+                "compositional_restraint",
+                "material_consciousness",
+                "spatial_awareness"
+            ]
+        },
+        "background_elements": {
+            "description": "背景要素",
+            "values": [
+                "background_texture",
+                "compositional_space",
+                "compositional_field",
+                "canvas_space",
+                "installation_atmosphere",
+                "atmospheric_presence",
+                "spatial_dimension",
+                "dimensional_void",
+                "spatial_ambiguity",
+                "temporal_moment",
+                "temporal_layers",
+                "historical_presence",
+                "meditative_quality",
+                "surface_complexity",
+                "surface_tension"
+            ]
+        }
+    },
+    "templates": {
+        "abstract_composition": {
+            "description": "抽象的構成",
+            "text": "{art_movements} inspired digital art with {philosophical_concepts} foundation. {geometric_variations} and {spatial_concepts} interweave through {background_elements}. {color_variations} create {quality_aspects}, while {abstract_elements} harmoniously blends with {geometric_elements}. Primary {techniques} enhanced by {process_elements}, creating {texture_variations} with {quality_aspects}. {subjects} emerges as main motif through {visual_elements}. {atmospheric_qualities} evoked through {conceptual_pairs}. {artistic_techniques} manifests in {visual_elements}. Scale: balanced between micro and macro. Treatment: precise yet organic. Mood: contemplative dynamism. Technique: layered digital abstraction with mathematical precision."
+        },
+        "kandinsky_inspired": {
+            "description": "カンディンスキー風構成",
+            "text": "Spiritual {geometric_elements} expressing {musical_elements} through {color_variations}. Dynamic interplay of {geometric_variations} and {abstract_elements} creates {musical_elements}. Synesthetic translation of {musical_elements} into {visual_elements}. {geometric_elements} dance with {abstract_elements}. {quality_aspects} atmosphere emerges through {texture_variations}. {artistic_techniques} guides {visual_elements}. {philosophical_concepts} manifests in {abstract_elements}. {geometric_elements} informs {shape_arrangements}. {musical_elements} translated to {visual_elements}. Scale: cosmic to microscopic. Treatment: spiritual-geometric synthesis. Mood: transcendent dynamism."
+        },
+        "mondrian_composition": {
+            "description": "モンドリアン風構成",
+            "text": "Neo-plasticist grid composition utilizing pure {color_variations} in {geometric_elements}. {grid_structure} creates {dynamic_equilibrium} through {shape_arrangements}. {geometric_elements} counterpoints {geometric_tension}..."
+        },
+        "rothko_fields": {
+            "description": "ロスコ風色面構成",
+            "text": "Ethereal {color_variations} composition exploring {quality_aspects} through {color_variations}. Subtle {color_variations} transitions create {atmospheric_qualities}. {geometric_elements} float with {quality_aspects}. {color_variations} generates {visual_elements}. {process_elements} produces {spatial_concepts}. {quality_aspects} emerges from {process_elements}. {color_variations} achieves {visual_elements}. {texture_variations} contributes to {background_elements}. {shape_arrangements} induces {visual_elements}. Scale: human-engulfing. Treatment: luminous color layers. Mood: contemplative transcendence. Technique: color field meditation with subtle transitions."
+        },
+        "pollock_action": {
+            "description": "ポロック風アクションペインティング",
+            "text": "Dynamic {artistic_techniques} expressing {brush_elements} through {abstract_elements}. Chaotic {color_variations} creates {visual_elements}. {quality_aspects} captured in {process_elements}. {brush_elements} forms {visual_elements}. {texture_variations} builds {spatial_concepts}. {color_variations} generates {visual_elements}. {process_elements} balance in {background_elements}. {artistic_materials} guides {artistic_techniques}. {background_elements} achieves {visual_elements}. Scale: encompassing environment. Treatment: controlled chaos. Mood: kinetic intensity. Technique: action-driven mark-making with layered complexity."
+        },
+        "fontana_spatial": {
+            "description": "フォンタナ風空間概念",
+            "text": "Minimalist {color_variations} plane interrupted by {process_elements}. {quality_aspects} creates {spatial_concepts}. {artistic_materials} emphasizes {spatial_concepts}. {conceptual_pairs} through {spatial_concepts}. {process_elements} defines {spatial_concepts}. {background_elements} explores {artistic_materials}. {geometric_elements} reveals {spatial_concepts}. {conceptual_pairs} enhances {spatial_concepts}. {artistic_materials} confronts {spatial_concepts}. Scale: human-scale monumentality. Treatment: precise intervention. Mood: spatial contemplation. Technique: material transcendence through violation."
+        },
+        "twombly_gestural": {
+            "description": "トゥオンブリー風スクリブル",
+            "text": "Ethereal {brush_elements} dance across {background_elements} with poetic spontaneity. {quality_aspects} linear elements weave {visual_elements}. Delicate {color_variations} punctuated by {process_elements} interventions. {brush_elements} flows through {background_elements}. {texture_variations} surface holds {brush_elements}. {metaphysical_elements} emerges in {visual_elements}. {quality_aspects} captured in {brush_elements}. {spatial_concepts} achieved through {process_elements}. {quality_aspects} expressed in {brush_elements}. Scale: intimate yet expansive. Treatment: poetic mark-making. Mood: lyrical spontaneity. Technique: gestural archaeology with historical echoes."
+        },
+        "richter_abstract": {
+            "description": "リヒター風抽象",
+            "text": "Complex {color_variations} composition undergoes {process_elements} transformation. {quality_aspects} boundaries dissolve between {geometric_elements}. {texture_variations} builds through {process_elements}. {color_variations} emerges through {quality_aspects} intervention. {brush_elements} reveal {background_elements}. {process_elements} guide {visual_elements}. {artistic_materials} asserts through {process_elements}. {spatial_concepts} created by {process_elements}. {background_elements} suggest {metaphysical_elements}. Scale: human-scale monumentality. Treatment: systematic chance. Mood: calculated uncertainty. Technique: mechanical-manual synthesis with photographic memory."
+        },
+        "lee_ufan": {
+            "description": "李禹煥風ミニマル",
+            "text": "Meditative {brush_elements} resonates with {background_elements} infinity. {brush_elements} achieves {metaphysical_elements}. {spatial_concepts} creates {spatial_concepts}. {artistic_materials} explores {philosophical_concepts}. {metaphysical_elements} guides {visual_elements}. {geometric_elements} relationship with {spatial_concepts}. {background_elements} captured in {brush_elements}. {metaphysical_elements} through {brush_elements}. {spatial_concepts} emerges from {brush_elements}. Scale: intimate universality. Treatment: meditative precision. Mood: contemplative presence. Technique: minimal intervention with maximum resonance."
+        },
+        "malevich_supreme": {
+            "description": "マレーヴィチ風シュプレマティスム",
+            "text": "Pure {geometric_elements} floating in {spatial_concepts} with supreme authority. {color_variations} relationship transcends earthly representation. {spatial_concepts} between forms creates {metaphysical_elements}. {geometric_elements} achieves {philosophical_concepts}. {abstract_elements} liberate from {metaphysical_elements}. {color_variations} express {philosophical_concepts}. {geometric_elements} reveals {philosophical_concepts}. {spatial_concepts} through {geometric_elements}. {visual_elements} suggests {metaphysical_elements}. Scale: cosmic infinitude. Treatment: pure geometric abstraction. Mood: spiritual transcendence. Technique: supreme reduction with metaphysical presence."
+        },
+        "klee_pedagogical": {
+            "description": "クレー風教育的抽象",
+            "text": "Playful {geometric_elements} explores {philosophical_concepts}. {quality_aspects} elements reveal {philosophical_concepts}. {artistic_techniques} investigation through {geometric_variations} arrangement. {visual_elements} flows through {geometric_elements}. {metaphysical_elements} emerges from {abstract_elements}. {philosophical_concepts} expressed in {visual_elements}. {musical_elements} guides {visual_elements}. {geometric_elements} creates {spatial_concepts}. {metaphysical_elements} informs {visual_elements}. Scale: microscopic to cosmic. Treatment: analytical play. Mood: childlike wisdom. Technique: systematic intuition with natural law."
+        },
+        "albers_interaction": {
+            "description": "アルバース風色彩相互作用",
+            "text": "Nested {geometric_elements} demonstrates {color_variations} principles. {visual_elements} emerges through precise {color_variations} study. {geometric_elements} achieves {visual_elements} through {shape_arrangements}. {color_variations} shifts create {visual_elements}. {color_variations} varies with {process_elements}. {spatial_concepts} results from {color_variations}. {process_elements} explores {visual_elements}. {geometric_elements} guides {color_variations}. {visual_elements} revealed through {color_variations}. Scale: human perception. Treatment: systematic investigation. Mood: optical contemplation. Technique: precise color interaction with mathematical foundation."
+        },
+        "beksinski_nightmare": {
+            "description": "ベクシンスキー風悪夢的風景",
+            "text": "Surreal {dark_elements} with {dark_elements} fusion. {atmospheric_qualities} pervades the scene. {structural_elements} emerges from {background_elements}. {conceptual_pairs} fusion with {texture_variations}. {color_variations_1} palette transitions to {color_variations_2}. {dark_elements} interweave with {dark_elements}. {nightmare_elements} emerge from {structural_elements}. {atmospheric_qualities} deepens through {quality_aspects}. {process_elements} distorts {geometric_elements}. Scale: monumentally oppressive. Treatment: biomechanical decay. Mood: profound nightmare. Technique: horror fusion with structural decay."
+        },
+        "beksinski_structure": {
+            "description": "ベクシンスキー風建造物",
+            "text": "Monumental {structural_elements} looms in {landscape_elements} with oppressive presence. {dark_elements} interweave with {artistic_materials} creating biomechanical horror. {conceptual_pairs} hybridization defies natural order. {artistic_materials} effects corrode {structural_elements} with temporal decay. {atmospheric_qualities} penetrates through {process_elements} suggesting otherworldly presence. {nightmare_elements} distorts {spatial_concepts}. {conceptual_pairs} merge with {dark_elements}. {nightmare_elements} achieves {conceptual_pairs}. {dark_elements} deepens {nightmare_elements}. Scale: monumentally oppressive. Treatment: biomechanical decay. Mood: architectural nightmare. Technique: structural horror with organic fusion."
+        },
+        "boltanski_memorial": {
+            "description": "ボルタンスキー風メモリアル",
+            "text": "Ethereal {installation_elements} resonates with {collection_elements} of lost souls. {conceptual_pairs} dances through translucent {artistic_materials} creating spectral presence. {atmospheric_qualities} casting {atmospheric_qualities} across temporal void. {memorial_elements} arrangements suggest {conceptual_pairs}. Memory-focused {installation_elements} evokes collective loss. {collection_elements} blur {conceptual_pairs}. {background_elements} creates {quality_aspects}. {atmospheric_qualities} pervades {installation_elements}. {conceptual_pairs} suggests {atmospheric_qualities}. Scale: human-scale intimacy. Treatment: memorial presence. Mood: elegiac contemplation. Technique: archival memory with spectral illumination."
+        },
+        "boltanski_archive": {
+            "description": "ボルタンスキー風アーカイブ",
+            "text": "Documentary {collection_elements} arranged in {installation_elements} suggests collective memory. {memorial_elements} interweave with {background_elements} creating temporal depth. {conceptual_pairs} interplay penetrates {artistic_materials} with spectral quality. {memorial_elements} arranged in {geometric_elements} explore human condition. Contemplative {atmospheric_qualities} pervades archival space. {conceptual_pairs} creates {quality_aspects}. {background_elements} suggest {conceptual_pairs}. {memorial_elements} merge into {metaphysical_elements}. {collection_elements} achieves {atmospheric_qualities}. Scale: archival expanse. Treatment: documentary poetry. Mood: historical meditation. Technique: photographic memory with temporal depth."
+        },
+        "beksinski_boltanski_fusion": {
+            "description": "ベクシンスキー×ボルタンスキー融合",
+            "text": "Haunting {dystopian_landscape} merged with {memorial_installation}. {biomechanical_forms} interact with {archival_photographs} in decaying space. {gothic_elements} cast {memorial_shadows} across {industrial_ruins}. {personal_artifacts} scattered among {twisted_architecture}. {mechanical_hybrids} emerge from {fading_memories}. {candlelight_effects} illuminate {skeletal_frameworks}. {cloth_installations} drape over {rusted_machinery}, creating {ghostly_presence}. {identity_fragments} dissolve into {deteriorating_surfaces}. {temporal_distance} emphasized through {organic_mutations}. Atmosphere of {melancholic_mood} and {foreboding_presence}. {historical_remnants} merge with {mechanical_decay}. {shadow_projections} animate {post_apocalyptic_scenes}. {memory_traces} etched into {haunted_spaces}. Scale: monumental, Treatment: ethereal decay, Mood: profound unease with historical weight."
+        },
+        "nightmare_archive_synthesis": {
+            "description": "悪夢的アーカイブ融合",
+            "text": "Documentary {portrait_collection} transforms into {biomechanical_nightmare}. {archival_imagery} degrading into {twisted_forms}. {memorial_light} pierces through {dystopian_structures}. {forgotten_objects} embedded in {decaying_architecture}. {shadow_masses} consume {personal_artifacts}. {industrial_ruins} house {lost_portraits}. {mechanical_hybrids} emerge from {scattered_documents}. {gothic_elements} frame {tin_boxes}. {haunted_spaces} filled with {historical_remnants}. {spectral_glow} illuminates {deteriorating_surfaces}. {time_worn_materials} fuse with {organic_mutations}. {memorial_shadows} cast by {skeletal_frameworks}. Atmosphere: profound dread meets historical melancholy. Treatment: textural decay with archival resonance. Scale: intimate yet monumental. Technique: layered degradation with memorial presence."
+        },
+        "temporal_decay_composition": {
+            "description": "時間的崩壊の構成",
+            "text": "Monumental {structural_elements} houses {memorial_elements}. {collection_elements} decompose into {dark_elements}. {artistic_materials} merges with {artistic_materials}. {quality_aspects} emerges through {dark_elements}. {atmospheric_qualities} inhabits {structural_elements}. {atmospheric_qualities} reveals {dark_elements}. {background_elements} embedded in {dark_elements}. {conceptual_pairs} across {dark_elements}. {memorial_elements} scattered through {dark_elements}. {dark_elements} frame {memorial_elements}. {nightmare_elements} emerge from {memorial_elements}. {structural_elements} support {memorial_elements}. Scale: vast yet intimate. Treatment: temporal erosion. Mood: historical weight meets nightmare vision. Technique: layered decay with memorial resonance."
+        },
+        "memorial_nightmare_landscape": {
+            "description": "追悼的悪夢風景",
+            "text": "Ethereal {installation_elements} transforms into {landscape_elements}. {collection_elements} bleeds into {dark_elements}. {memorial_elements} animate {dark_elements}. {memorial_elements} cast by {structural_elements}. {memorial_elements} merge with {nightmare_elements}. {memorial_elements} illuminate {structural_elements}. {memorial_elements} scattered across {dark_elements}. {atmospheric_qualities} emphasized through {structural_elements}. {memorial_elements} fuse with {dark_elements}. {atmospheric_qualities} pervades {dark_elements}. {memorial_elements} dissolve into {dark_elements}. {memorial_elements} etched into {dark_elements}. Scale: expansive yet personal. Treatment: spectral decay. Mood: profound unease with historical resonance. Technique: layered memory with nightmare elements."
+        },
+        "repeated_elements_example": {
+            "description": "要素の繰り返し使用例",
+            "text": "Primary {color_1} contrasts with secondary {color_1}, while tertiary {color_2} complements both. {geometric_shape_1} repeats with varying scales: large {geometric_shape_1}, medium {geometric_shape_1}, and small {geometric_shape_1}. {texture_1} interweaves with {texture_2}, creating layers of {texture_1} depth."
+        },
+        "color_harmony_study": {
+            "description": "色彩の重複研究",
+            "text": "Main {color_1} field dominates, with {color_2} accents. {color_1} variations create depth, while {color_3} highlights emerge. Secondary {color_2} elements echo primary {color_1} tones. Scale: varying color intensities. Treatment: layered color repetition. Mood: chromatic harmony through repetition."
+        }
+    }
+} 

@@ -1,0 +1,483 @@
+{
+    "elements": {
+        "abstract_forms": {
+            "description": "抽象的な形態表現",
+            "values": [
+                "twisted geometric shapes morphing into organic forms",
+                "fractalized human silhouettes dissolving into chaos",
+                "non-euclidean architecture bending reality",
+                "flowing liquid metal structures defying gravity",
+                "crystalline formations shattering into void",
+                "biomechanical patterns emerging from darkness",
+                "quantum mathematical visualizations in motion",
+                "dimensional rifts tearing through space",
+                "kaleidoscopic mirrors reflecting infinite nightmares",
+                "neural network patterns forming conscious structures",
+                "möbius strip corridors folding into themselves",
+                "hypercube structures phasing through dimensions",
+                "fractal mandelbrot patterns becoming sentient",
+                "tesseract chambers with impossible geometry",
+                "klein bottle spaces warping perception",
+                "DNA helixes mutating into cosmic horrors",
+                "quantum probability clouds taking form",
+                "topological nightmares breaking euclidean space",
+                "4D projections casting impossible shadows",
+                "reality-warping mathematical equations",
+                "crystalline thought structures fragmenting",
+                "time-crystal formations growing backwards",
+                "hyperbolic space manifolds twisting",
+                "quantum entangled nightmare geometries",
+                "self-replicating fractal organisms"
+            ]
+        },
+        "mathematical_forms": {
+            "description": "数学的形態表現",
+            "values": [
+                "complex differential equations visualized in 3D",
+                "fibonacci spirals evolving through dimensions",
+                "quantum wave functions materializing",
+                "strange attractors forming dynamic patterns",
+                "cellular automata creating emergent structures",
+                "chaos theory manifesting in physical form",
+                "topology transformations in real-time",
+                "fractal dimensions bleeding into reality",
+                "manifold geometries self-organizing",
+                "probability fields taking physical form",
+                "quantum superposition states visualized",
+                "hyperbolic tessellations expanding infinitely",
+                "mathematical singularities emerging",
+                "abstract algebra structures materialized",
+                "group theory symmetries in motion"
+            ]
+        },
+        "geometric_patterns": {
+            "description": "幾何学的パターン",
+            "values": [
+                "hypercube projections in motion",
+                "sacred geometry matrices",
+                "platonic solid transformations",
+                "golden ratio spirals in flux",
+                "tessellating fractal patterns",
+                "möbius strip variations",
+                "klein bottle intersections",
+                "penrose tiling mutations",
+                "geodesic dome structures",
+                "voronoi diagram flows",
+                "delaunay triangulation webs",
+                "crystallographic symmetries",
+                "polytope cross-sections",
+                "toroidal knot patterns",
+                "recursive geometric fractals"
+            ]
+        },
+        "dimensional_effects": {
+            "description": "次元効果",
+            "values": [
+                "4D shadow projections",
+                "dimensional bleeding effects",
+                "reality fold intersections",
+                "spacetime curvature distortions",
+                "quantum tunneling visualizations",
+                "dimensional phase transitions",
+                "hyperspatial warping",
+                "manifold intersection points",
+                "dimensional boundary erosion",
+                "reality layer separation",
+                "quantum foam textures",
+                "dimensional drift patterns",
+                "reality glitch artifacts",
+                "spacetime fabric tears",
+                "dimensional resonance waves"
+            ]
+        },
+        "energy_patterns": {
+            "description": "エネルギーパターン",
+            "values": [
+                "quantum field fluctuations",
+                "probability wave collapses",
+                "energy field matrices",
+                "plasma current flows",
+                "electromagnetic field lines",
+                "quantum entanglement webs",
+                "zero-point energy fields",
+                "vacuum energy patterns",
+                "string theory vibrations",
+                "dark energy manifestations",
+                "quantum vacuum bubbles",
+                "energy vortex formations",
+                "particle-wave duality patterns",
+                "quantum interference patterns",
+                "energy probability clouds"
+            ]
+        },
+        "texture_elements": {
+            "description": "テクスチャ要素",
+            "values": [
+                "quantum noise granulation",
+                "fractal surface patterns",
+                "dimensional static effects",
+                "probability field textures",
+                "mathematical noise maps",
+                "topological surface details",
+                "quantum foam textures",
+                "abstract cellular patterns",
+                "crystalline lattice structures",
+                "wave function interference patterns",
+                "chaos theory textures",
+                "strange attractor surfaces",
+                "quantum probability densities",
+                "mathematical moiré patterns",
+                "abstract procedural textures"
+            ]
+        },
+        "light_effects": {
+            "description": "光の効果",
+            "values": [
+                "quantum light scattering",
+                "dimensional light bleeding",
+                "probability photon paths",
+                "abstract caustics",
+                "mathematical light rays",
+                "hyperdimensional glows",
+                "quantum luminescence",
+                "topological light bending",
+                "abstract light diffraction",
+                "mathematical light interference",
+                "fractal light patterns",
+                "quantum radiance effects",
+                "abstract light echoes",
+                "dimensional light phase shifts",
+                "theoretical light dynamics"
+            ]
+        },
+        "mathematical_concepts": {
+            "description": "数学的概念",
+            "values": [
+                "riemann zeta function visualization",
+                "mandelbrot set transformations",
+                "fourier transform waves",
+                "complex number manifolds",
+                "vector field representations",
+                "partial differential equations",
+                "quantum mechanics graphs",
+                "chaos theory attractors",
+                "statistical distribution curves",
+                "topology transformation maps",
+                "group theory symmetries",
+                "tensor field visualizations",
+                "probability density functions",
+                "phase space diagrams",
+                "mathematical graph networks"
+            ]
+        },
+        "mathematical_graphs": {
+            "description": "数学的グラフ",
+            "values": [
+                "3D function plots",
+                "phase space trajectories",
+                "complex plane mappings",
+                "vector field streamlines",
+                "probability distribution curves",
+                "quantum wave functions",
+                "chaos theory bifurcations",
+                "differential geometry surfaces",
+                "topological mapping grids",
+                "statistical scatter plots",
+                "neural network graphs",
+                "information theory diagrams",
+                "group theory lattices",
+                "category theory arrows",
+                "algebraic variety plots"
+            ]
+        },
+        "color_dynamics": {
+            "description": "色彩力学",
+            "values": [
+                "monochromatic quantum resonances",
+                "dual-tone dimensional shifts",
+                "singular color dissolving into void",
+                "pure chromatic energy fields",
+                "minimal color phase transitions",
+                "ethereal monochrome gradients",
+                "singular wavelength mutations",
+                "pure spectral consciousness",
+                "minimal color quantum states",
+                "void-spectrum intersections",
+                "singular color field theory",
+                "pure chromatic abstractions",
+                "minimal spectral emissions",
+                "quantum color singularity",
+                "monochromatic void patterns"
+            ]
+        },
+        "artist_styles": {
+            "description": "アーティストスタイル",
+            "values": [
+                "in the style of M.C. Escher's impossible geometries",
+                "inspired by Wassily Kandinsky's abstract compositions",
+                "following Paul Klee's mathematical art principles",
+                "reminiscent of Bridget Riley's optical art",
+                "channeling Victor Vasarely's geometric abstractions",
+                "influenced by Piet Mondrian's mathematical precision",
+                "like Josef Albers' color theory studies",
+                "in the manner of Frantisek Kupka's cosmic abstractions",
+                "similar to Kazimir Malevich's suprematist forms",
+                "drawing from Max Bill's concrete art",
+                "inspired by Sol LeWitt's systematic art",
+                "following Agnes Martin's grid compositions",
+                "like Manfred Mohr's algorithmic art",
+                "in the style of Vera Molnar's computer art",
+                "channeling Roman Verostko's algorithmic abstractions"
+            ]
+        },
+        "biological_abstractions": {
+            "description": "生物学的抽象表現",
+            "values": [
+                "neural synapses firing in quantum space",
+                "DNA structures evolving through dimensions",
+                "organic fractals growing exponentially",
+                "cellular automata becoming conscious",
+                "biological circuits merging with mathematics",
+                "quantum biology manifestations",
+                "evolutionary algorithms visualized",
+                "morphogenetic field patterns",
+                "bioelectric signal networks",
+                "emergence of artificial life patterns",
+                "synthetic biology structures",
+                "protein folding visualizations",
+                "genetic algorithm mutations",
+                "biomorphic quantum structures",
+                "molecular machinery abstractions"
+            ]
+        },
+        "cosmic_structures": {
+            "description": "宇宙構造表現",
+            "values": [
+                "quantum vacuum fluctuations at cosmic scale",
+                "string theory multiverse intersections",
+                "dark matter network visualizations",
+                "cosmic web mathematical patterns",
+                "quantum gravity singularities",
+                "spacetime foam structures",
+                "cosmic inflation geometries",
+                "quantum entangled galaxies",
+                "higher dimensional cosmic strings",
+                "brane world intersections",
+                "cosmic topology mappings",
+                "quantum cosmological constants",
+                "parallel universe bleeding",
+                "cosmic phase transitions",
+                "quantum cosmic evolution"
+            ]
+        },
+        "information_patterns": {
+            "description": "情報パターン",
+            "values": [
+                "quantum information fields",
+                "mathematical data structures",
+                "information entropy visualizations",
+                "quantum computing circuits",
+                "digital physics manifestations",
+                "cybernetic pattern emergence",
+                "quantum error correction codes",
+                "information theory landscapes",
+                "digital consciousness emergence",
+                "quantum memory structures",
+                "algorithmic information patterns",
+                "computational universe models",
+                "quantum neural networks",
+                "digital reality glitches",
+                "information quantum fields"
+            ]
+        },
+        "transcendental_structures": {
+            "description": "超越的構造表現",
+            "values": [
+                "non-euclidean thought manifolds",
+                "consciousness crystallization patterns",
+                "quantum consciousness architectures",
+                "metaphysical void structures",
+                "abstract reality frameworks",
+                "temporal consciousness lattices",
+                "interdimensional thought matrices",
+                "quantum mind geometries",
+                "abstract existence patterns",
+                "reality dissolution frameworks",
+                "consciousness wave functions",
+                "abstract being topologies",
+                "quantum existence manifolds",
+                "metaphysical probability structures",
+                "abstract consciousness fields"
+            ]
+        },
+        "void_patterns": {
+            "description": "虚無パターン",
+            "values": [
+                "quantum vacuum fluctuations",
+                "void consciousness matrices",
+                "nothingness crystallization",
+                "abstract emptiness formations",
+                "metaphysical null spaces",
+                "quantum void resonances",
+                "abstract absence patterns",
+                "consciousness void fields",
+                "quantum nothingness waves",
+                "abstract emptiness manifolds",
+                "void thought structures",
+                "metaphysical vacuum geometries",
+                "abstract null dimensions",
+                "quantum absence fields",
+                "consciousness emptiness matrices"
+            ]
+        },
+        "existential_forms": {
+            "description": "実存的形態",
+            "values": [
+                "quantum existence waves",
+                "consciousness probability clouds",
+                "abstract being patterns",
+                "metaphysical existence fields",
+                "quantum consciousness manifolds",
+                "abstract reality waves",
+                "void existence matrices",
+                "consciousness form fluctuations",
+                "quantum being resonances",
+                "abstract existence geometries",
+                "metaphysical form patterns",
+                "consciousness structure fields",
+                "quantum reality matrices",
+                "abstract being resonances",
+                "void consciousness waves"
+            ]
+        },
+        "human_abstractions": {
+            "description": "人間抽象表現",
+            "values": [
+                "perceptual geometry dissolving into void",
+                "neural lattices as probability waves",
+                "quantum sensory matrices",
+                "consciousness as abstract vectors",
+                "dimensional awareness fragments",
+                "void-scattered cognitive patterns",
+                "crystallized perception fields",
+                "metaphysical signal dispersions",
+                "awareness as geometric noise",
+                "consciousness as wave interference",
+                "neural topology in quantum foam",
+                "perception as mathematical curves",
+                "cognitive field distortions",
+                "awareness as fractal echoes",
+                "consciousness as particle systems"
+            ]
+        },
+        "consciousness_emanations": {
+            "description": "意識放射表現",
+            "values": [
+                "quantum cognitive emissions",
+                "abstract sensory geometries",
+                "neural noise dispersions",
+                "perceptual field vectors",
+                "consciousness as Perlin noise",
+                "void-scattered thought particles",
+                "awareness as moiré patterns",
+                "cognitive wave functions",
+                "consciousness as procedural textures",
+                "neural interference patterns",
+                "quantum perception noise",
+                "awareness as mathematical noise",
+                "consciousness as density gradients",
+                "neural probability clouds",
+                "perception as wave equations"
+            ]
+        }
+    },
+    "templates": {
+        "abstract_mathematical": {
+            "description": "数理的抽象表現",
+            "text": "Create an abstract mathematical visualization where {human_abstractions} interact with {mathematical_forms}, as {consciousness_emanations} weave through {abstract_forms}. {transcendental_structures} emerge through {dimensional_effects}, while {energy_patterns} flow through {void_patterns}. {light_effects} illuminate the dissolution of form as {color_dynamics} suggest the transformation of human consciousness into mathematical abstraction."
+        },
+        "quantum_abstract": {
+            "description": "量子的抽象表現",
+            "text": "Generate a quantum-inspired abstract artwork where {human_abstractions} exist in superposition with {void_patterns}, enhanced by {consciousness_emanations} phasing through {dimensional_effects}. {transcendental_structures} pulse through the composition, creating {existential_forms} that shift and flow. {light_effects} reveal quantum states of consciousness while {color_dynamics} represent the probability fields of human thought."
+        },
+        "topological_abstract": {
+            "description": "位相的抽象表現",
+            "text": "Design a topological abstract composition where {human_abstractions} transform through impossible geometries, merging with {consciousness_emanations} in higher dimensional spaces. {void_patterns} fold through {dimensional_effects}, while {transcendental_structures} define the boundaries of consciousness. {existential_forms} provide depth and complexity, illuminated by {light_effects} that defy conventional reality."
+        },
+        "quantum_biological": {
+            "description": "量子生物学的表現",
+            "text": "Create a quantum-biological visualization where {biological_abstractions} interact with {mathematical_forms} in a space defined by {cosmic_structures}. {geometric_patterns} and {information_patterns} form the underlying structure, while {energy_patterns} pulse through {dimensional_effects}. {texture_elements} provide organic complexity, illuminated by {light_effects} that suggest quantum coherence. {color_dynamics} represent the flow of quantum information through biological systems, creating a bridge between the microscopic and macroscopic realms. {mathematical_concepts} emerge from the chaos, suggesting deeper patterns of universal organization."
+        },
+        "information_cosmos": {
+            "description": "情報宇宙表現",
+            "text": "Generate an abstract representation of the information universe where {information_patterns} weave through {cosmic_structures}, creating a tapestry of {mathematical_forms} and {abstract_forms}. {biological_abstractions} emerge spontaneously from {geometric_patterns}, while {dimensional_effects} reveal multiple layers of reality. {energy_patterns} flow through the composition like digital rivers, creating {texture_elements} that shift between states of order and chaos. {light_effects} illuminate the underlying {mathematical_concepts}, as {color_dynamics} suggest the transformation of information into physical reality."
+        },
+        "transcendental_void": {
+            "description": "超越的虚無表現",
+            "text": "Create a transcendental void visualization where {transcendental_structures} merge with {void_patterns}, creating an abstract realm where {existential_forms} and {quantum_abstract} interact through {dimensional_effects}. {energy_patterns} resonate with {mathematical_concepts}, while {color_dynamics} suggest the dissolution of conventional reality. {texture_elements} and {light_effects} reveal the underlying nature of consciousness and existence, transcending physical form into pure abstraction."
+        },
+        "quantum_consciousness": {
+            "description": "量子意識表現",
+            "text": "Generate an abstract quantum consciousness landscape where {human_abstractions} evolve through {void_patterns}, creating complex interactions with {consciousness_emanations}. {transcendental_structures} emerge spontaneously as {existential_forms} dissolve into pure consciousness. {energy_patterns} and {color_dynamics} represent the flow of quantum awareness, while {light_effects} illuminate the boundaries between human essence and void."
+        },
+        "human_void": {
+            "description": "人間と虚無の表現",
+            "text": "Create an abstract visualization where {human_abstractions} emerge and dissolve through {void_patterns}, as {consciousness_emanations} radiate into {transcendental_structures}. {existential_forms} flow from human essence while {energy_patterns} suggest the dissolution of physical form. {color_dynamics} and {light_effects} reveal the transformation of consciousness into pure abstraction."
+        },
+        "consciousness_expansion": {
+            "description": "意識拡張表現",
+            "text": "Generate an abstract landscape where {human_abstractions} expand through {void_patterns}, creating {consciousness_emanations} that interact with {transcendental_structures}. {existential_forms} emerge from human thought, while {energy_patterns} suggest the boundaries between consciousness and void. {light_effects} and {color_dynamics} illuminate the expansion of mind into infinite space."
+        }
+    },
+    "modifiers": {
+        "quality": [
+            "ultra detailed mathematical precision",
+            "quantum-level resolution",
+            "topological perfection",
+            "abstract mathematical clarity",
+            "higher dimensional detail",
+            "theoretical physics quality",
+            "mathematical purity",
+            "abstract conceptual fidelity",
+            "quantum visualization accuracy",
+            "theoretical abstraction quality",
+            "quantum biological precision",
+            "information theoretical clarity",
+            "cosmic scale resolution",
+            "multidimensional fidelity",
+            "emergent complexity detail"
+        ],
+        "technical": [
+            "8k resolution mathematical rendering",
+            "quantum computation processing",
+            "topological optimization",
+            "abstract mathematical enhancement",
+            "higher dimensional processing",
+            "theoretical physics simulation",
+            "mathematical precision filter",
+            "abstract concept optimization",
+            "quantum visualization engine",
+            "theoretical abstraction processing",
+            "quantum biological simulation",
+            "information processing enhancement",
+            "cosmic scale visualization",
+            "multidimensional rendering",
+            "emergent pattern processing"
+        ],
+        "compositional": {
+            "description": "構図修飾子",
+            "values": [
+                "recursive depth layering",
+                "quantum perspective shifting",
+                "multidimensional composition",
+                "information density mapping",
+                "emergent pattern organization",
+                "biological growth structures",
+                "cosmic scale hierarchies",
+                "quantum field arrangements",
+                "topological space organization",
+                "mathematical symmetry balance"
+            ]
+        }
+    }
+} 

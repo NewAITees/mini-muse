@@ -1,0 +1,440 @@
+{
+    "elements": {
+        "sci_fi_elements": {
+            "description": "SFの要素",
+            "values": [
+                "flying saucer",
+                "alien spacecraft",
+                "laser beam",
+                "tractor beam",
+                "retro rocket",
+                "space station",
+                "alien technology",
+                "hologram display",
+                "energy field",
+                "force shield",
+                "alien portal",
+                "cosmic ray",
+                "space debris",
+                "meteor shower",
+                "orbital ring"
+            ]
+        },
+        "urban_elements": {
+            "description": "都市要素",
+            "values": [
+                "city skyline",
+                "skyscraper",
+                "neon sign",
+                "street light",
+                "subway station",
+                "office building",
+                "urban crowd",
+                "traffic light",
+                "city street",
+                "metro platform",
+                "shopping district",
+                "parking lot",
+                "construction site",
+                "billboard",
+                "power line",
+                "cityscape",
+                "downtown area",
+                "residential district"
+            ]
+        },
+        "creature_elements": {
+            "description": "生物の要素",
+            "values": [
+                "alien being",
+                "tentacle form",
+                "skeletal figure",
+                "deep sea creature",
+                "cosmic entity",
+                "mutant form",
+                "hybrid beast",
+                "ancient mummy",
+                "ghost figure",
+                "shadow creature",
+                "dimensional being",
+                "space parasite",
+                "bio-mechanical form",
+                "ethereal spirit",
+                "crystalline life",
+                "skeleton",
+                "monster",
+                "creature"
+            ]
+        },
+        "medical_elements": {
+            "description": "医療要素",
+            "values": [
+                "x-ray image",
+                "brain scan",
+                "anatomical diagram",
+                "medical chart",
+                "surgical tool",
+                "laboratory equipment",
+                "microscope view",
+                "diagnostic screen",
+                "neural pathway",
+                "cellular structure",
+                "medical symbol",
+                "dna helix",
+                "organ system",
+                "bone structure",
+                "tissue sample",
+                "brain",
+                "internal organs",
+                "body part"
+            ]
+        },
+        "mood_elements": {
+            "description": "雰囲気要素",
+            "values": [
+                "eerie glow",
+                "mysterious shadow",
+                "cosmic radiation",
+                "neon illumination",
+                "spectral light",
+                "dark atmosphere",
+                "ethereal mist",
+                "electric spark",
+                "haunting presence",
+                "supernatural aura",
+                "temporal distortion",
+                "dimensional rift",
+                "quantum effect",
+                "psychic energy",
+                "void presence"
+            ]
+        },
+        "style_elements": {
+            "description": "スタイル要素",
+            "values": [
+                "retro sci-fi",
+                "vintage horror",
+                "punk aesthetic",
+                "medical illustration",
+                "technical diagram",
+                "street art",
+                "comic book",
+                "propaganda poster",
+                "surreal art",
+                "gothic style",
+                "cyberpunk",
+                "biomechanical",
+                "psychedelic",
+                "minimalist",
+                "grunge texture"
+            ]
+        },
+        "humor_elements": {
+            "description": "ユーモア要素",
+            "values": [
+                "playful contrast",
+                "ironic juxtaposition",
+                "absurd situation",
+                "comic timing",
+                "witty arrangement",
+                "satirical setup",
+                "amusing detail",
+                "humorous twist",
+                "comedic element",
+                "funny interaction",
+                "whimsical touch",
+                "lighthearted mood",
+                "comical pose",
+                "entertaining scene",
+                "quirky feature"
+            ]
+        },
+        "atmospheric_qualities": {
+            "description": "雰囲気の質",
+            "values": [
+                "mystic resonance",
+                "ethereal presence",
+                "haunting ambiance",
+                "spectral atmosphere",
+                "temporal distortion",
+                "spatial warping",
+                "dimensional shift",
+                "quantum fluctuation",
+                "cosmic vibration",
+                "primal energy",
+                "ancient power",
+                "modern pulse",
+                "urban rhythm",
+                "natural harmony",
+                "synthetic discord"
+            ]
+        },
+        "light_effects": {
+            "description": "ライト効果",
+            "values": [
+                "soft lighting",
+                "hard lighting",
+                "rim lighting",
+                "backlighting",
+                "dramatic lighting",
+                "cinematic lighting",
+                "studio lighting",
+                "natural lighting",
+                "artificial lighting",
+                "neon lighting",
+                "glowing light",
+                "ambient light",
+                "spotlight",
+                "floodlight",
+                "volumetric lighting"
+            ]
+        },
+        "image_quality": {
+            "description": "画質",
+            "values": [
+                "photorealistic",
+                "high resolution",
+                "8-bit",
+                "16-bit",
+                "pixel art",
+                "low resolution",
+                "grainy",
+                "sharp focus",
+                "shallow depth of field",
+                "deep depth of field",
+                "blurry",
+                "clear",
+                "detailed",
+                "sketchy",
+                "painterly"
+            ]
+        },
+        "art_styles": {
+            "description": "アートスタイル",
+            "values": [
+                "retro",
+                "cyberpunk",
+                "steampunk",
+                "art deco",
+                "art nouveau",
+                "impressionism",
+                "expressionism",
+                "surrealism",
+                "pop art",
+                "minimalism",
+                "abstract art",
+                "realistic",
+                "cartoonish",
+                "comic style",
+                "manga",
+                "anime style",
+                "watercolor",
+                "sketch",
+                "silhouette"
+            ]
+        },
+        "subject_posture": {
+            "description": "Subject Posture",
+            "values": [
+                "natural pose",
+                "dynamic pose",
+                "sitting pose",
+                "standing pose",
+                "walking pose",
+                "running pose",
+                "action pose",
+                "portrait pose",
+                "Overhead",
+                "Looking up",
+                "Tilted",
+                "Facing forward",
+                "Side facing",
+                "Facing backward"
+            ]
+        },
+        "viewpoint_elements": {
+            "description": "Viewpoint",
+            "values": [
+                "eye-level",
+                "high angle",
+                "low angle",
+                "bird's-eye view",
+                "worm's-eye view",
+                "dutch angle"
+            ]
+        },
+        "composition_elements": {
+            "description": "Composition",
+            "values": [
+                "triangular composition",
+                "symmetrical composition",
+                "diagonal composition",
+                "spiral composition",
+                "S-curve composition",
+                "framing composition",
+                "central composition",
+                "rule of thirds"
+            ]
+        },
+        "foreground_elements": {
+            "description": "Foreground Elements",
+            "values": [
+                "flowers",
+                "trees",
+                "part of building",
+                "person's hand",
+                "objects",
+                "shadows",
+                "water surface",
+                "fog"
+            ]
+        },
+        "midground_elements": {
+            "description": "Midground Elements",
+            "values": [
+                "person",
+                "animal",
+                "main building",
+                "vehicle",
+                "center of landscape",
+                "center of event",
+                "center of action"
+            ]
+        },
+        "background_elements": {
+            "description": "Background Elements",
+            "values": [
+                "mountains",
+                "sky",
+                "forest",
+                "cityscape",
+                "room interior",
+                "outer space",
+                "abstract patterns",
+                "solid color background"
+            ]
+        },
+        "color_palette": {
+            "description": "Color Palette",
+            "values": [
+                "warm colors",
+                "cool colors",
+                "monochromatic",
+                "complementary colors",
+                "analogous colors",
+                "vibrant colors",
+                "muted colors",
+                "pastel colors",
+                "dark colors",
+                "bright colors"
+            ]
+        },
+        "camera_work": {
+            "description": "Camera Work",
+            "values": [
+                "shallow depth of field",
+                "deep depth of field",
+                "background blur",
+                "motion blur",
+                "pan",
+                "tilt",
+                "zoom in",
+                "zoom out",
+                "fixed camera",
+                "handheld camera"
+            ]
+        },
+        "post_processing_effects": {
+            "description": "Post Processing Effects",
+            "values": [
+                "contrast enhancement",
+                "color grading",
+                "vignette",
+                "texture addition",
+                "film grain",
+                "sharpening",
+                "blur effect",
+                "light rays",
+                "lens flare",
+                "chromatic aberration"
+            ]
+        },
+        "clothing_elements": {
+            "description": "服装要素",
+            "values": [
+                "leather jacket",
+                "denim jacket",
+                "t-shirt",
+                "hoodie",
+                "suit",
+                "casual shirt",
+                "tank top",
+                "sweater",
+                "blazer",
+                "trench coat"
+            ]
+        }
+    },
+    "templates": {
+        "retro_ufo_attack": {
+            "description": "レトロなUFO都市襲撃",
+            "japanese_description": "1950年代B級SF映画風の派手なUFO襲撃シーン。ピカピカに光るクロームメッキのUFOが、わざとらしい青白い光線で都市を襲撃。逃げ惑う群衆の動きが妙にぎこちなく、パニック映画のパロディのような雰囲気。",
+            "text": "A shiny chrome flying saucer hovers over a {urban_elements} in classic 1950s B-movie style. Deliberately cheesy blue-white beams shoot down at buildings. Comically stiff crowds flee in exaggerated panic. Retro-style special effects create an intentionally campy atmosphere. {art_styles}, {viewpoint_elements}, {composition_elements}. Scale: dramatic city vista. Treatment: vintage sci-fi parody. Mood: playful retro horror. Secondary elements: over-acted military response, toy-like emergency vehicles."
+        },
+        "medical_alien": {
+            "description": "エイリアンの胸部レントゲン写真",
+            "japanese_description": "胸部のX線写真のクローズアップ。画面全体に広がる異星人の胸腔内部には、人間の内臓の代わりに、複数の小さなエンジンや機械的な構造物、螺旋状の管が規則正しく並んでいる。",
+            "text": "A detailed chest X-ray showing the alien's thoracic cavity filled with symmetrical mechanical structures, miniature engines, and spiral conduits arranged in precise patterns where human organs should be. The image excludes arms and neck, focusing solely on the chest area. {camera_work}. Scale: full-frame chest scan. Treatment: clinical medical imaging. Mood: scientific documentation of the impossible. Secondary elements: measurement scales, density variations."
+        },
+        "punk_skeleton": {
+            "description": "パンクな骸骨のポートレート",
+            "japanese_description": "ボロボロのレザージャケットを着た骸骨の胸から上のポートレート。右手の中指と人差し指の骨で煙草を挟み、煙草の先から立ち上る煙が頭蓋骨の歯の隙間を通り抜けている。スタッズだらけの襟から覗く頭蓋骨は、挑戦的に斜め上を向いている。",
+            "text": "Close-up portrait of a {creature_elements} from chest up, wearing a {clothing_elements}. Cigarette held between skeletal index and middle fingers of the right hand, with smoke rising from the cigarette tip and drifting through the teeth of the upturned skull. The skull tilts defiantly upward, framed. Neon signs blur in the {background_elements}. {light_effects}. Scale: tight portrait framing. Treatment: punk rock portrait photography. Mood: rebellious attitude. Secondary elements: metal studs catching light, leather texture details, cigarette smoke patterns."
+        },
+        "cosmic_horror": {
+            "description": "エイリアンとの遭遇",
+            "japanese_description": "オフィスの蛍光灯の下での対面図。人間サイズの生物が左側に立ち、両手で丁寧に名刺を差し出している。右側のスーツの男性は青ざめた表情で固まっている。生物の体表には企業ロゴが淡く光っている。",
+            "text": "Side-by-side portrait under {mood_elements}. On the left, a human-sized {creature_elements} in {subject_posture} extends a business card with both hands in a respectful manner. On the right, a pale-faced businessman in a suit stands frozen. Corporate logo patterns glow softly on the creature's surface. Scale: waist-up two-shot portrait. Treatment: office photography meets cosmic horror. Mood: formal business tension. Secondary elements: dropped briefcase, office cubicle walls."
+        },
+        "deep_sea_humans": {
+            "description": "深海生物のオフィス会議",
+            "japanese_description": "深海のオフィス会議室。暗がりの中、巨大なチョウチンアンコウが小さなネクタイを付けて、プロジェクタースクリーンの前に浮かんでいる。発光器官からの青白い光が、空っぽの会議室を不気味に照らしている。",
+            "text": "A giant anglerfish wearing a tiny business tie floats in a dark underwater office meeting room. Its bioluminescent lure illuminates an empty presentation screen with pale blue light. Office chairs and conference table cast eerie shadows. {color_palette}. Scale: wide shot of meeting room. Treatment: corporate setting meets deep sea creature. Mood: surreal after-hours business. Secondary elements: laptop on table, water pitcher, window blinds."
+        },
+        "fossil_modern": {
+            "description": "化石の中の未来のテクノロジー",
+            "japanese_description": "博物館の展示ケース内のクローズアップ。褐色の岩石層の中に埋め込まれた、未来のテクノロジーの化石。画面部分には古代のインターフェースが鉱物の結晶として浮かび上がり、未来的なデザインが石灰質の層として立体的に保存されている。",
+            "text": "Extreme close-up of a museum display showing a large fossilized piece of future technology embedded in brown sedimentary rock. The screen area reveals a three-dimensional ancient interface preserved in crystalline minerals, with futuristic designs emerging as distinct limestone layers. Interface elements preserved in various mineral types create depth and texture. {image_quality}. Scale: detailed macro photography. Treatment: scientific specimen photography meets futuristic archaeology. Mood: technological wonder frozen in time. Secondary elements: crystallized UI elements, mineralized futuristic designs, fossilized patterns, stratified timeline layers showing content depth."
+        },
+        "astronaut_goldfish": {
+            "description": "宇宙服の中の金魚",
+            "japanese_description": "宇宙船の窓際に立つ宇宙服。ヘルメット部分が水で満たされた透明な球体になっており、その中でオレンジ色の金魚が泳いでいる。左側の大きな窓からは、青く輝く地球と漆黒の宇宙が見える。",
+            "text": "close up of spacesuit stands by a large window inside of {sci_fi_elements}. The helmet is replaced by a transparent water-filled sphere where an orange {creature_elements} swims. Through the window, Earth glows blue against the black void of space. {light_effects}, {post_processing_effects}. Life support systems connect to the sphere's base where it joins the suit. Scale: medium shot from right side. Treatment: space exploration photography. Mood: peaceful observation. Secondary elements: control panel lights, window frame details, suit joint mechanisms."
+        },
+        "sushi_mummy": {
+            "description": "回転寿司のミイラ",
+            "japanese_description": "回転寿司店の中央のレーン。手前から奥へと続く黒い光沢のベルトコンベアの上を、白い皿に乗った古代エジプトのミイラの頭部が流れていく。古びた包帯に覆われた顔が、清潔な店内の照明に照らされている。",
+            "text": "Medium shot of a sushi restaurant conveyor belt extending from {foreground_elements} to {background_elements}. A mummified pharaoh's head on a white plate moves along the glossy black belt. Clean {urban_elements} illuminates the ancient bandaged features against modern stainless steel surfaces. {art_styles}. Scale: three-quarter view of conveyor lane. Treatment: modern dining meets archaeology. Mood: casual presentation of ancient artifact. Secondary elements: polished metal surfaces, moving belt mechanism, overhead lighting reflections."
+        },
+        "skeleton_shopping": {
+            "description": "生命を買い物する骸骨たち",
+            "japanese_description": "蛍光灯で明るく照らされたスーパーの棚の前に立つ骸骨。カジュアルなセーターを着て、白骨の手で光り輝く瓶を手に取り、真剣な様子でラベルを読んでいる。棚には同じように光る商品が並ぶ。",
+            "text": "A {creature_elements} in a casual sweater stands before a brightly lit supermarket shelf, bony fingers holding up a glowing bottle to read its label. {light_effects} illuminates rows of similarly glowing products on metal shelves. The skeleton's empty eye sockets focus intently on the bottle. {composition_elements}. Scale: medium shot of single shopper. Treatment: retail photography with supernatural elements. Mood: everyday shopping with dark humor. Secondary elements: shelf price labels, shopping basket, product reflections."
+        },
+        "brain_office": {
+            "description": "脳内オフィスで働く宇宙飛行士",
+            "japanese_description": "巨大な脳の断面図。画面右上に頭蓋骨の一部が見え、ピンク色の脳組織が画面全体に広がる。シナプスの光る通路に沿って、小さな宇宙飛行士たちがデスクワークをしている。軸索は透明なオフィスの廊下となり、樹状突起がパーティションを形成している。",
+            "text": "Cross-section view of a giant {medical_elements} filling the entire frame, with partial skull visible in upper right corner. Pink brain tissue forms the {midground_elements}, with glowing synaptic pathways creating office corridors. Tiny astronauts in white spacesuits sit at translucent desks formed from dendrites. Axons create glass-like hallways through the brain matter. Neural cells form natural office architecture. {viewpoint_elements}. Scale: extreme close-up of brain tissue. Treatment: medical diagram meets miniature office. Mood: clinical precision with whimsy. Secondary elements: microscopic office furniture, cellular lighting fixtures."
+        },
+        "subway_shadows": {
+            "description": "怪物の影を持つ通勤客達",
+            "japanese_description": "白い蛍光灯に照らされた地下鉄ホームのタイル壁の前に並ぶ通勤客たち。スマートフォンの青白い光に照らされた顔や、腕時計を見る仕草など、日常的な姿の彼らの影が、巨大な触手や翼、牙を持つ怪物たちの形に変化している。電車の到着を告げるLEDディスプレイの光が影の輪郭をより鮮明に浮かび上がらせ、壁には路線図や駅名、安全標識が並び、典型的な地下鉄のホームの雰囲気を演出している。",
+            "text": "Commuters stand before a pristine white subway platform wall, their ordinary poses - checking phones with faces lit by blue-white screens, glancing at watches - cast shadows that transform into {creature_elements} silhouettes with massive tentacles, wings, and fangs. {light_effects} arrival displays cast additional light, making the shadow transformations more pronounced. Station signs, route maps, and safety notices create authentic subway atmosphere. {art_styles}, {color_palette}. Scale: wide platform shot. Treatment: urban horror photography with precise lighting. Mood: subtle supernatural lurking in mundane moments. Secondary elements: LED arrival time displays casting colored light, platform safety lines, directional arrows, advertisement posters, typical subway signage, reflective tile surfaces."
+        },
+        "breakdancing_hieroglyphs": {
+            "description": "ブレイクダンスするヒエログリフ",
+            "japanese_description": "古代エジプトの壁画様式で描かれた人物が、ヒエログリフ特有の横向きの姿勢を保ちながら、立体的なフリーズポーズを決めている。赤、青、紫のスポットライトが、古代の描写技法で表現された踊り手の周りを照らし、平面的な様式美を保ちながらも奥行きのある動きを表現。壁画らしい装飾的な模様と神聖文字が、浮き彫りのように立体的に背景を彩る。",
+            "text": "An Egyptian figure rendered in {style_elements} performs a dynamic breakdance freeze pose, maintaining the characteristic side-view profile while expressing three-dimensional movement. Multiple spotlights in red, blue, and purple illuminate the dancer, who emerges from the wall while staying true to ancient artistic conventions. Sacred hieroglyphic inscriptions and decorative patterns frame the scene in bas-relief, creating depth while preserving classical Egyptian art principles. {camera_work}, {post_processing_effects}. Scale: temple wall panel. Treatment: ancient Egyptian art meets modern dance. Mood: timeless movement captured in stone. Secondary elements: raised relief hieroglyphs, traditional Egyptian border patterns, architectural details, dynamic pose within classical artistic framework."
+        }
+    }
+}

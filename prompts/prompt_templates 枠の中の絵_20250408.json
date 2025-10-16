@@ -1,0 +1,404 @@
+{
+    "elements": {
+        "abstract_elements": {
+            "description": "抽象的な要素",
+            "values": [
+                "geometric shapes", "color fields", "lines", "textures", "patterns", 
+                "forms", "spaces", "fractals", "pixels", "glitches", "vectors", 
+                "3D primitives", "particle systems", "noise patterns", "mathematical curves"
+            ]
+        },
+        "mathematical_elements": {
+            "description": "数学的要素",
+            "values": [
+                "fractal patterns", "Mandelbrot set", "Julia set", "recursive structures",
+                "quantum probability fields", "strange attractors", "cellular automata",
+                "mathematical singularities", "hyperbolic geometry", "tesseracts",
+                "Fibonacci spirals", "golden ratio structures", "chaos theory visualizations"
+            ]
+        },
+        "dark_elements": {
+            "description": "ダークな要素",
+            "values": [
+                "biomechanical structures", "twisted architectures", "skeletal forms",
+                "industrial decay", "mechanical organisms", "fossilized machines",
+                "dystopian constructs", "surreal mechanisms", "organic machinery",
+                "technological ruins", "mechanical metamorphosis"
+            ]
+        },
+        "frame_settings": {
+            "description": "フレーム設定",
+            "values": [
+                "antique brass observation port",
+                "steampunk viewing chamber",
+                "quantum observation pod",
+                "Victorian specimen jar",
+                "futuristic holographic window",
+                "ornate tarot card border",
+                "ancient family crest",
+                "stained glass window frame",
+                "mystical eye iris",
+                "floating magic mirror",
+                "ancient scroll frame",
+                "cosmic portal gateway",
+                "living tree hollow",
+                "mechanical clockwork frame",
+                "dimensional tear edges",
+                "royal coat of arms",
+                "enchanted book page",
+                "digital screen interface",
+                "organic vine frame"
+            ]
+        },
+        "miniature_scenes": {
+            "description": "ミニチュアシーン",
+            "values": [
+                "cyberpunk underground market",
+                "floating garden metropolis",
+                "bio-mechanical coral reef city",
+                "quantum physics research facility",
+                "ancient ruins with modern technology",
+                "mechanical forest ecosystem",
+                "deep sea bioluminescent city",
+                "microscopic quantum civilization",
+                "floating sky islands kingdom",
+                "subterranean crystal cavern",
+                "time-frozen moment bubble",
+                "parallel dimension overlap",
+                "cosmic nebula sanctuary",
+                "pocket universe library",
+                "dream realm architecture",
+                "memory crystal archive",
+                "quantum probability space",
+                "dimensional fold market",
+                "void space observatory"
+            ]
+        },
+        "unique_objects": {
+            "description": "ユニークなオブジェクト",
+            "values": [
+                "mechanical kraken with crystal eyes",
+                "quantum-powered exploration vehicle",
+                "bio-mechanical sea creatures",
+                "time-traveling observation drones",
+                "shape-shifting mechanical organisms",
+                "holographic ancient deities",
+                "army of mechanical soldiers",
+                "wandering mystic scholars",
+                "ancient stone titans",
+                "cybernetic chimeras",
+                "floating angelic beings",
+                "shadow creatures from void",
+                "elemental guardians",
+                "mythological hybrid beasts",
+                "cosmic horror entities",
+                "dimensional travelers",
+                "time-shifted phantoms",
+                "techno-organic monsters"
+            ]
+        },
+        "art_styles": {
+            "description": "アートスタイル",
+            "values": [
+                "voxel art with realistic lighting",
+                "retro pixel art with modern effects",
+                "watercolor and ink illustration",
+                "technical blueprint aesthetic",
+                "scientific illustration style",
+                "geometric low-poly rendering",
+                "hyperrealistic photography",
+                "minimalist flat design",
+                "3D isometric rendering",
+                "traditional oil painting",
+                "ukiyo-e japanese style",
+                "art nouveau decoration",
+                "gothic architecture detail",
+                "renaissance classical",
+                "cyberpunk neon aesthetic",
+                "abstract expressionism",
+                "pop art comic style",
+                "baroque ornate style",
+                "art deco geometric",
+                "surrealist dreamscape",
+                "medieval manuscript"
+            ]
+        },
+        "scene_moods": {
+            "description": "シーンの雰囲気",
+            "values": [
+                "whimsical discovery", "mysterious exploration",
+                "scientific wonder", "magical realism",
+                "industrial fantasy", "technological nature",
+                "ancient futurism", "dreamlike surrealism",
+                "quantum mysticism", "mechanical harmony",
+                "temporal curiosity", "dimensional wonder",
+                "bio-mechanical synthesis", "crystalline meditation",
+                "steampunk nostalgia", "cyber-organic fusion"
+            ]
+        },
+        "weather_effects": {
+            "description": "天候効果",
+            "values": [
+                "underwater current streams",
+                "floating particle systems",
+                "temporal distortion waves",
+                "quantum weather patterns",
+                "microscopic bubble formations",
+                "crystalline precipitation"
+            ]
+        },
+        "detail_elements": {
+            "description": "詳細要素",
+            "values": [
+                "intricate gear mechanisms",
+                "floating data particles",
+                "bioluminescent organisms",
+                "holographic information displays",
+                "quantum energy patterns",
+                "microscopic civilizations"
+            ]
+        },
+        "color_palettes": {
+            "description": "カラーパレット",
+            "values": [
+                "deep sea blues with bioluminescent accents",
+                "brass and copper with ethereal glows",
+                "vintage sepia with neon highlights",
+                "crystalline rainbow refractions",
+                "quantum spectrum interference patterns",
+                "steampunk metallics with jewel tones",
+                "microscopic organism fluorescence",
+                "temporal distortion chromatics"
+            ]
+        },
+        "texture_combinations": {
+            "description": "テクスチャの組み合わせ",
+            "values": [
+                "smooth glass with rusted metal",
+                "crystalline structures with organic growth",
+                "digital glitches with natural patterns",
+                "mechanical parts with liquid flows",
+                "holographic surfaces with ancient materials"
+            ]
+        },
+        "camera_angles": {
+            "description": "カメラアングル",
+            "values": [
+                "dutch angle", "bird's eye view", "worm's eye view",
+                "isometric view", "dramatic low angle", "overhead shot",
+                "forced perspective", "fish-eye lens effect"
+            ]
+        },
+        "camera_focus": {
+            "description": "カメラフォーカス",
+            "values": [
+                "selective focus on foreground", "deep depth of field",
+                "macro lens detail", "soft bokeh background",
+                "tilt-shift miniature effect", "split focus",
+                "rack focus transition", "hyperfocal distance"
+            ]
+        },
+        "lighting_setups": {
+            "description": "ライティング設定",
+            "values": [
+                "bioluminescent ambient", "dramatic rim lighting",
+                "ethereal backlight", "underwater caustics",
+                "neon accent lights", "steampunk copper lanterns",
+                "magical crystal illumination", "industrial spotlights"
+            ]
+        },
+        "character_actions": {
+            "description": "キャラクターの行動",
+            "values": [
+                "exploring mysterious mechanisms", "conducting scientific experiments",
+                "maintaining ancient machinery", "documenting unknown species",
+                "trading with mechanical beings", "repairing quantum devices",
+                "studying holographic artifacts", "collecting bio-mechanical specimens"
+            ]
+        },
+        "character_expressions": {
+            "description": "キャラクターの表情",
+            "values": [
+                "filled with wonder", "deeply concentrated",
+                "showing scientific curiosity", "expressing amazement",
+                "displaying mechanical precision", "radiating mysterious knowledge"
+            ]
+        },
+        "scene_dynamics": {
+            "description": "シーンの動態",
+            "values": [
+                "bustling with mechanical life", "pulsing with quantum energy",
+                "flowing with temporal currents", "shifting between dimensions",
+                "evolving through time-lapse", "transforming through states",
+                "interacting with holographic data", "merging organic and synthetic"
+            ]
+        },
+        "architectural_elements": {
+            "description": "建築要素",
+            "values": [
+                "floating crystal observatories", "brass and copper clockwork towers",
+                "bio-mechanical growth structures", "quantum computing cores",
+                "time-worn steampunk facilities", "holographic data archives",
+                "microscopic city infrastructure", "dimensional bridge networks"
+            ]
+        },
+        "environmental_details": {
+            "description": "環境の詳細",
+            "values": [
+                "swirling quantum particles", "floating mechanical debris",
+                "crystalline growth patterns", "temporal echo ripples",
+                "holographic information streams", "bio-luminescent spores",
+                "dimensional fracture patterns", "nano-scale civilizations"
+            ]
+        },
+        "time_effects": {
+            "description": "時間効果",
+            "values": [
+                "temporal distortion waves", "quantum time dilation",
+                "chronological layer shifts", "time spiral patterns",
+                "parallel moment captures", "temporal echo phenomena"
+            ]
+        },
+        "atmospheric_conditions": {
+            "description": "大気条件",
+            "values": [
+                "quantum fog banks", "crystalline precipitation",
+                "temporal storm systems", "dimensional aurora effects",
+                "mechanical weather patterns", "holographic climate phenomena"
+            ]
+        },
+        "technological_elements": {
+            "description": "技術的要素",
+            "values": [
+                "quantum computation cores", "steam-driven analytical engines",
+                "bio-mechanical interfaces", "crystalline data storage",
+                "temporal observation equipment", "dimensional scanning devices"
+            ]
+        },
+        "scale_transitions": {
+            "description": "スケールの移行",
+            "values": [
+                "macro to micro shifts", "quantum to cosmic scales",
+                "temporal to spatial transitions", "dimensional perspective changes",
+                "reality to abstract transformations", "physical to digital transitions"
+            ]
+        },
+        "subjects": {
+            "description": "主題",
+            "values": [
+                "abstract shape", "natural form", "technological object", 
+                "symbolic representation", "conceptual idea", "emotional expression"
+            ]
+        },
+        "colors": {
+            "description": "色",
+            "values": [
+                "vibrant", "muted", "monochromatic", "complementary", "analogous",
+                "triadic", "pastel", "neon", "iridescent", "holographic", "gradient",
+                "oxidized metal", "decay", "void-like", "biomechanical"
+            ]
+        },
+        "techniques": {
+            "description": "技法",
+            "values": [
+                "layering", "blending", "dripping", "splattering", "scraping",
+                "collage", "digital manipulation", "generative algorithms",
+                "procedural texturing", "3D rendering", "voxel art", "pixel sorting",
+                "data moshing", "glitch art"
+            ]
+        },
+        "emotions": {
+            "description": "感情",
+            "values": [
+                "chaos", "harmony", "tension", "serenity", "energy", "mystery",
+                "balance", "disruption", "transcendence", "introspection", "dread",
+                "cosmic horror", "technological anxiety"
+            ]
+        },
+        "textures": {
+            "description": "テクスチャ",
+            "values": [
+                "smooth", "rough", "grainy", "glossy", "matte", "textured",
+                "impasto", "pixelated", "voxelized", "fractal", "noisy", "glitchy",
+                "corroded", "mechanical", "organic-synthetic"
+            ]
+        },
+        "compositions": {
+            "description": "構図",
+            "values": [
+                "asymmetrical", "radial", "fractal-based", "biomechanical",
+                "mathematical", "chaotic", "ordered"
+            ]
+        },
+        "contrasts": {
+            "description": "対比",
+            "values": [
+                "organic and mechanical", "order and chaos",
+                "mathematical and organic", "light and shadow",
+                "structure and void", "reality and abstraction"
+            ]
+        },
+        "art_movements": {
+            "description": "芸術運動",
+            "values": [
+                "abstract", "surreal", "biomechanical", "dark futuristic",
+                "mathematical", "fractal", "technological"
+            ]
+        },
+        "mathematical_patterns": {
+            "description": "数学的パターン",
+            "values": [
+                "parametric curves", "wave equations", "Fourier transforms", 
+                "golden ratio spirals", "symmetric patterns", "density gradients",
+                "radial emanations", "quantum wave functions", "probability fields",
+                "differential geometry", "topological transformations"
+            ]
+        },
+        "color_schemes": {
+            "description": "カラースキーム",
+            "values": [
+                "teal and gold", "burgundy and black", "deep azure and crimson",
+                "metallic gradient", "iridescent spectrum", "quantum chromatics",
+                "bioluminescent pulse", "void-space contrast", "dimensional shift"
+            ]
+        },
+        "visual_effects": {
+            "description": "視覚効果",
+            "values": [
+                "Perlin noise distortion", "layered depth", "glow effects",
+                "particle systems", "wave interference", "quantum fluctuations",
+                "dimensional rifts", "probability clouds", "energy fields"
+            ]
+        },
+        "composition_patterns": {
+            "description": "構成パターン",
+            "values": [
+                "radial symmetry", "vertical flow", "golden spiral",
+                "quantum probability distribution", "wave function collapse",
+                "dimensional intersection", "fractal recursion", "void emergence"
+            ]
+        }
+    },
+    "templates": {
+        "abstract_art": {
+            "description": "抽象芸術の生成",
+            "japanese_description": "抽象的な要素を組み合わせた芸術作品の生成。",
+            "text": "Through an elaborate {frame_settings} utilizing {camera_focus}, we witness an extraordinary miniature realm where time and space interweave. A mesmerizing {miniature_scenes} unfolds from a {camera_angles} perspective, where {unique_objects} exists within swirling {weather_effects}. The scene features {character_actions} amidst {architectural_elements}, while {environmental_details} create depth and mystery. Rendered in {art_styles} style with {color_palettes}, the composition showcases {detail_elements} through {scale_transitions}. {lighting_setups} illuminate the intricate {texture_combinations}, while {time_effects} add temporal dimension. {technological_elements} integrate seamlessly with {scene_dynamics}, creating a {scene_moods} atmosphere under {atmospheric_conditions}."
+        },
+        "detailed_diorama": {
+            "description": "詳細なジオラマの生成",
+            "japanese_description": "詳細な要素を組み合わせたジオラマ作品の生成。",
+            "text": "A sophisticated {frame_settings} reveals an intricate diorama captured through {camera_focus}, presenting a window into an impossible world. Within, a detailed {miniature_scenes} emerges from {camera_angles}, where {unique_objects} interacts with {weather_effects} in surprising ways. {character_actions} take place around {architectural_elements}, complemented by {environmental_details} that defy conventional scale. The scene masterfully combines {art_styles} with {color_palettes}, while {detail_elements} emerge through careful {scale_transitions}. Dynamic {lighting_setups} play across {texture_combinations}, as {time_effects} weave through the composition. {technological_elements} harmonize with {scene_dynamics}, establishing a {scene_moods} environment beneath {atmospheric_conditions}."
+        },
+        "imaginative_world": {
+            "description": "想像力豊かな世界の生成",
+            "japanese_description": "想像力と科学的精密さが融合した世界の生成。",
+            "text": "Peering into an advanced {frame_settings}, enhanced by {camera_focus}, we discover a world where imagination meets scientific precision. {camera_angles} captures a breathtaking {miniature_scenes}, featuring {unique_objects} surrounded by mesmerizing {weather_effects}. Intricate {character_actions} unfold among {architectural_elements}, while {environmental_details} create layers of narrative depth. {art_styles} techniques merge seamlessly with {color_palettes}, as {detail_elements} reveal themselves through subtle {scale_transitions}. Sophisticated {lighting_setups} enhance the {texture_combinations}, while {time_effects} add fourth-dimensional complexity. {technological_elements} pulse with life amid {scene_dynamics}, all embraced by a {scene_moods} essence under evolving {atmospheric_conditions}."
+        },
+        "miniature_world": {
+            "description": "ティルトシフトを使用したミニチュアワールド",
+            "japanese_description": "ティルトシフト効果で表現された小人の世界観の生成",
+            "text": "Through a {frame_settings} we observe a miniaturized world captured with a distinctive tilt-shift lens effect, creating a charming diorama-like perspective. The {camera_focus} emphasizes a delightful {miniature_scenes} where tiny {unique_objects} appear to be living their daily lives. The scene is rendered in {art_styles} with selective focus that makes everything appear toy-like and miniature. {lighting_setups} cast gentle shadows across the tiny landscape, while {weather_effects} add depth to this pocket-sized realm. The {scene_dynamics} unfold at a diminutive scale, creating an enchanting {scene_moods} atmosphere where every detail feels like part of a meticulously crafted model world. {architectural_elements} appear as if carefully assembled by skilled miniature artisans, while {environmental_details} contribute to the illusion of a perfectly scaled-down universe."
+        }
+    }
+}
