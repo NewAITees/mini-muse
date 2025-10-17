@@ -71,8 +71,8 @@ def parse_arguments():
     parser.add_argument(
         "--template", "-t",
         type=str,
-        default="abstract_art",
-        help="使用するプロンプトテンプレート名（デフォルト: abstract_art）"
+        default=None,
+        help="使用するプロンプトテンプレート名（指定しない場合は毎回ランダムに選択）"
     )
 
     # テンプレートファイル一覧表示
@@ -227,7 +227,7 @@ def main():
     # 生成設定表示
     print(f"\n[4] 生成設定:")
     print(f"  生成枚数: {args.count}枚")
-    print(f"  テンプレート: {args.template}")
+    print(f"  テンプレート: {args.template if args.template else '毎回ランダム選択'}")
     print(f"  ステップ数: {args.steps}")
     print(f"  CFGスケール: {args.cfg}")
     print(f"  解像度: {args.width}x{args.height}")
@@ -271,7 +271,8 @@ def main():
 
             # 出力パス生成
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = f"{args.template}_{timestamp}_{i+1:04d}.png"
+            template_name = args.template if args.template else "random"
+            filename = f"{template_name}_{timestamp}_{i+1:04d}.png"
             output_path = current_date_dir / filename
 
             # 画像生成開始時刻
@@ -297,7 +298,7 @@ def main():
             # CSVログに記録
             csv_data = {
                 "filename": filename,
-                "template": args.template,
+                "template": template_name,
                 "positive_prompt": prompt,
                 "negative_prompt": args.negative_prompt,
                 "seed": seed if seed is not None else "random",

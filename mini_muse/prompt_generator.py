@@ -301,20 +301,29 @@ class PromptGenerator:
             print(f"エラー: JSONの解析に失敗しました: {e}")
             raise
 
-    def generate_prompt(self, template_name: str = "abstract_art") -> str:
+    def generate_prompt(self, template_name: Optional[str] = None) -> str:
         """
         指定されたテンプレートに基づいてプロンプトを生成します。
 
         Args:
             template_name: 使用するテンプレート名
-                          (abstract_art, detailed_diorama, imaginative_world, miniature_world)
+                          Noneの場合は利用可能なテンプレートからランダムに選択
 
         Returns:
             str: 生成されたプロンプト
 
         Raises:
-            ValueError: 指定されたテンプレートが存在しない場合
+            ValueError: 指定されたテンプレートが存在しない場合、またはテンプレートがない場合
         """
+        # テンプレートがない場合はエラー
+        if not self.templates:
+            raise ValueError("利用可能なテンプレートがありません。")
+
+        # template_nameが指定されていない場合はランダムに選択
+        if template_name is None:
+            template_name = random.choice(list(self.templates.keys()))
+            print(f"テンプレートをランダムに選択: '{template_name}'")
+
         if template_name not in self.templates:
             available = ", ".join(self.templates.keys())
             raise ValueError(
@@ -327,21 +336,54 @@ class PromptGenerator:
 
         # テンプレート内のプレースホルダーを検出
         placeholders = re.findall(r'\{(\w+)\}', template)
-        print(f"検出されたプレースホルダー: {placeholders}")
+        print(f"検出されたプレースホルダー: {set(placeholders)}")
 
-        # 各プレースホルダーをランダムな値で置換
-        filled_template = template
-        for placeholder in placeholders:
-            if placeholder in self.elements:
-                # 要素からランダムに1つ選択
+        # プレースホルダーごとに選択された値を保存する辞書
+        placeholder_values = {}
+
+        # ベース名ごとに既に選択された値を追跡（重複を避けるため）
+        used_values_by_base = {}
+
+        # 各ユニークなプレースホルダーに対して値を選択
+        for placeholder in set(placeholders):
+            # プレースホルダーのベース名を取得 (例: color_1 -> color, texture_2 -> texture)
+            base_name = re.sub(r'_\d+$', '', placeholder)
+
+            # ベース名が要素に存在するか確認
+            if base_name in self.elements:
+                values = self.elements[base_name]["values"]
+
+                # このベース名で既に使用された値を取得
+                if base_name not in used_values_by_base:
+                    used_values_by_base[base_name] = []
+
+                # 未使用の値からランダムに選択
+                available_values = [v for v in values if v not in used_values_by_base[base_name]]
+
+                # すべて使用済みの場合は、全体からランダムに選択
+                if not available_values:
+                    available_values = values
+                    used_values_by_base[base_name] = []  # リセット
+
+                selected_value = random.choice(available_values)
+                used_values_by_base[base_name].append(selected_value)
+                placeholder_values[placeholder] = selected_value
+                print(f"  {placeholder} ({base_name}) -> {selected_value}")
+
+            # プレースホルダー名そのままが要素に存在するか確認
+            elif placeholder in self.elements:
                 values = self.elements[placeholder]["values"]
                 selected_value = random.choice(values)
-                filled_template = filled_template.replace(
-                    f"{{{placeholder}}}", selected_value, 1
-                )
+                placeholder_values[placeholder] = selected_value
                 print(f"  {placeholder} -> {selected_value}")
             else:
-                print(f"警告: 要素 '{placeholder}' が見つかりません。")
+                print(f"警告: 要素 '{placeholder}' (ベース名: '{base_name}') が見つかりません。")
+                placeholder_values[placeholder] = f"[{placeholder}]"
+
+        # すべてのプレースホルダーを置換
+        filled_template = template
+        for placeholder, value in placeholder_values.items():
+            filled_template = filled_template.replace(f"{{{placeholder}}}", value)
 
         print(f"生成されたプロンプト長: {len(filled_template)} 文字")
         return filled_template
@@ -392,20 +434,25 @@ class PromptGenerator:
 
     def generate_multiple_prompts(
         self,
-        template_name: str = "abstract_art",
+        template_name: Optional[str] = None,
         count: int = 5
     ) -> List[str]:
         """
-        同じテンプレートを使用して複数のプロンプトを生成します。
+        複数のプロンプトを生成します。
 
         Args:
             template_name: 使用するテンプレート名
+                          Noneの場合は毎回ランダムにテンプレートを選択
             count: 生成するプロンプトの数
 
         Returns:
             List[str]: 生成されたプロンプトのリスト
         """
-        print(f"{count}個のプロンプトを生成します（テンプレート: {template_name}）")
+        if template_name is None:
+            print(f"{count}個のプロンプトを生成します（テンプレート: 毎回ランダム選択）")
+        else:
+            print(f"{count}個のプロンプトを生成します（テンプレート: {template_name}）")
+
         prompts = []
         for i in range(count):
             prompt = self.generate_prompt(template_name)
