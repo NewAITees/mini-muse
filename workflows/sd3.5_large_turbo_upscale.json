@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 604041042441062,
+      "seed": 774271064212056,
       "steps": 30,
       "cfg": 5.45,
       "sampler_name": "euler",
@@ -31,7 +31,7 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "sd3.5_large_turbo.safetensors"
+      "ckpt_name": "sd3.5_large_fp8_scaled.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -71,7 +71,7 @@
     "inputs": {
       "text": "The painting is a vibrant explosion of colors and textures, where the boundaries between chaos and order seem to blur. At its center lies a swirling mass of deep purples and blues, almost resembling galaxies in motion, while streaks of gold and silver cut through the turbulence like cosmic rays. The edges of these forms are jagged and unpredictable, as if frozen moments of movement.\n\nSurrounding this central vortex are scattered patches of warm oranges, pinks, and reds, which contrast sharply with the cooler tones at the heart of the piece. These hues seem to radiate outward, creating a sense of expansion and growth. Along the edges of the canvas, faint lines and dots suggest a delicate network of connections, almost like a hidden nervous system.\n\nThe texture of the paint is thick in some areas, with visible brushstrokes that add a dynamic quality to the work. In other parts, the layers are thin and ethereal, allowing glimpses of the underpainting beneath. This interplay between opacity and transparency adds depth and complexity to the overall composition.\n\nDespite its abstract nature, the painting evokes a sense of movement and transformation. It feels alive, as though it could shift and evolve if you were to look away for even a moment. The interplay of color, line, and texture creates a visual symphony that challenges the viewer to interpret its meaning in their own way.",
       "clip": [
-        "41",
+        "43",
         0
       ]
     },
@@ -129,7 +129,7 @@
     "inputs": {
       "text": "",
       "clip": [
-        "41",
+        "43",
         0
       ]
     },
