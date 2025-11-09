@@ -2,7 +2,7 @@
 
 このドキュメントは、AI（Claude）が作業を進める際に参照する環境情報をまとめたものです。
 
-**最終更新**: 2025-10-20
+**最終更新**: 2025-11-09
 
 ---
 
@@ -25,26 +25,27 @@
 /home/perso/analysis/mini-muse/
 ├── mini_muse/                    # メインパッケージ
 │   ├── __pycache__/
-│   ├── comfyui_client.py         # ComfyUI APIクライアント (19,344 bytes)
-│   ├── prompt_generator.py       # プロンプト生成器 (17,829 bytes)
-│   └── ollama_prompt.py          # Ollama画像分析モジュール (NEW - Step 2)
-├── prompts/                      # プロンプトテンプレート（15ファイル）
+│   ├── comfyui_client.py         # ComfyUI APIクライアント
+│   ├── prompt_generator.py       # プロンプト生成器
+│   ├── ollama_prompt.py          # Ollama画像分析モジュール
+│   ├── generate_images.py        # バッチ画像生成メインスクリプト
+│   └── batch_video_generation.py # バッチ動画生成スクリプト
+├── prompts/                      # プロンプトテンプレート（23ファイル）
 │   ├── prompt_elements.json      # デフォルト（ミニチュア/ジオラマ）
-│   ├── prompt_templates_抽象画_20250117.json
-│   ├── prompt_templates_抽象画_enhanced_20250117.json
-│   ├── prompt_templates_抽象画_final_20250117.json
-│   ├── prompt_templates_抽象悪夢_20250122.json
-│   ├── prompt_templates_Tシャツデザイン_20250127.json
-│   └── その他のテンプレートファイル...
+│   ├── prompt_templates_*.json   # 各種テンプレートファイル
+│   └── ...
 ├── workflows/                    # ComfyUIワークフロー
-│   └── sd3.5_large_turbo_upscale.json
+│   ├── sd3.5_large_turbo_upscale.json
+│   └── wan22_i2v_workflow.json
 ├── tests/                        # テストスクリプト
 │   ├── test_comfyui_client.py
 │   ├── test_prompt_generator.py
 │   ├── test_integration.py
 │   ├── test_generate.py
 │   ├── test_simple_generate.py
-│   └── test_ollama_prompt.py     # Ollama画像分析テスト (NEW - Step 2)
+│   ├── test_ollama_video_prompt.py
+│   ├── test_placeholder_resolution.py
+│   └── test_video_generation.py
 ├── config/
 │   └── config.yaml               # プロジェクト設定ファイル
 ├── doc/
@@ -59,14 +60,12 @@
 ├── .venv/                        # 仮想環境
 ├── .cache/
 ├── .git/
-├── generate_images.py            # バッチ画像生成メインスクリプト (11,168 bytes)
-├── test_placeholder_resolution.py
 ├── sample.jpg
 ├── loadimage_min.json
 ├── README.md                     # プロジェクトREADME
 ├── pyproject.toml                # uv プロジェクト設定
 ├── uv.lock                       # uv 依存関係ロック
-└── TensorRT/                     # シンボリックリンク？
+└── TensorRT/                     # シンボリックリンク
 ```
 
 ---
@@ -125,7 +124,7 @@
 
 ---
 
-### 3. generate_images.py
+### 3. mini_muse/generate_images.py
 
 **目的**: バッチ画像生成メインスクリプト
 **主要機能**:
@@ -160,14 +159,26 @@ stablediffusion/outputs/
 
 ---
 
-### 4. tests/
+### 4. mini_muse/batch_video_generation.py
+
+**目的**: バッチ動画生成スクリプト
+**主要機能**:
+- 画像から動画への変換処理
+- Ollama連携による動画プロンプト生成
+
+---
+
+### 5. tests/
 
 既存のテストファイル:
-- `test_comfyui_client.py` (11,695 bytes)
-- `test_prompt_generator.py` (15,169 bytes)
-- `test_integration.py` (9,452 bytes)
-- `test_generate.py` (2,218 bytes)
-- `test_simple_generate.py` (8,103 bytes)
+- `test_comfyui_client.py`
+- `test_prompt_generator.py`
+- `test_integration.py`
+- `test_generate.py`
+- `test_simple_generate.py`
+- `test_ollama_video_prompt.py`
+- `test_placeholder_resolution.py`
+- `test_video_generation.py`
 
 **重要**: 既存のテストファイルに追加するのではなく、新規テストは新規ファイルとして作成する
 
@@ -351,17 +362,22 @@ uv run python tests/test_prompt_generator.py
 
 ### 画像生成（1枚）
 ```bash
-uv run python generate_images.py
+uv run python mini_muse/generate_images.py
 ```
 
 ### 画像生成（バッチ）
 ```bash
-uv run python generate_images.py --count 10 --template abstract_art
+uv run python mini_muse/generate_images.py --count 10 --template abstract_art
 ```
 
 ### テンプレートファイル一覧
 ```bash
-uv run python generate_images.py --list-templates
+uv run python mini_muse/generate_images.py --list-templates
+```
+
+### 動画生成（バッチ）
+```bash
+uv run python mini_muse/batch_video_generation.py
 ```
 
 ---

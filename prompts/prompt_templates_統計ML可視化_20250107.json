@@ -1,0 +1,208 @@
+{
+    "elements": {
+        "rendering_styles": {
+            "description": "レンダリングスタイル",
+            "values": [
+                "anime style illustration",
+                "3D CGI rendering",
+                "photorealistic",
+                "hand-drawn illustration",
+                "digital painting",
+                "vector art",
+                "watercolor style",
+                "comic book style",
+                "technical illustration",
+                "infographic style",
+                "pixel art",
+                "low poly 3D",
+                "claymation style",
+                "papercraft style",
+                "neon art style"
+            ]
+        },
+        "lighting": {
+            "description": "ライティング",
+            "values": [
+                "soft studio lighting",
+                "dramatic spotlight",
+                "neon glow lighting",
+                "natural daylight",
+                "rim lighting",
+                "volumetric lighting",
+                "ambient occlusion",
+                "backlit silhouette",
+                "colorful gradient lighting",
+                "cinematic lighting",
+                "fluorescent office lighting",
+                "warm tungsten lighting",
+                "cool LED lighting",
+                "magical glowing light"
+            ]
+        },
+        "atmosphere": {
+            "description": "雰囲気",
+            "values": [
+                "playful and humorous",
+                "whimsical and lighthearted",
+                "educational and clear",
+                "mysterious and intriguing",
+                "retro and nostalgic",
+                "modern and sleek",
+                "chaotic and energetic",
+                "calm and mathematical",
+                "satirical and witty",
+                "surreal and dreamlike"
+            ]
+        },
+        "composition": {
+            "description": "構図",
+            "values": [
+                "central composition",
+                "rule of thirds",
+                "symmetrical layout",
+                "diagonal composition",
+                "split screen composition",
+                "isometric view",
+                "top-down view",
+                "side view cross-section",
+                "circular composition",
+                "grid layout"
+            ]
+        },
+        "color_schemes": {
+            "description": "配色",
+            "values": [
+                "vibrant primary colors",
+                "pastel color palette",
+                "neon cyberpunk colors",
+                "monochromatic blue tones",
+                "warm orange and red tones",
+                "cool blue and purple tones",
+                "retro 80s color scheme",
+                "black and white with accent color",
+                "gradient rainbow spectrum",
+                "muted scientific diagram colors"
+            ]
+        },
+        "background_styles": {
+            "description": "背景スタイル",
+            "values": [
+                "clean white background",
+                "blackboard with chalk diagrams",
+                "grid paper background",
+                "abstract mathematical patterns",
+                "starfield background",
+                "gradient background",
+                "technical blueprint background",
+                "textured paper background",
+                "transparent glass surface",
+                "wooden desk surface"
+            ]
+        },
+        "detail_level": {
+            "description": "詳細度",
+            "values": [
+                "highly detailed",
+                "simplified shapes",
+                "minimalist design",
+                "intricate patterns",
+                "clean line art",
+                "textured surfaces",
+                "smooth gradients",
+                "sharp geometric forms"
+            ]
+        }
+    },
+    "templates": {
+        "multi_armed_bandit": {
+            "description": "多腕バンディット",
+            "japanese_description": "カウボーイハットと目出し帽を被った紫色のタコが、8本の腕で複数のスロットマシンのレバーを同時に引いている静止画。各マシンから出るコインの量が異なり、タコは悩んでいる表情。",
+            "text": "A purple octopus wearing a cowboy hat and bandit mask simultaneously pulls levers of multiple slot machines with its eight tentacles. Each machine displays different coin payouts. The octopus has a thoughtful, calculating expression. Slot machines arranged in an arc around the octopus. {rendering_styles}, {composition}, {color_schemes}. {lighting} illuminates the scene. {atmosphere} mood. {background_styles}. {detail_level}. Scale: medium shot showing octopus and all slot machines. Treatment: humorous educational illustration. Secondary elements: floating coins, payout numbers, probability symbols."
+        },
+        "mcmc": {
+            "description": "MCMC (マルコフ連鎖モンテカルロ)",
+            "japanese_description": "モンテカルロカジノのルーレットテーブルで、金色の鎖でつながれた複数のサイコロがテーブル上に配置されている。ディーラーは「Markov」という名札をつけた紳士。",
+            "text": "A luxurious Monte Carlo casino roulette table with multiple dice connected by golden chains arranged in a path across the green felt surface. An elegant dealer wearing a 'Markov' name tag stands behind the table. Roulette wheel visible in background. {rendering_styles}, {composition}, {color_schemes}. {lighting} creates casino ambiance. {atmosphere} mood. {background_styles}. {detail_level}. Scale: full table view from above. Treatment: sophisticated gambling meets probability theory. Secondary elements: chain links showing state transitions, probability distributions on felt, betting chips."
+        },
+        "random_forest": {
+            "description": "ランダムフォレスト",
+            "japanese_description": "森の中で複数の決定木が会議中。各木の枝分かれ部分に「YES/NO」の看板があり、小動物たちがデータポイントとして木を登っている静止画。",
+            "text": "A forest of decision trees having a conference, with YES/NO signs hanging at each branch junction. Small woodland creatures (squirrels, birds, rabbits) positioned at different branch levels as data points. Each tree has a distinct decision path marked. {rendering_styles}, {composition}, {color_schemes}. {lighting} filters through the canopy. {atmosphere} mood. {background_styles}. {detail_level}. Scale: wide forest view showing multiple trees. Treatment: whimsical nature meets machine learning. Secondary elements: question labels on branches, leaf nodes with predictions, tree voting results."
+        },
+        "neural_network": {
+            "description": "ニューラルネットワーク",
+            "japanese_description": "脳型のナイトクラブで、球体のニューロンキャラクターたちが光るシナプスのワイヤーで接続され、信号を伝達している様子。重みの強いシナプスは太い光のビームで表現。",
+            "text": "A brain-shaped nightclub interior with spherical neuron characters interconnected by glowing synaptic wires. Signals pass between neurons shown as light pulses. Thicker, brighter beams represent stronger weighted connections. Neurons arranged in distinct input, hidden, and output layers. {rendering_styles}, {composition}, {color_schemes}. {lighting} creates neon glow effects. {atmosphere} mood. {background_styles}. {detail_level}. Scale: cross-section view of neural network architecture. Treatment: cyberpunk meets neuroscience. Secondary elements: activation functions as DJ equipment, bias nodes, layer labels."
+        },
+        "gradient_descent": {
+            "description": "勾配降下法",
+            "japanese_description": "損失関数の山の斜面を、「Learning Rate」と書かれたバックパックを背負った登山者がボールに乗って転がり降りている。途中に局所最適解の小さな窪みがある。",
+            "text": "A mountainous loss function landscape with a hiker riding a ball rolling downhill toward the global minimum. The hiker wears a backpack labeled 'Learning Rate'. Small valley traps (local minima) visible along the slope. Arrows indicate gradient direction. {rendering_styles}, {composition}, {color_schemes}. {lighting} emphasizes terrain contours. {atmosphere} mood. {background_styles}. {detail_level}. Scale: wide landscape showing the entire optimization journey. Treatment: adventure illustration meets optimization. Secondary elements: contour lines, gradient arrows, starting point flag, global minimum marker."
+        },
+        "k_means": {
+            "description": "K-meansクラスタリング",
+            "japanese_description": "K人の王様（重心）がそれぞれ異なる色の旗を持ち、周りの小さなデータポイント（臣民）を引き寄せ合っている静止画。臣民たちは最も近い王様に向かって移動中。",
+            "text": "K royal figures (centroids) each holding differently colored flags, surrounded by small subject figures (data points) being attracted to their nearest king. Each king stands at the center of their cluster. Subjects wearing colors matching their assigned king. {rendering_styles}, {composition}, {color_schemes}. {lighting} highlights cluster boundaries. {atmosphere} mood. {background_styles}. {detail_level}. Scale: bird's eye view showing all clusters. Treatment: medieval kingdom meets clustering algorithm. Secondary elements: cluster boundary lines, movement arrows, iteration number."
+        },
+        "pca": {
+            "description": "主成分分析",
+            "japanese_description": "映写技師が3D映画を2Dスクリーンに投影。複雑な多次元データの影が壁に映り、主成分だけが鮮明に表示される。元の3Dデータは透明な箱の中で回転している様子。",
+            "text": "A movie projectionist operating equipment that projects a complex 3D rotating data cloud (inside a transparent box) onto a 2D screen, where only the principal components appear clearly. Shadow of high-dimensional data flattened onto the projection screen. The projectionist points at the screen saying 'These are the principal components!'. {rendering_styles}, {composition}, {color_schemes}. {lighting} creates projection effects. {atmosphere} mood. {background_styles}. {detail_level}. Scale: cinema setup with projector and screen. Treatment: movie theater meets dimensionality reduction. Secondary elements: variance percentages, axis labels, original vs projected data."
+        },
+        "svm": {
+            "description": "サポートベクターマシン",
+            "japanese_description": "赤チームと青チームが綱引き対決。その間に最大マージンの厚い壁を建設中の作業員たち。壁の両側ギリギリにいるサポートベクターが「俺たちが重要だ！」と自慢している。",
+            "text": "Red and blue teams in a tug-of-war match with construction workers building a thick maximum margin wall between them. Support vectors (data points closest to the wall on both sides) wearing hard hats and pointing proudly at themselves. The wall represents the decision boundary. {rendering_styles}, {composition}, {color_schemes}. {lighting} emphasizes the margin width. {atmosphere} mood. {background_styles}. {detail_level}. Scale: side view showing both teams and the wall. Treatment: construction site meets classification. Secondary elements: margin width measurements, hyperplane labels, kernel trick tools."
+        },
+        "bayesian_inference": {
+            "description": "ベイズ推定",
+            "japanese_description": "18世紀の牧師トーマス・ベイズが天秤を持ち、左皿に「事前確率」、右皿に「尤度×証拠」を乗せている。周りに確率分布のグラフが浮かんでいる静止画。",
+            "text": "Reverend Thomas Bayes in 18th century clerical attire holding a large balance scale. The left pan contains a sphere labeled 'Prior Probability', the right pan holds 'Likelihood × Evidence'. Probability distribution curves float in the air around him. The scale tips to show the posterior probability. {rendering_styles}, {composition}, {color_schemes}. {lighting} gives historical painting atmosphere. {atmosphere} mood. {background_styles}. {detail_level}. Scale: portrait showing Bayes and the full scale. Treatment: classical portrait meets probability theory. Secondary elements: Bayes' theorem formula, distribution curves, probability values."
+        },
+        "entropy": {
+            "description": "エントロピー",
+            "japanese_description": "左側に散らかった子供部屋（高エントロピー）、右側に整理整頓された部屋（低エントロピー）を比較。情報理論の悪魔が両方の部屋の間に立ち、メジャーで混沌度を測定している。",
+            "text": "Split-screen composition showing a messy children's room (high entropy) on the left and a perfectly organized room (low entropy) on the right. An information theory demon character stands in the center holding a measuring device labeled 'Chaos Meter'. Entropy values displayed above each room. {rendering_styles}, {composition}, {color_schemes}. {lighting} contrasts both sides. {atmosphere} mood. {background_styles}. {detail_level}. Scale: full room comparison view. Treatment: before/after meets information theory. Secondary elements: entropy formula, disorder indicators, information bits."
+        },
+        "cnn": {
+            "description": "畳み込みニューラルネットワーク",
+            "japanese_description": "探偵が虫眼鏡（畳み込みフィルター）を持って画像の上を移動しながら特徴マップにスタンプを押している。「エッジ発見！」「コーナー発見！」とメモを取る様子。プーリング層ではプレス機で情報を圧縮。",
+            "text": "A detective with a magnifying glass (convolutional filter) scanning across an image, stamping feature maps and taking notes like 'Edge Detected!' and 'Corner Found!'. A compression press machine in the background represents the pooling layer. Multiple filter stages shown as assembly line. {rendering_styles}, {composition}, {color_schemes}. {lighting} highlights detection areas. {atmosphere} mood. {background_styles}. {detail_level}. Scale: overhead view of detection process. Treatment: detective investigation meets computer vision. Secondary elements: filter kernels, feature maps, pooling operations, activation stamps."
+        },
+        "rnn": {
+            "description": "再帰型ニューラルネットワーク",
+            "japanese_description": "メビウスの輪の上を走る情報ランナーが、過去の記憶をバトンとして次のステップに渡している。長期依存性で息切れして「遠い過去は忘れた...」と困っている表情。",
+            "text": "An information runner jogging on a Möbius strip track, passing a memory baton to their future self at each loop. The runner appears progressively more tired, with a speech bubble saying 'I forgot the distant past...'. Multiple instances of the runner at different time steps visible on the loop. {rendering_styles}, {composition}, {color_schemes}. {lighting} creates dimensional depth. {atmosphere} mood. {background_styles}. {detail_level}. Scale: isometric view showing the full Möbius strip. Treatment: impossible geometry meets recurrent networks. Secondary elements: time step markers, hidden state indicators, vanishing gradient visualization."
+        },
+        "ensemble_learning": {
+            "description": "アンサンブル学習",
+            "japanese_description": "オーケストラの指揮者が、決定木・SVM・ニューラルネットの楽団員を指揮。各モデルが異なる楽器で予測を演奏し、最終的に多数決や平均でハーモニーを奏でる。",
+            "text": "An orchestra conductor leading an ensemble of different ML models as musicians: decision trees playing violins, SVMs on trumpets, neural networks at the piano. Each musician produces different prediction notes that combine into a harmonious final prediction. Musical scores show voting and averaging methods. {rendering_styles}, {composition}, {color_schemes}. {lighting} spotlights the conductor and ensemble. {atmosphere} mood. {background_styles}. {detail_level}. Scale: full orchestra view from audience perspective. Treatment: concert hall meets model aggregation. Secondary elements: music stands with prediction scores, voting system notation, ensemble weights."
+        },
+        "overfitting": {
+            "description": "過学習",
+            "japanese_description": "几帳面な完璧主義者が、訓練データの点を全て通るように、めちゃくちゃ曲がりくねった複雑な境界線を定規で引いている。新しいテストデータが現れると「え、こんなの知らない！」とパニック。",
+            "text": "A meticulous perfectionist with ruler and compass drawing an extremely convoluted, curvy decision boundary that passes through every single training data point (shown as dots). A new test data point appears with a shocked expression bubble saying 'I don't know this one!'. Simple underlying pattern visible but ignored. {rendering_styles}, {composition}, {color_schemes}. {lighting} emphasizes the overcomplicated boundary. {atmosphere} mood. {background_styles}. {detail_level}. Scale: close-up view of the fitting process. Treatment: obsessive precision meets generalization failure. Secondary elements: training accuracy 100%, test accuracy low, true pattern outline, complexity indicators."
+        },
+        "regularization": {
+            "description": "正則化",
+            "japanese_description": "複雑なモデルに「複雑さ税」を課す税務署員（L1/L2ノルム）。「シンプルにしないと罰金だぞ！」とペナルティ項を計算機で計算。モデルは渋々シンプルな形に変形している。",
+            "text": "A tax inspector character labeled 'L1/L2 Norm' wielding a calculator and imposing a 'Complexity Tax' on an overly complicated model. The model character reluctantly simplifies its shape to avoid penalties. A penalty term equation floats above. Tax bill shows regularization strength lambda. {rendering_styles}, {composition}, {color_schemes}. {lighting} creates bureaucratic office atmosphere. {atmosphere} mood. {background_styles}. {detail_level}. Scale: medium shot showing inspector and model. Treatment: tax office meets penalty methods. Secondary elements: complexity meter, lambda parameter dial, simplified vs complex comparison, penalty formula."
+        },
+        "cross_validation": {
+            "description": "交差検証",
+            "japanese_description": "データセットを折り紙のように5つに折りたたみ、1つずつテストセットにして検証する職人。「k-分割で完璧にチェック！」と各フォールドにスタンプを押していく様子。",
+            "text": "An origami craftsman folding a dataset into 5 equal sections like accordion folds. Each fold takes turns being the test set, marked with validation stamps. The craftsman checks each fold systematically, stamping them with approval marks. K-fold visualization shows the rotation process. {rendering_styles}, {composition}, {color_schemes}. {lighting} highlights the folding process. {atmosphere} mood. {background_styles}. {detail_level}. Scale: overhead view of folding workspace. Treatment: paper craft meets validation methodology. Secondary elements: fold numbers, train/test indicators, performance scores per fold, average accuracy."
+        },
+        "curse_of_dimensionality": {
+            "description": "次元の呪い",
+            "japanese_description": "100次元の迷宮に迷い込んだデータポイントたち。次元が増えるたびに空間が広がり、「距離の概念が崩壊した！」と叫んでいる。呪いをかけた魔女が「次元増やしすぎ！」と笑っている。",
+            "text": "Lost data points wandering in a 100-dimensional labyrinth with walls extending in impossible directions. As dimensions increase, space expands exponentially shown by growing distance markers. A witch labeled 'Curse of Dimensionality' laughs, pointing at the overwhelmed data points shouting 'Distance metrics collapsed!'. Dimension counter increasing from 2D to 100D. {rendering_styles}, {composition}, {color_schemes}. {lighting} creates mysterious maze atmosphere. {atmosphere} mood. {background_styles}. {detail_level}. Scale: wide view showing expanding dimensional space. Treatment: fantasy maze meets high-dimensional geometry. Secondary elements: dimension counter, distance measurements, sparse data warning, exponential space growth visualization."
+        },
+        "tsne": {
+            "description": "t-SNE",
+            "japanese_description": "高次元の雲の中にいたデータポイントたちが、次元削減マシン（t-SNE）のプレス機で2D平面に圧縮される。似たもの同士が自然にクラスター（島）を形成して「仲間発見！」と喜んでいる。",
+            "text": "Data points floating in a high-dimensional cloud being pressed down through a t-SNE compression machine onto a 2D plane. Similar points naturally form island clusters on the flat surface. Data points within the same cluster celebrate saying 'Found my friends!'. Dimensionality reduction funnel visible. {rendering_styles}, {composition}, {color_schemes}. {lighting} shows the compression process. {atmosphere} mood. {background_styles}. {detail_level}. Scale: side view showing 3D to 2D transformation. Treatment: industrial press meets manifold learning. Secondary elements: perplexity parameter dial, cluster islands, distance preservation indicators, iteration counter."
+        }
+    }
+}
