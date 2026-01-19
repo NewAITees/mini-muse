@@ -225,10 +225,10 @@ import json
 import random
 import re
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Optional
 
 
-def list_available_template_files() -> List[str]:
+def list_available_template_files() -> list[str]:
     """
     promptsフォルダ内の利用可能なテンプレートファイルを一覧表示します。
 
@@ -270,16 +270,16 @@ class PromptGenerator:
         else:
             # ファイル名のみの場合はpromptsフォルダから検索
             elements_path = Path(elements_file)
-            if not elements_path.is_absolute() and elements_path.parent == Path('.'):
+            if not elements_path.is_absolute() and elements_path.parent == Path("."):
                 project_root = Path(__file__).parent.parent
                 elements_file = project_root / "prompts" / elements_file
 
         self.elements_file = Path(elements_file)
-        self.elements: Dict = {}
-        self.templates: Dict = {}
+        self.elements: dict = {}
+        self.templates: dict = {}
 
         self._load_elements()
-        print(f"PromptGeneratorの初期化が完了しました。")
+        print("PromptGeneratorの初期化が完了しました。")
         print(f"読み込んだファイル: {self.elements_file.name}")
         print(f"要素カテゴリ数: {len(self.elements)}")
         print(f"テンプレート数: {len(self.templates)}")
@@ -287,7 +287,7 @@ class PromptGenerator:
     def _load_elements(self):
         """JSONファイルから要素とテンプレートを読み込みます。"""
         try:
-            with open(self.elements_file, 'r', encoding='utf-8') as f:
+            with open(self.elements_file, encoding="utf-8") as f:
                 data = json.load(f)
 
             self.elements = data.get("elements", {})
@@ -335,7 +335,7 @@ class PromptGenerator:
         print(f"テンプレート '{template_name}' を使用してプロンプトを生成します。")
 
         # テンプレート内のプレースホルダーを検出
-        placeholders = re.findall(r'\{(\w+)\}', template)
+        placeholders = re.findall(r"\{(\w+)\}", template)
         print(f"検出されたプレースホルダー: {set(placeholders)}")
 
         # プレースホルダーごとに選択された値を保存する辞書
@@ -347,7 +347,7 @@ class PromptGenerator:
         # 各ユニークなプレースホルダーに対して値を選択
         for placeholder in set(placeholders):
             # プレースホルダーのベース名を取得 (例: color_1 -> color, texture_2 -> texture)
-            base_name = re.sub(r'_\d+$', '', placeholder)
+            base_name = re.sub(r"_\d+$", "", placeholder)
 
             # ベース名が要素に存在するか確認
             if base_name in self.elements:
@@ -388,7 +388,7 @@ class PromptGenerator:
         print(f"生成されたプロンプト長: {len(filled_template)} 文字")
         return filled_template
 
-    def get_available_templates(self) -> List[str]:
+    def get_available_templates(self) -> list[str]:
         """
         利用可能なテンプレート名のリストを取得します。
 
@@ -397,7 +397,7 @@ class PromptGenerator:
         """
         return list(self.templates.keys())
 
-    def get_template_info(self, template_name: str) -> Optional[Dict]:
+    def get_template_info(self, template_name: str) -> Optional[dict]:
         """
         指定されたテンプレートの情報を取得します。
 
@@ -409,7 +409,7 @@ class PromptGenerator:
         """
         return self.templates.get(template_name)
 
-    def get_available_elements(self) -> List[str]:
+    def get_available_elements(self) -> list[str]:
         """
         利用可能な要素カテゴリ名のリストを取得します。
 
@@ -418,7 +418,7 @@ class PromptGenerator:
         """
         return list(self.elements.keys())
 
-    def get_element_values(self, element_name: str) -> Optional[List[str]]:
+    def get_element_values(self, element_name: str) -> Optional[list[str]]:
         """
         指定された要素カテゴリの値リストを取得します。
 
@@ -433,10 +433,8 @@ class PromptGenerator:
         return None
 
     def generate_multiple_prompts(
-        self,
-        template_name: Optional[str] = None,
-        count: int = 5
-    ) -> List[str]:
+        self, template_name: Optional[str] = None, count: int = 5
+    ) -> list[str]:
         """
         複数のプロンプトを生成します。
 
@@ -480,7 +478,7 @@ class LegacyPromptGenerator:
         # 旧実装のコードは省略（data_store が利用できないため）
         pass
 
-    def generate_prompt(self, tag_names: List[str]) -> Optional[str]:
+    def generate_prompt(self, tag_names: list[str]) -> Optional[str]:
         """
         指定された複数のタグに基づいてプロンプトを生成します（旧形式）。
 

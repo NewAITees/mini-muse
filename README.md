@@ -74,7 +74,7 @@ uv pip install requests websocket-client
 
 ### 1. ComfyUIの起動
 
-ComfyUIサーバーを起動してください（デフォルト: http://127.0.0.1:8000）
+ComfyUIサーバーを起動してください（デフォルト: http://127.0.0.1:15434）
 
 ### 2. 画像生成
 
@@ -161,7 +161,7 @@ uv run python generate_images.py \
   --count 10 \
   --template-file "prompts/prompt_templates_抽象画_20250117.json" \
   --template abstract_composition \
-  --server 127.0.0.1:8000 \
+  --server 127.0.0.1:15434 \
   --workflow workflows/sd3.5_large_turbo_upscale.json \
   --steps 30 \
   --cfg 5.45 \
@@ -170,6 +170,31 @@ uv run python generate_images.py \
   --seed 42 \
   --output-dir stablediffusion/outputs \
   --negative-prompt "blurry, low quality, distorted"
+```
+
+#### 追加オプション
+
+- `--auto-server-port`: ComfyUIサーバーのポート番号を自動で5桁の空きポートから割り当てます。`--server` で指定したホスト部分を維持し、ポートのみを置き換えます。
+- `--port-registry-file`: 自動割り当てしたポートを `<host>:<port>` 形式で書き出す先を指定します（デフォルト: `config/auto_server_port.txt`）。
+- `--server-wait-seconds`: 自動ポート割り当て後、サーバーが起動するのを待機する最大秒数。ComfyUI起動スクリプトと連携させる際に利用します。
+- `--auto-server-port-only`: ポート割り当てとレジストリへの書き込みだけを行い、その場で終了します。事前にポートを確保したいときに使用します。
+- `--use-port-registry`: レジストリファイルから `host:port` を読み取り、`--server` の値を上書きします。ComfyUI側と共有したポート設定を使いまわす用途向けです。
+
+出力ディレクトリは常に `--output-dir`/`<日付(YYYYMMDD)>` という構造になります。すでに日付を含むパスを渡した場合は追加のサブフォルダは作られません。
+
+**ポート事前割り当てフロー例**
+
+```bash
+# 1. ポートを確保してファイルに書き出す（このコマンドは画像生成を行いません）
+uv run python mini_muse/generate_images.py --server 127.0.0.1 \
+  --auto-server-port --auto-server-port-only
+
+# 2. ComfyUI起動スクリプト側で config/auto_server_port.txt を読み取り、同じポートで起動
+
+# 3. 画像生成時にレジストリからポートを読み取って実行
+PYTHONPATH=/home/perso/analysis/mini-muse \
+  uv run python mini_muse/generate_images.py --use-port-registry \
+  --count 100 --template-file prompts/prompt_templates_枠の中の絵_20250205.json
 ```
 
 ### 3. ヘルプ表示
@@ -310,7 +335,7 @@ uv run python your_script.py
 from mini_muse.comfyui_client import ComfyUIClient
 
 # クライアント初期化
-client = ComfyUIClient("127.0.0.1:8000")
+client = ComfyUIClient("127.0.0.1:15434")
 
 # ワークフロー読み込み
 workflow = client.load_workflow("workflows/sd3.5_large_turbo_upscale.json")
@@ -339,7 +364,7 @@ paths:
   outputs: ./stablediffusion/outputs
 
 comfyui:
-  base_url: http://127.0.0.1:8188
+  base_url: http://127.0.0.1:15434
 
 default_params:
   steps: 30
@@ -374,8 +399,8 @@ default_params:
 
 ```bash
 # ComfyUIのポートを確認
-# デフォルトは8188ですが、8000で動作している場合もあります
-python generate_images.py --server 127.0.0.1:8000
+# デフォルトは15434です
+uv run python mini_muse/generate_images.py --server 127.0.0.1:15434
 ```
 
 ### タイムアウトエラー

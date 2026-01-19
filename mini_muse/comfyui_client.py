@@ -17,7 +17,7 @@ ComfyUIClientは、ComfyUI サーバーとHTTP/WebSocket通信を行い、
 
 1. **ComfyUIサーバーの起動**
    ComfyUIサーバーが起動している必要があります。
-   デフォルトでは `127.0.0.1:8188` で起動します。
+   デフォルトでは `127.0.0.1:15434` で起動します。
 
 2. **必要なPythonパッケージ**
    ```bash
@@ -35,11 +35,11 @@ from mini_muse.comfyui_client import ComfyUIClient
 ### 2. クライアントの初期化
 
 ```python
-# デフォルト（127.0.0.1:8188）に接続
+# デフォルト（127.0.0.1:15434）に接続
 client = ComfyUIClient()
 
 # カスタムアドレスに接続
-client = ComfyUIClient("192.168.1.100:8188")
+client = ComfyUIClient("192.168.1.100:15434")
 ```
 
 ### 3. ワークフローの読み込み
@@ -318,7 +318,7 @@ except Exception as e:
 ### Q: 接続エラーが発生する
 A: 以下を確認してください：
    1. ComfyUIサーバーが起動しているか
-   2. サーバーアドレスが正しいか（デフォルト: 127.0.0.1:8188）
+   2. サーバーアドレスが正しいか（デフォルト: 127.0.0.1:15434）
    3. ファイアウォールで通信がブロックされていないか
 
 ### Q: 画像が生成されない
@@ -342,32 +342,32 @@ A: 以下のパラメータを調整してください：
 ================================================================================
 """
 
+import copy
 import json
 import random
 import time
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Optional
 
 import requests
-import websocket
 
 
 class ComfyUIClient:
     """ComfyUI APIクライアント"""
 
-    def __init__(self, server_address: str = "127.0.0.1:8188"):
+    def __init__(self, server_address: str = "127.0.0.1:15434"):
         """
         ComfyUIクライアントを初期化します。
 
         Args:
-            server_address: ComfyUIサーバーのアドレス（デフォルト: 127.0.0.1:8188）
+            server_address: ComfyUIサーバーのアドレス（デフォルト: 127.0.0.1:15434）
         """
         self.server_address = server_address
         self.base_url = f"http://{server_address}"
         self.ws_url = f"ws://{server_address}/ws"
         print(f"ComfyUIクライアント初期化: {self.base_url}")
 
-    def load_workflow(self, workflow_path: str) -> Dict[str, Any]:
+    def load_workflow(self, workflow_path: str) -> dict[str, Any]:
         """
         ワークフローJSONファイルを読み込みます。
 
@@ -385,13 +385,13 @@ class ComfyUIClient:
         if not workflow_path.exists():
             raise FileNotFoundError(f"ワークフローファイルが見つかりません: {workflow_path}")
 
-        with open(workflow_path, "r", encoding="utf-8") as f:
+        with open(workflow_path, encoding="utf-8") as f:
             workflow = json.load(f)
 
         print(f"ワークフローを読み込みました: {workflow_path}")
         return workflow
 
-    def queue_prompt(self, workflow: Dict[str, Any]) -> str:
+    def queue_prompt(self, workflow: dict[str, Any]) -> str:
         """
         プロンプトをキューに追加して実行を開始します。
 
@@ -409,7 +409,7 @@ class ComfyUIClient:
         response.raise_for_status()
         return response.json()["prompt_id"]
 
-    def get_history(self, prompt_id: str) -> Dict[str, Any]:
+    def get_history(self, prompt_id: str) -> dict[str, Any]:
         """
         実行履歴を取得します。
 
@@ -423,9 +423,7 @@ class ComfyUIClient:
         response.raise_for_status()
         return response.json()
 
-    def get_image(
-        self, filename: str, subfolder: str = "", folder_type: str = "output"
-    ) -> bytes:
+    def get_image(self, filename: str, subfolder: str = "", folder_type: str = "output") -> bytes:
         """
         生成された画像を取得します。
 
@@ -442,9 +440,7 @@ class ComfyUIClient:
         response.raise_for_status()
         return response.content
 
-    def wait_for_completion(
-        self, prompt_id: str, timeout: int = 300
-    ) -> Dict[str, Any]:
+    def wait_for_completion(self, prompt_id: str, timeout: int = 300) -> dict[str, Any]:
         """
         実行完了を待機します（ポーリング方式）。
 
@@ -464,13 +460,11 @@ class ComfyUIClient:
             if prompt_id in history:
                 return history[prompt_id]
             time.sleep(1)
-        raise TimeoutError(
-            f"プロンプト {prompt_id} が {timeout} 秒以内に完了しませんでした"
-        )
+        raise TimeoutError(f"プロンプト {prompt_id} が {timeout} 秒以内に完了しませんでした")
 
     def update_prompt(
         self,
-        workflow: Dict[str, Any],
+        workflow: dict[str, Any],
         positive_prompt: str,
         negative_prompt: str = "",
         seed: Optional[int] = None,
@@ -478,7 +472,7 @@ class ComfyUIClient:
         cfg: float = 5.45,
         width: int = 1024,
         height: int = 1024,
-    ) -> Dict[str, Any]:
+    ) -> dict[str, Any]:
         """
         ワークフローのパラメータを更新します（API形式のワークフロー用）。
 
@@ -518,7 +512,7 @@ class ComfyUIClient:
 
     def generate_image(
         self,
-        workflow: Dict[str, Any],
+        workflow: dict[str, Any],
         positive_prompt: str,
         negative_prompt: str = "",
         seed: Optional[int] = None,
@@ -550,7 +544,7 @@ class ComfyUIClient:
         """
         # ワークフローを更新
         updated_workflow = self.update_prompt(
-            workflow.copy(),
+            copy.deepcopy(workflow),
             positive_prompt,
             negative_prompt,
             seed,
@@ -595,7 +589,7 @@ class ComfyUIClient:
 # 使用例
 if __name__ == "__main__":
     # クライアント初期化
-    client = ComfyUIClient("127.0.0.1:8188")
+    client = ComfyUIClient("127.0.0.1:15434")
 
     # ワークフローを読み込み
     workflow = client.load_workflow("workflows/sd3.5_large_turbo_upscale.json")

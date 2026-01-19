@@ -181,19 +181,20 @@ A: 以下を試してください：
 """
 
 from __future__ import annotations
-import io
+
 import base64
-import json
+import io
 from pathlib import Path
-from typing import Optional
+
 import requests
 from PIL import Image
 
 DEFAULT_ANALYSIS_PROMPT = (
     "Analyze this image and output a single concise prompt for a 5-second video animation. "
-    "Format strictly: \"[subject], [motion], [camera movement], [atmosphere]\". "
+    'Format strictly: "[subject], [motion], [camera movement], [atmosphere]". '
     "No extra words."
 )
+
 
 def _load_and_resize_to_base64(image_path: str | Path, short_side: int = 768) -> str:
     """
@@ -227,12 +228,13 @@ def _load_and_resize_to_base64(image_path: str | Path, short_side: int = 768) ->
         im.save(buf, format="JPEG", quality=90, optimize=True)
     return base64.b64encode(buf.getvalue()).decode("utf-8")
 
+
 def analyze_image_with_ollama(
     image_path: str | Path,
     *,
     model: str = "llava",
     host: str = "http://localhost:11434",
-    prompt: Optional[str] = None,
+    prompt: str | None = None,
     timeout: int = 120,
 ) -> str:
     """

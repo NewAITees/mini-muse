@@ -21,7 +21,7 @@ ComfyUI APIを使用して、以下の処理を自動化します：
 
 1. **ComfyUIサーバーの起動**
    ComfyUIサーバーが起動している必要があります。
-   デフォルトでは `http://127.0.0.1:8188` で起動します。
+   デフォルトでは `http://127.0.0.1:15434` で起動します。
 
 2. **ワークフローJSON**
    ComfyUIでエクスポートしたワークフローJSONに、以下のプレースホルダを配置：
@@ -148,7 +148,7 @@ print(f"保存完了: {outputs}")
 
 **引数:**
 - `image_path` (str | Path): 画像ファイルパス
-- `host` (str): ComfyUIサーバーURL（デフォルト: http://127.0.0.1:8188）
+- `host` (str): ComfyUIサーバーURL（デフォルト: http://127.0.0.1:15434）
 
 **戻り値:**
 - `str`: アップロードされたファイル名
@@ -223,7 +223,7 @@ print(f"保存完了: {outputs}")
 - `image_path` (str | Path): 入力画像パス
 - `prompt_text` (str): プロンプトテキスト
 - `workflow_path` (str | Path): ワークフローJSONパス
-- `host` (str): ComfyUIサーバーURL（デフォルト: http://127.0.0.1:8188）
+- `host` (str): ComfyUIサーバーURL（デフォルト: http://127.0.0.1:15434）
 - `out_dir` (str | Path): 出力ディレクトリ（デフォルト: output）
 - `timeout_s` (int): タイムアウト時間（秒）（デフォルト: 600）
 
@@ -304,13 +304,16 @@ A: 以下を確認してください：
 """
 
 from __future__ import annotations
+
 import json
 import time
 from pathlib import Path
-from typing import Dict, Any, List, Tuple
+from typing import Any
+
 import requests
 
-COMFY_HOST = "http://127.0.0.1:8000"
+COMFY_HOST = "http://127.0.0.1:15434"
+
 
 # -------- 1) 画像アップロード --------
 def upload_image_to_comfyui(image_path: str | Path, *, host: str = COMFY_HOST) -> str:
@@ -319,7 +322,7 @@ def upload_image_to_comfyui(image_path: str | Path, *, host: str = COMFY_HOST) -
 
     Args:
         image_path: 画像ファイルパス
-        host: ComfyUIサーバーURL（デフォルト: http://127.0.0.1:8188）
+        host: ComfyUIサーバーURL（デフォルト: http://127.0.0.1:15434）
 
     Returns:
         str: アップロードされたファイル名
@@ -347,8 +350,9 @@ def upload_image_to_comfyui(image_path: str | Path, *, host: str = COMFY_HOST) -
     # ComfyUI/input/{p.name} に配置される。ワークフローの LoadImage.inputs.image にはこのファイル名を指定する。
     return p.name  # ファイル名のみ返す
 
+
 # -------- 2) ワークフロー JSON 差し替え（プレースホルダ方式）--------
-def load_workflow(path: str | Path) -> Dict[str, Any]:
+def load_workflow(path: str | Path) -> dict[str, Any]:
     """
     ワークフローJSONファイルを読み込みます。
 
@@ -367,7 +371,10 @@ def load_workflow(path: str | Path) -> Dict[str, Any]:
     """
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
-def replace_placeholders(workflow: Dict[str, Any], image_filename: str, prompt_text: str) -> Dict[str, Any]:
+
+def replace_placeholders(
+    workflow: dict[str, Any], image_filename: str, prompt_text: str
+) -> dict[str, Any]:
     """
     ワークフロー内のプレースホルダを実際の値に置換します。
 
@@ -387,6 +394,7 @@ def replace_placeholders(workflow: Dict[str, Any], image_filename: str, prompt_t
         >>> wf = load_workflow("workflow.json")
         >>> wf = replace_placeholders(wf, "sample.jpg", "A dragon flying")
     """
+
     # ComfyUI ワークフローは { "nodes": { "id": {...} } } 形式だったり配列だったり差があるため包括的に処理
     def _patch(obj: Any) -> Any:
         if isinstance(obj, dict):
@@ -402,10 +410,12 @@ def replace_placeholders(workflow: Dict[str, Any], image_filename: str, prompt_t
             return s
         else:
             return obj
+
     return _patch(workflow)
 
+
 # -------- 3) ワークフロー投入 --------
-def submit_workflow(workflow: Dict[str, Any], *, host: str = COMFY_HOST) -> str:
+def submit_workflow(workflow: dict[str, Any], *, host: str = COMFY_HOST) -> str:
     """
     ワークフローをComfyUIに投入します。
 
@@ -433,8 +443,11 @@ def submit_workflow(workflow: Dict[str, Any], *, host: str = COMFY_HOST) -> str:
         raise RuntimeError(f"prompt_id not found in response: {data}")
     return pid
 
+
 # -------- 4) 完了待機（/history/{pid} を優先、無ければ /history で全件から抽出）--------
-def wait_for_history(prompt_id: str, *, host: str = COMFY_HOST, timeout_s: int = 600, poll_s: float = 1.5) -> Dict[str, Any]:
+def wait_for_history(
+    prompt_id: str, *, host: str = COMFY_HOST, timeout_s: int = 600, poll_s: float = 1.5
+) -> dict[str, Any]:
     """
     実行完了を待機します（履歴ポーリング）。
 
@@ -480,8 +493,9 @@ def wait_for_history(prompt_id: str, *, host: str = COMFY_HOST, timeout_s: int =
             raise TimeoutError(f"history not ready within {timeout_s}s (prompt_id={prompt_id})")
         time.sleep(poll_s)
 
+
 # -------- 5) 出力ファイルのダウンロード --------
-def _collect_output_files_from_history(history_entry: Dict[str, Any]) -> List[Tuple[str, str]]:
+def _collect_output_files_from_history(history_entry: dict[str, Any]) -> list[tuple[str, str]]:
     """
     履歴エントリから出力ファイル情報を収集します。
 
@@ -491,7 +505,7 @@ def _collect_output_files_from_history(history_entry: Dict[str, Any]) -> List[Tu
     Returns:
         List[Tuple[str, str]]: (filename, type) のタプルリスト
     """
-    files: List[Tuple[str, str]] = []
+    files: list[tuple[str, str]] = []
     outputs = history_entry.get("outputs") or {}
     # outputs は { node_id: { "images": [{filename, type, subfolder, ...}], "gifs": ..., "videos": ... } }
     for _nid, node_out in outputs.items():
@@ -504,7 +518,8 @@ def _collect_output_files_from_history(history_entry: Dict[str, Any]) -> List[Tu
                         files.append((fn, tp))
     return files
 
-def download_outputs(prompt_id: str, save_dir: str | Path, *, host: str = COMFY_HOST) -> List[Path]:
+
+def download_outputs(prompt_id: str, save_dir: str | Path, *, host: str = COMFY_HOST) -> list[Path]:
     """
     生成された出力ファイルをダウンロードします。
 
@@ -539,7 +554,7 @@ def download_outputs(prompt_id: str, save_dir: str | Path, *, host: str = COMFY_
         raise RuntimeError(f"failed to fetch history: {e}")
 
     files = _collect_output_files_from_history(hist)
-    saved: List[Path] = []
+    saved: list[Path] = []
     for fn, tp in files:
         # /view?filename=XXX&type=output で取得可能
         params = {"filename": fn, "type": tp}
@@ -550,6 +565,7 @@ def download_outputs(prompt_id: str, save_dir: str | Path, *, host: str = COMFY_
         saved.append(out_path)
     return saved
 
+
 # -------- まとめ：ワンショット実行 --------
 def run_comfy_pipeline(
     image_path: str | Path,
@@ -559,7 +575,7 @@ def run_comfy_pipeline(
     host: str = COMFY_HOST,
     out_dir: str | Path = "output",
     timeout_s: int = 600,
-) -> List[Path]:
+) -> list[Path]:
     """
     画像→動画生成の完全自動化パイプライン。
 
@@ -574,7 +590,7 @@ def run_comfy_pipeline(
         image_path: 入力画像パス
         prompt_text: プロンプトテキスト
         workflow_path: ワークフローJSONパス
-        host: ComfyUIサーバーURL（デフォルト: http://127.0.0.1:8188）
+        host: ComfyUIサーバーURL（デフォルト: http://127.0.0.1:15434）
         out_dir: 出力ディレクトリ（デフォルト: output）
         timeout_s: タイムアウト時間（秒）（デフォルト: 600）
 

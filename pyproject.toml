@@ -1,0 +1,79 @@
+[project]
+name = "mini-muse"
+version = "0.1.0"
+description = "ComfyUIベースの画像生成システム"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+    "websocket-client>=1.6.0",
+    "pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=3.5.0",
+    "ruff>=0.8.0",
+    "mypy>=1.13.0",
+    "types-requests>=2.31.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mini_muse"]
+
+[tool.ruff]
+# Python 3.9+ をサポート
+target-version = "py39"
+
+# 行の長さ
+line-length = 100
+
+# 除外するディレクトリ
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    ".pytest_cache",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+# 有効化するルールセット
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+]
+
+# 無視するルール
+ignore = [
+    "E501",  # line too long (ruff-formatに任せる)
+    "B904",  # raise ... from err (既存コードとの互換性のため一時的に無視)
+]
+
+[tool.ruff.lint.per-file-ignores]
+# テストファイルでは一部のルールを無視
+"tests/**/*.py" = ["N802", "N803"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+no_strict_optional = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_errors = true

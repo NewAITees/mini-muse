@@ -12,7 +12,7 @@
 5. 処理済み画像を video_processed/ に移動
 
 フォルダ構成:
-    D:\python\stablediffusion\
+    D:\\python\\stablediffusion\
     ├── video_input/          # 入力画像フォルダ
     ├── video_output/         # 動画出力フォルダ
     └── video_processed/      # 処理済み画像フォルダ
@@ -25,17 +25,17 @@
 """
 
 import os
-import sys
 import shutil
+import sys
 import time
-from pathlib import Path
 from datetime import datetime
-from typing import List, Dict, Any
+from pathlib import Path
+from typing import Any
 
 # モジュールインポート
 try:
-    from mini_muse.ollama_video_prompt import analyze_image_with_ollama
     from mini_muse.comfy_video_generator import run_comfy_pipeline
+    from mini_muse.ollama_video_prompt import analyze_image_with_ollama
 except ImportError as e:
     print(f"エラー: モジュールのインポートに失敗しました: {e}")
     print("\n実行方法:")
@@ -83,7 +83,7 @@ def setup_directories() -> bool:
         return False
 
 
-def get_input_images() -> List[Path]:
+def get_input_images() -> list[Path]:
     """
     入力ディレクトリから画像ファイルを取得します。
 
@@ -112,7 +112,7 @@ def copy_video_from_comfy_to_output(video_filename: str, dest_dir: Path) -> Path
         Path: コピー先のファイルパス
 
     Note:
-        ComfyUIの出力ディレクトリは D:\python\stablediffusion\output\comfy\video\ です
+        ComfyUIの出力ディレクトリは D:\\python\\stablediffusion\\output\\comfy\video\\ です
     """
     # ComfyUIの出力ディレクトリ（Windowsパス）
     comfy_output = Path("/mnt/d/python/stablediffusion/output/comfy/video")
@@ -128,11 +128,7 @@ def copy_video_from_comfy_to_output(video_filename: str, dest_dir: Path) -> Path
     return dest_file
 
 
-def process_single_image(
-    image_path: Path,
-    index: int,
-    total: int
-) -> Dict[str, Any]:
+def process_single_image(image_path: Path, index: int, total: int) -> dict[str, Any]:
     """
     単一画像を処理して動画を生成します。
 
@@ -156,7 +152,7 @@ def process_single_image(
         "prompt": None,
         "video_path": None,
         "error": None,
-        "duration": 0.0
+        "duration": 0.0,
     }
 
     start_time = time.time()
@@ -169,13 +165,10 @@ def process_single_image(
         # Step 1: プロンプト生成
         print("\n[Step 1] Ollamaでプロンプト生成中...")
         prompt = analyze_image_with_ollama(
-            image_path,
-            model=OLLAMA_MODEL,
-            host=OLLAMA_HOST,
-            timeout=60
+            image_path, model=OLLAMA_MODEL, host=OLLAMA_HOST, timeout=60
         )
         result["prompt"] = prompt
-        print(f"✓ プロンプト生成成功")
+        print("✓ プロンプト生成成功")
         print(f"  プロンプト: {prompt}")
 
         # Step 2: 動画生成
@@ -185,13 +178,13 @@ def process_single_image(
         # 一時的な出力ディレクトリ
         temp_output = Path("output/batch_temp")
 
-        output_files = run_comfy_pipeline(
+        run_comfy_pipeline(
             image_path=image_path,
             prompt_text=prompt,
             workflow_path=WORKFLOW_PATH,
             host=COMFY_HOST,
             out_dir=temp_output,
-            timeout_s=COMFY_TIMEOUT
+            timeout_s=COMFY_TIMEOUT,
         )
 
         # 動画ファイルをComfyUIの出力ディレクトリからコピー
@@ -200,7 +193,9 @@ def process_single_image(
 
         # 最新の動画ファイル名を取得（通常は ComfyUI_XXXXX_.mp4）
         comfy_output = Path("/mnt/d/python/stablediffusion/output/comfy/video")
-        video_files = sorted(comfy_output.glob("*.mp4"), key=lambda p: p.stat().st_mtime, reverse=True)
+        video_files = sorted(
+            comfy_output.glob("*.mp4"), key=lambda p: p.stat().st_mtime, reverse=True
+        )
 
         if video_files:
             latest_video = video_files[0]
@@ -239,9 +234,9 @@ def process_single_image(
 
 def main():
     """メイン処理"""
-    print("="*70)
+    print("=" * 70)
     print("バッチ動画生成スクリプト")
-    print("="*70)
+    print("=" * 70)
 
     # ディレクトリ設定
     if not setup_directories():
@@ -298,9 +293,9 @@ def main():
     # 結果サマリー
     total_duration = time.time() - total_start_time
 
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("処理完了")
-    print("="*70)
+    print("=" * 70)
     print(f"総処理時間: {total_duration:.1f}秒 ({total_duration/60:.1f}分)")
     print(f"成功: {success_count}枚")
     print(f"失敗: {failed_count}枚")
@@ -311,14 +306,14 @@ def main():
 
     # 成功した処理の詳細
     if success_count > 0:
-        print(f"\n[成功した処理]")
+        print("\n[成功した処理]")
         for r in results:
             if r["success"]:
                 print(f"  ✓ {r['image_path'].name} → {r['video_path'].name}")
 
     # 失敗した処理の詳細
     if failed_count > 0:
-        print(f"\n[失敗した処理]")
+        print("\n[失敗した処理]")
         for r in results:
             if not r["success"]:
                 print(f"  ✗ {r['image_path'].name}: {r['error']}")
@@ -326,7 +321,7 @@ def main():
     print("\n出力ディレクトリ:")
     print(f"  動画: {OUTPUT_DIR}")
     print(f"  処理済み画像: {PROCESSED_DIR}")
-    print("="*70)
+    print("=" * 70)
 
     return 0 if failed_count == 0 else 1
 

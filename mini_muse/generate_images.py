@@ -29,13 +29,111 @@ ComfyUI 画像バッチ生成スクリプト
 
 import argparse
 import csv
+import random
+import socket
 import sys
 import time
 from datetime import datetime
 from pathlib import Path
+from typing import Optional
 
 from mini_muse.comfyui_client import ComfyUIClient
 from mini_muse.prompt_generator import PromptGenerator, list_available_template_files
+
+
+def parse_server_address(server: str) -> tuple[str, Optional[int]]:
+    """host:port 形式の文字列を分解し、ポート未指定の場合は None を返す"""
+    if ":" not in server:
+        return server, None
+
+    host, port_str = server.rsplit(":", 1)
+    if port_str.isdigit():
+        return host, int(port_str)
+    return server, None
+
+
+def is_port_in_use(host: str, port: int, timeout: float = 0.25) -> bool:
+    """指定ポートに接続できれば使用中とみなす"""
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.settimeout(timeout)
+        return sock.connect_ex((host, port)) == 0
+
+
+def find_available_port(
+    host: str, min_port: int = 10000, max_port: int = 65535, max_attempts: int = 50
+) -> int:
+    """空いている5桁ポートを探索"""
+    attempts = 0
+    while attempts < max_attempts:
+        port = random.randint(min_port, max_port)
+        attempts += 1
+        if not is_port_in_use(host, port):
+            return port
+    raise RuntimeError(
+        "空きポートを見つけられませんでした。max_attempts を増やすか範囲を見直してください。"
+    )
+
+
+def write_port_registry(registry_path: Path, host: str, port: int) -> None:
+    """自動決定したポート番号をファイルに書き出す"""
+    registry_path.parent.mkdir(parents=True, exist_ok=True)
+    registry_path.write_text(f"{host}:{port}\n", encoding="utf-8")
+
+
+def read_port_registry(registry_path: Path, fallback_host: Optional[str] = None) -> tuple[str, int]:
+    """ポートレジストリファイルから host:port を読み取る"""
+
+    if not registry_path.exists():
+        raise FileNotFoundError(f"ポートレジストリが見つかりません: {registry_path}")
+
+    content = registry_path.read_text(encoding="utf-8").strip()
+    if not content:
+        raise ValueError(f"ポートレジストリが空です: {registry_path}")
+
+    if ":" in content:
+        host, port = parse_server_address(content)
+        if port is None:
+            raise ValueError(
+                f"レジストリの形式が不正です (host:port を指定してください): {content}"
+            )
+        return host, port
+
+    if not content.isdigit():
+        raise ValueError(f"レジストリの形式が不正です: {content}")
+
+    if fallback_host is None:
+        raise ValueError(
+            "ホスト名が不明です。--server でホストを指定するか、レジストリに host:port を書き込んでください。"
+        )
+
+    return fallback_host, int(content)
+
+
+def wait_for_server_start(host: str, port: int, wait_seconds: int) -> None:
+    """指定秒数サーバー起動を待機し、利用可能になったらログを出す"""
+    if wait_seconds <= 0:
+        return
+
+    print(f"  サーバー起動を最大 {wait_seconds} 秒待機します...")
+    end_time = time.time() + wait_seconds
+    while time.time() < end_time:
+        if is_port_in_use(host, port):
+            print(f"  ✓ サーバー接続を確認しました: {host}:{port}")
+            return
+        time.sleep(1)
+    print("  ⚠️ サーバーの起動を確認できませんでした。続行しますが接続できない場合があります。")
+
+
+def resolve_dated_output_dir(base_dir: Path, date_str: str) -> tuple[Path, bool]:
+    """ベースディレクトリが日付で終わる場合はそのまま使用し、そうでなければサブディレクトリを作成
+
+    Returns:
+        (Path, bool): (使用するディレクトリ, 既存ディレクトリだったか)
+    """
+    target_dir = base_dir if base_dir.name == date_str else base_dir / date_str
+    existed = target_dir.exists()
+    target_dir.mkdir(parents=True, exist_ok=True)
+    return target_dir, existed
 
 
 def parse_arguments():
@@ -48,15 +146,12 @@ def parse_arguments():
   %(prog)s --count 10                          # 10枚生成
   %(prog)s --template abstract_art --count 5   # abstract_artテンプレートで5枚生成
   %(prog)s --steps 40 --cfg 7.0 --count 3      # パラメータ指定で3枚生成
-        """
+        """,
     )
 
     # 生成枚数
     parser.add_argument(
-        "--count", "-c",
-        type=int,
-        default=1,
-        help="生成する画像の枚数（デフォルト: 1）"
+        "--count", "-c", type=int, default=1, help="生成する画像の枚数（デフォルト: 1）"
     )
 
     # テンプレートファイル選択
@@ -64,30 +159,63 @@ def parse_arguments():
         "--template-file",
         type=str,
         default=None,
-        help="使用するテンプレートファイル名（例: prompt_templates_Tシャツデザイン_20250127.json）"
+        help="使用するテンプレートファイル名（例: prompt_templates_Tシャツデザイン_20250127.json）",
     )
 
     # テンプレート選択
     parser.add_argument(
-        "--template", "-t",
+        "--template",
+        "-t",
         type=str,
         default=None,
-        help="使用するプロンプトテンプレート名（指定しない場合は毎回ランダムに選択）"
+        help="使用するプロンプトテンプレート名（指定しない場合は毎回ランダムに選択）",
     )
 
     # テンプレートファイル一覧表示
     parser.add_argument(
         "--list-templates",
         action="store_true",
-        help="利用可能なテンプレートファイル一覧を表示して終了"
+        help="利用可能なテンプレートファイル一覧を表示して終了",
     )
 
     # ComfyUIサーバー
     parser.add_argument(
         "--server",
         type=str,
-        default="127.0.0.1:8000",
-        help="ComfyUIサーバーアドレス（デフォルト: 127.0.0.1:8000）"
+        default="127.0.0.1:15434",
+        help="ComfyUIサーバーアドレス（デフォルト: 127.0.0.1:15434）",
+    )
+
+    parser.add_argument(
+        "--auto-server-port",
+        action="store_true",
+        help="5桁の空きポートを自動で割り当てて --server のポート部を上書き",
+    )
+
+    parser.add_argument(
+        "--auto-server-port-only",
+        action="store_true",
+        help="ポート割り当てと記録だけを行い、画像生成は実行しない",
+    )
+
+    parser.add_argument(
+        "--use-port-registry",
+        action="store_true",
+        help="port_registry_file から host:port を読み取り --server を上書き",
+    )
+
+    parser.add_argument(
+        "--port-registry-file",
+        type=str,
+        default="config/auto_server_port.txt",
+        help="自動割り当てしたポート番号を書き出すファイルパス",
+    )
+
+    parser.add_argument(
+        "--server-wait-seconds",
+        type=int,
+        default=0,
+        help="自動割り当て後にComfyUIサーバーの起動を待機する秒数",
     )
 
     # ワークフローファイル
@@ -95,43 +223,22 @@ def parse_arguments():
         "--workflow",
         type=str,
         default="workflows/sd3.5_large_turbo_upscale.json",
-        help="ワークフローファイルのパス（デフォルト: workflows/sd3.5_large_turbo_upscale.json）"
+        help="ワークフローファイルのパス（デフォルト: workflows/sd3.5_large_turbo_upscale.json）",
     )
 
     # 生成パラメータ
     parser.add_argument(
-        "--steps",
-        type=int,
-        default=30,
-        help="サンプリングステップ数（デフォルト: 30）"
+        "--steps", type=int, default=30, help="サンプリングステップ数（デフォルト: 30）"
     )
 
-    parser.add_argument(
-        "--cfg",
-        type=float,
-        default=5.45,
-        help="CFGスケール（デフォルト: 5.45）"
-    )
+    parser.add_argument("--cfg", type=float, default=5.45, help="CFGスケール（デフォルト: 5.45）")
+
+    parser.add_argument("--width", type=int, default=1024, help="画像の幅（デフォルト: 1024）")
+
+    parser.add_argument("--height", type=int, default=1024, help="画像の高さ（デフォルト: 1024）")
 
     parser.add_argument(
-        "--width",
-        type=int,
-        default=1024,
-        help="画像の幅（デフォルト: 1024）"
-    )
-
-    parser.add_argument(
-        "--height",
-        type=int,
-        default=1024,
-        help="画像の高さ（デフォルト: 1024）"
-    )
-
-    parser.add_argument(
-        "--seed",
-        type=int,
-        default=None,
-        help="シード値（指定しない場合はランダム）"
+        "--seed", type=int, default=None, help="シード値（指定しない場合はランダム）"
     )
 
     # 出力先
@@ -139,7 +246,7 @@ def parse_arguments():
         "--output-dir",
         type=str,
         default="stablediffusion/outputs",
-        help="出力ディレクトリ（デフォルト: stablediffusion/outputs）"
+        help="出力ディレクトリ（デフォルト: stablediffusion/outputs）",
     )
 
     # ネガティブプロンプト
@@ -147,7 +254,7 @@ def parse_arguments():
         "--negative-prompt",
         type=str,
         default="blurry, low quality, distorted, ugly, deformed",
-        help="ネガティブプロンプト"
+        help="ネガティブプロンプト",
     )
 
     return parser.parse_args()
@@ -167,10 +274,10 @@ def write_csv_log(csv_path, data, is_new_file):
         "height",
         "image_size_bytes",
         "generation_time_seconds",
-        "timestamp"
+        "timestamp",
     ]
 
-    with open(csv_path, 'a', newline='', encoding='utf-8') as f:
+    with open(csv_path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
 
         # 新規ファイルの場合はヘッダーを書き込む
@@ -183,6 +290,45 @@ def write_csv_log(csv_path, data, is_new_file):
 def main():
     """メイン処理"""
     args = parse_arguments()
+
+    if args.auto_server_port_only:
+        args.auto_server_port = True
+
+    registry_path = Path(args.port_registry_file)
+
+    server_host, explicit_port = parse_server_address(args.server)
+
+    if args.use_port_registry and args.auto_server_port:
+        raise ValueError("--use-port-registry と --auto-server-port は同時に指定できません。")
+
+    if args.use_port_registry:
+        server_host, explicit_port = read_port_registry(registry_path, fallback_host=server_host)
+        args.server = f"{server_host}:{explicit_port}"
+
+    if args.auto_server_port:
+        assigned_port = find_available_port(server_host)
+        args.server = f"{server_host}:{assigned_port}"
+        write_port_registry(registry_path, server_host, assigned_port)
+        print("=" * 70)
+        print("ComfyUI サーバーポート自動割り当て")
+        print("=" * 70)
+        print(f"  ホスト: {server_host}")
+        print(f"  割り当てポート: {assigned_port}")
+        print(f"  記録ファイル: {registry_path}")
+
+        if args.auto_server_port_only:
+            print("  ※ ポートをレジストリに書き出しただけで処理を終了しました。")
+            print(
+                "    ComfyUI をこのポートで起動した後、--use-port-registry などで再実行してください。"
+            )
+            return 0
+
+        wait_for_server_start(server_host, assigned_port, args.server_wait_seconds)
+    else:
+        if explicit_port is None:
+            raise ValueError(
+                "--auto-server-port を使用しない場合、--server には host:port 形式を指定してください。"
+            )
 
     # テンプレートファイル一覧表示モード
     if args.list_templates:
@@ -207,17 +353,17 @@ def main():
     base_output_dir.mkdir(parents=True, exist_ok=True)
 
     # ComfyUIクライアント初期化
-    print(f"\n[1] ComfyUIクライアントを初期化中...")
+    print("\n[1] ComfyUIクライアントを初期化中...")
     print(f"  サーバー: {args.server}")
     client = ComfyUIClient(args.server)
 
     # ワークフロー読み込み
-    print(f"\n[2] ワークフローを読み込み中...")
+    print("\n[2] ワークフローを読み込み中...")
     print(f"  ワークフロー: {args.workflow}")
     workflow = client.load_workflow(args.workflow)
 
     # プロンプト生成器初期化
-    print(f"\n[3] プロンプト生成器を初期化中...")
+    print("\n[3] プロンプト生成器を初期化中...")
     if args.template_file:
         print(f"  テンプレートファイル: {args.template_file}")
         prompt_gen = PromptGenerator(elements_file=args.template_file)
@@ -225,7 +371,7 @@ def main():
         prompt_gen = PromptGenerator()
 
     # 生成設定表示
-    print(f"\n[4] 生成設定:")
+    print("\n[4] 生成設定:")
     print(f"  生成枚数: {args.count}枚")
     print(f"  テンプレート: {args.template if args.template else '毎回ランダム選択'}")
     print(f"  ステップ数: {args.steps}")
@@ -235,7 +381,7 @@ def main():
     print(f"  出力先: {base_output_dir}")
 
     # バッチ生成開始
-    print(f"\n[5] 画像生成を開始...")
+    print("\n[5] 画像生成を開始...")
     print("=" * 70)
 
     success_count = 0
@@ -253,13 +399,15 @@ def main():
             generation_date = datetime.now().strftime("%Y%m%d")
             if generation_date != current_date:
                 current_date = generation_date
-                current_date_dir = base_output_dir / current_date
-                current_date_dir.mkdir(parents=True, exist_ok=True)
+                current_date_dir, existed = resolve_dated_output_dir(
+                    base_output_dir, generation_date
+                )
                 current_csv_path = current_date_dir / f"generation_log_{current_date}.csv"
-                print(f"  日付フォルダ作成: {current_date_dir}")
+                action = "既存フォルダ使用" if existed else "日付フォルダ作成"
+                print(f"  {action}: {current_date_dir}")
 
             # プロンプト生成
-            print(f"  プロンプト生成中...")
+            print("  プロンプト生成中...")
             prompt = prompt_gen.generate_prompt(args.template)
             print(f"  プロンプト: {prompt[:80]}...")
 
@@ -279,7 +427,7 @@ def main():
             gen_start_time = time.time()
 
             # 画像生成
-            print(f"  画像生成中...")
+            print("  画像生成中...")
             image_data = client.generate_image(
                 workflow,
                 positive_prompt=prompt,
@@ -289,7 +437,7 @@ def main():
                 cfg=args.cfg,
                 width=args.width,
                 height=args.height,
-                save_path=str(output_path)
+                save_path=str(output_path),
             )
 
             # 生成時間を計算
@@ -308,7 +456,7 @@ def main():
                 "height": args.height,
                 "image_size_bytes": len(image_data),
                 "generation_time_seconds": f"{gen_time:.2f}",
-                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             }
 
             # CSVファイルが新規かどうかをチェック
