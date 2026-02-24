@@ -1,0 +1,338 @@
+{
+    "elements": {
+        "organic_forms": {
+            "description": "有機的形態",
+            "values": [
+                "twisted sinews",
+                "pulsating veins",
+                "neural networks",
+                "bone structures",
+                "muscle fibers",
+                "cellular patterns",
+                "DNA helixes",
+                "coral formations",
+                "root systems",
+                "mycelium networks",
+                "arterial branches",
+                "chitinous shells",
+                "bioluminescent organs",
+                "embryonic forms",
+                "spinal columns",
+                "ribcage structures",
+                "tendon connections",
+                "synaptic junctions",
+                "membrane surfaces",
+                "cartilage formations"
+            ]
+        },
+        "mechanical_components": {
+            "description": "機械的構成要素",
+            "values": [
+                "gears and cogs",
+                "hydraulic pistons",
+                "circuit boards",
+                "fiber optic cables",
+                "pneumatic tubes",
+                "servo motors",
+                "precision bearings",
+                "titanium frameworks",
+                "chrome plating",
+                "copper coils",
+                "silicon chips",
+                "magnetic cores",
+                "turbine blades",
+                "actuator arms",
+                "pressure valves",
+                "cooling fins",
+                "exhaust vents",
+                "power conduits",
+                "sensor arrays",
+                "data ports"
+            ]
+        },
+        "fusion_elements": {
+            "description": "融合要素",
+            "values": [
+                "bio-synthetic tissue",
+                "cybernetic implants",
+                "neural interfaces",
+                "organic circuitry",
+                "living metal",
+                "flesh-machine hybrids",
+                "techno-organic growths",
+                "synthetic muscles",
+                "bio-luminescent wiring",
+                "nano-scale machinery",
+                "grown metal structures",
+                "vascular tubing",
+                "skeletal frameworks with cables",
+                "skin-membrane circuits",
+                "breathing machinery",
+                "pulsing technology",
+                "evolved mechanisms",
+                "adaptive structures",
+                "self-healing alloys",
+                "symbiotic systems"
+            ]
+        },
+        "surface_textures": {
+            "description": "表面テクスチャ",
+            "values": [
+                "brushed metal",
+                "wet organic sheen",
+                "corroded patina",
+                "polished chrome",
+                "matte carbon fiber",
+                "iridescent scales",
+                "porous bone",
+                "smooth plastic",
+                "rough concrete",
+                "weathered rust",
+                "translucent membrane",
+                "reflective glass",
+                "etched patterns",
+                "embossed reliefs",
+                "layered composites",
+                "woven fibers",
+                "crystalline surfaces",
+                "gelatinous coating",
+                "segmented plates",
+                "fractured ceramics"
+            ]
+        },
+        "lighting_effects": {
+            "description": "照明効果",
+            "values": [
+                "bioluminescent glow",
+                "neon accents",
+                "industrial spotlights",
+                "ambient rim lighting",
+                "volumetric fog",
+                "holographic projections",
+                "laser beams",
+                "plasma arcs",
+                "LED strips",
+                "emergency red lighting",
+                "surgical white light",
+                "ultraviolet glow",
+                "infrared heat signatures",
+                "pulsing strobes",
+                "dim environmental lighting",
+                "dramatic chiaroscuro",
+                "soft diffused light",
+                "harsh directional light",
+                "scattered light rays",
+                "internal illumination"
+            ]
+        },
+        "color_schemes": {
+            "description": "配色",
+            "values": [
+                "chrome and crimson",
+                "obsidian and gold",
+                "steel blue and flesh pink",
+                "toxic green and black",
+                "rust orange and teal",
+                "bone white and dark grey",
+                "copper and emerald",
+                "silver and purple",
+                "brass and burgundy",
+                "titanium and cyan",
+                "matte black and neon",
+                "gunmetal and blood red",
+                "pearl and shadow",
+                "bronze and violet",
+                "nickel and magenta",
+                "iron grey and amber",
+                "platinum and coral",
+                "carbon and electric blue",
+                "mercury and rose",
+                "tungsten and jade"
+            ]
+        },
+        "atmospheres": {
+            "description": "雰囲気",
+            "values": [
+                "industrial dystopia",
+                "surgical sterility",
+                "alien biology",
+                "post-apocalyptic decay",
+                "cyberpunk noir",
+                "body horror",
+                "technological sublime",
+                "organic nightmare",
+                "mechanical precision",
+                "evolutionary mutation",
+                "cold efficiency",
+                "raw visceral power",
+                "elegant machinery",
+                "grotesque beauty",
+                "haunting presence",
+                "ancient technology",
+                "forbidden science",
+                "transcendent fusion",
+                "predatory design",
+                "symbiotic harmony"
+            ]
+        },
+        "spatial_arrangements": {
+            "description": "空間配置",
+            "values": [
+                "symmetrical mandala",
+                "asymmetric chaos",
+                "radial expansion",
+                "layered depth",
+                "interconnected network",
+                "central focal point",
+                "spiraling vortex",
+                "grid-based structure",
+                "organic clustering",
+                "linear progression",
+                "scattered fragments",
+                "nested containers",
+                "flowing curves",
+                "angular intersections",
+                "concentric rings",
+                "branching hierarchy",
+                "tessellated patterns",
+                "overlapping planes",
+                "floating elements",
+                "anchored foundations"
+            ]
+        },
+        "detail_levels": {
+            "description": "ディテールレベル",
+            "values": [
+                "microscopic detail",
+                "intricate complexity",
+                "fine filigree",
+                "bold simplicity",
+                "layered intricacy",
+                "fractal recursion",
+                "sharp precision",
+                "soft gradients",
+                "high contrast",
+                "subtle variations",
+                "ornate decoration",
+                "minimalist structure",
+                "dense information",
+                "sparse elegance",
+                "textural richness",
+                "clean lines",
+                "chaotic detail",
+                "ordered patterns",
+                "organic randomness",
+                "mechanical regularity"
+            ]
+        },
+        "movement_qualities": {
+            "description": "動きの質感",
+            "values": [
+                "frozen motion",
+                "implied movement",
+                "static tension",
+                "dynamic flow",
+                "pulsing rhythm",
+                "mechanical rotation",
+                "organic growth",
+                "explosive expansion",
+                "contracting compression",
+                "oscillating vibration",
+                "smooth gliding",
+                "jerky articulation",
+                "fluid transformation",
+                "crystalline stillness",
+                "energetic burst",
+                "slow evolution",
+                "rapid iteration",
+                "balanced equilibrium",
+                "unstable transition",
+                "perpetual motion"
+            ]
+        },
+        "artistic_influences": {
+            "description": "芸術的影響",
+            "values": [
+                "H.R. Giger biomechanics",
+                "Syd Mead industrial design",
+                "Moebius surrealism",
+                "Beksiński nightmare visions",
+                "Tsutomu Nihei architecture",
+                "Wayne Barlowe creature design",
+                "Simon Stålenhag retro-futurism",
+                "Katsuhiro Otomo cyberpunk",
+                "Masamune Shirow tech-organic",
+                "Hajime Sorayama chrome aesthetics",
+                "Yoshitaka Amano ethereal fantasy",
+                "Ashley Wood painterly mech",
+                "Peter Gric surreal machinery",
+                "Ernst Fuchs fantastic realism",
+                "Dariusz Zawadzki dark surrealism",
+                "Dan Seagrave album art style",
+                "Kris Kuksi assemblage sculpture",
+                "Neri Oxman material ecology",
+                "Daniel Simon vehicle design",
+                "Keith Thompson creature concepts"
+            ]
+        },
+        "conceptual_themes": {
+            "description": "概念的テーマ",
+            "values": [
+                "transhumanism",
+                "technological evolution",
+                "body modification",
+                "machine consciousness",
+                "organic obsolescence",
+                "synthetic life",
+                "digital dreams",
+                "flesh and steel",
+                "evolution accelerated",
+                "human transcendence",
+                "mechanical soul",
+                "biological programming",
+                "cybernetic rebirth",
+                "post-human form",
+                "artificial instinct",
+                "natural mechanics",
+                "designed evolution",
+                "emergent complexity",
+                "hybrid existence",
+                "integrated systems"
+            ]
+        }
+    },
+    "templates": {
+        "biomech_fusion": {
+            "description": "バイオメカニカル融合",
+            "text": "{artistic_influences} inspired composition featuring {fusion_elements} emerging from {organic_forms}. {mechanical_components} integrated with {surface_textures} surface treatment. {color_schemes} color palette creates {atmospheres} mood. {lighting_effects} reveals {detail_levels} throughout {spatial_arrangements} arrangement. {movement_qualities} conveys {conceptual_themes}. Abstract biomechanical art with extreme detail, 8k resolution, cinematic lighting."
+        },
+        "cybernetic_organism": {
+            "description": "サイバネティック生命体",
+            "text": "Abstract interpretation of {conceptual_themes} showing {organic_forms} merged with {mechanical_components}. {fusion_elements} creates {atmospheres} atmosphere. {surface_textures} contrasts with {surface_textures} in {spatial_arrangements} composition. {color_schemes} enhanced by {lighting_effects}. {detail_levels} reveals {movement_qualities} energy. Influenced by {artistic_influences}. Hyperdetailed abstract art, professional quality, dramatic composition."
+        },
+        "machine_evolution": {
+            "description": "機械進化",
+            "text": "Evolutionary {mechanical_components} developing {organic_forms} characteristics. {fusion_elements} demonstrates {conceptual_themes}. {spatial_arrangements} structure with {detail_levels}. {surface_textures} and {surface_textures} create visual tension. {atmospheres} enhanced by {lighting_effects}. {color_schemes} dominates with {movement_qualities} dynamics. {artistic_influences} aesthetic influence. Ultra-detailed abstract biomechanical artwork, museum quality."
+        },
+        "neural_network": {
+            "description": "ニューラルネットワーク",
+            "text": "Complex {organic_forms} network interwoven with {mechanical_components}. {fusion_elements} forms {spatial_arrangements} pattern. {lighting_effects} illuminates {surface_textures} details. {color_schemes} creates {atmospheres} mood. {detail_levels} shows {movement_qualities} throughout composition. Theme of {conceptual_themes} expressed through {artistic_influences} style. Intricate abstract digital painting, photorealistic textures, volumetric lighting."
+        },
+        "synthetic_anatomy": {
+            "description": "合成解剖学",
+            "text": "Anatomical study of {organic_forms} reconstructed with {mechanical_components}. {fusion_elements} replaces natural structures. {surface_textures} exterior with {surface_textures} interior. {spatial_arrangements} composition in {color_schemes}. {lighting_effects} provides {atmospheres} illumination. {detail_levels} precision with {movement_qualities} implied. {conceptual_themes} explored through {artistic_influences} lens. Clinical yet artistic abstract composition, extreme macro detail."
+        },
+        "techno_organic_landscape": {
+            "description": "テクノオーガニック風景",
+            "text": "Vast abstract landscape where {organic_forms} and {mechanical_components} coexist. {fusion_elements} emerges from {spatial_arrangements} terrain. {surface_textures} ground meets {surface_textures} structures. {atmospheres} pervades scene lit by {lighting_effects}. {color_schemes} stretches across {detail_levels} vista. {movement_qualities} suggests {conceptual_themes}. Inspired by {artistic_influences}. Epic scale abstract environment, cinematic composition, atmospheric depth."
+        },
+        "biomech_mandala": {
+            "description": "バイオメカニカル曼荼羅",
+            "text": "Sacred geometric pattern combining {organic_forms} with {mechanical_components}. {fusion_elements} arranged in {spatial_arrangements} symmetry. {surface_textures} radiating outward with {detail_levels}. {color_schemes} creates meditative {atmospheres}. {lighting_effects} enhances {movement_qualities} energy. {conceptual_themes} expressed through {artistic_influences} tradition. Perfectly symmetrical abstract mandala, intricate detail, spiritual-technological synthesis."
+        },
+        "dark_synthesis": {
+            "description": "ダークシンセシス",
+            "text": "Ominous {atmospheres} composition featuring {organic_forms} corrupted by {mechanical_components}. {fusion_elements} creates disturbing {movement_qualities}. {surface_textures} and {surface_textures} merge in {spatial_arrangements}. {color_schemes} under {lighting_effects}. {detail_levels} reveals {conceptual_themes}. {artistic_influences} darkness permeates the scene. Nightmarish abstract artwork, unsettling beauty, masterful execution."
+        }
+    }
+}

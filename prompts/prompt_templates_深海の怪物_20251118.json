@@ -1,0 +1,388 @@
+{
+    "elements": {
+        "creature_bases": {
+            "description": "生物モチーフ",
+            "values": [
+                "colossal octopus",
+                "ancient whale",
+                "abyssal anglerfish",
+                "giant squid",
+                "oarfish serpent",
+                "deep sea jellyfish",
+                "primordial coelacanth",
+                "massive nautilus",
+                "leviathan eel",
+                "titan crab",
+                "prehistoric shark",
+                "enormous sea slug",
+                "ancient trilobite creature",
+                "colossal isopod",
+                "deep sea dragon",
+                "abyssal manta ray",
+                "primordial ammonite beast",
+                "giant tube worm colony",
+                "massive sea spider",
+                "eldritch cuttlefish"
+            ]
+        },
+        "void_strategies": {
+            "description": "黒の使い方・構図",
+            "values": [
+                "frame drenched in abyssal negative space",
+                "composition weighted so black devours the scene",
+                "subject emerging from near-total darkness",
+                "seventy percent of frame swallowed by void",
+                "black swallowing edges, only slivers of detail lit",
+                "shapes lost to inked shadow, only highlights remain",
+                "silhouette carved out of pure black pressure",
+                "void pressing in from every corner of the frame",
+                "black surrounding the creature like liquid tar",
+                "darkness sculpting the form more than light does",
+                "black bleeding into every contour",
+                "void eating away at visible matter",
+                "negative space vast and suffocating",
+                "black depths suggesting endless drop below",
+                "scene rendered as if light is failing",
+                "overwhelming dark mass dwarfing illumination",
+                "spotlight barely holding back consuming black",
+                "colors desaturated by crushing darkness",
+                "illumination isolated in oceans of shadow",
+                "black functioning as the primary subject"
+            ]
+        },
+        "creature_features": {
+            "description": "生物の特徴（古代感・劣化）",
+            "values": [
+                "deeply cracked skin",
+                "weathered wrinkles",
+                "barnacle-encrusted hide",
+                "scarred and pitted flesh",
+                "peeling ancient scales",
+                "calcified growths",
+                "eroded carapace",
+                "time-worn texture",
+                "fissured epidermis",
+                "centuries-old battle scars",
+                "corroded armor plates",
+                "fossilized patches",
+                "deteriorated membranes",
+                "aged bioluminescent organs",
+                "worn tentacle suckers",
+                "weathered fin rays",
+                "ancient parasitic attachments",
+                "eroded sensory organs",
+                "crumbling exoskeleton edges",
+                "millennia-old growth rings"
+            ]
+        },
+        "lighting_scenarios": {
+            "description": "照明シナリオ",
+            "values": [
+                "single spotlight from submersible",
+                "multiple diving lights converging",
+                "distant ROV headlights",
+                "bioluminescent glow from creature",
+                "searchlight sweeping through darkness",
+                "emergency flare illumination",
+                "bathyscaphe flood lights",
+                "scattered submarine running lights",
+                "deep sea camera flash",
+                "research vessel spotlights",
+                "fading flashlight beam",
+                "industrial diving lamp",
+                "underwater torch cone",
+                "sonar-triggered strobe",
+                "salvage operation lights",
+                "archaeological dig illumination",
+                "scientific probe lighting",
+                "military submarine searchlight",
+                "bioluminescent lure glow",
+                "phosphorescent plankton trails"
+            ]
+        },
+        "distance_perspectives": {
+            "description": "距離と視点",
+            "values": [
+                "extreme distance showing full silhouette",
+                "far enough to see entire creature",
+                "mid-range revealing half the body",
+                "close enough to see torso and head",
+                "intimate distance showing only face",
+                "uncomfortably close to single eye",
+                "touching distance to skin texture",
+                "inside tentacle forest",
+                "beneath massive underbelly",
+                "alongside endless flank",
+                "dwarfed by single fin",
+                "lost among gill structures",
+                "surrounded by appendages",
+                "facing open maw",
+                "engulfed by shadow of mass",
+                "barely glimpsing edge of form",
+                "scale-defying proximity",
+                "kilometers away yet visible",
+                "arm's length from ancient flesh",
+                "swallowed by creature's presence"
+            ]
+        },
+        "water_particles": {
+            "description": "水中の浮遊物",
+            "values": [
+                "glittering plankton clouds",
+                "sparkling marine snow",
+                "luminescent microorganisms",
+                "scattered air bubbles",
+                "rising oxygen spheres",
+                "drifting detritus",
+                "suspended sediment",
+                "floating organic matter",
+                "crystalline ice particles",
+                "bioluminescent bacteria",
+                "tiny crustacean swarms",
+                "jellyfish larvae drifting",
+                "volcanic ash particles",
+                "mineral-rich water columns",
+                "thermal vent emissions",
+                "ancient spore clouds",
+                "microscopic diatoms",
+                "phosphorescent algae",
+                "deep current debris",
+                "abyssal particle rain"
+            ]
+        },
+        "color_modes": {
+            "description": "配色モード",
+            "values": [
+                "stark monochrome",
+                "pure black and white",
+                "grayscale with deep blacks",
+                "silver and obsidian",
+                "charcoal and ash tones",
+                "ink black with white highlights",
+                "black dominant with blood red accents",
+                "darkness pierced by pale blue",
+                "void black with ghostly green",
+                "pitch black with amber warnings",
+                "absolute black with bioluminescent cyan",
+                "shadow black with dying orange",
+                "coal black with electric white",
+                "abyssal black with spectral purple",
+                "midnight black with cold silver",
+                "tar black with sickly yellow",
+                "onyx black with deep crimson",
+                "jet black with ethereal white",
+                "obsidian with phosphorescent highlights",
+                "total darkness with pinpoint lights"
+            ]
+        },
+        "artistic_styles": {
+            "description": "芸術スタイル（CG排除）",
+            "values": [
+                "photorealistic underwater photography",
+                "oil painting with heavy impasto",
+                "charcoal sketch with smudging",
+                "ink wash painting",
+                "graphite pencil hyperrealism",
+                "traditional woodblock print",
+                "watercolor with wet-on-wet technique",
+                "scratchboard illustration",
+                "mezzotint engraving",
+                "sumi-e brush painting",
+                "chiaroscuro oil technique",
+                "documentary film still",
+                "vintage diving photograph",
+                "scientific illustration style",
+                "etching with aquatint",
+                "conte crayon drawing",
+                "gouache painting",
+                "lithograph print",
+                "platinum print photography",
+                "daguerreotype aesthetic"
+            ]
+        },
+        "atmospheres": {
+            "description": "雰囲気",
+            "values": [
+                "nightmare made manifest",
+                "primordial terror",
+                "cosmic insignificance",
+                "ancient unknowable presence",
+                "suffocating dread",
+                "overwhelming awe",
+                "existential horror",
+                "haunting loneliness",
+                "crushing pressure of depth",
+                "timeless isolation",
+                "dreamlike unreality",
+                "apocalyptic revelation",
+                "forbidden knowledge",
+                "ancestral memory",
+                "primal fear awakened",
+                "abyssal madness",
+                "silent menace",
+                "inevitable doom",
+                "otherworldly majesty",
+                "terrifying beauty"
+            ]
+        },
+        "black_symbolism": {
+            "description": "黒の象徴的使用",
+            "values": [
+                "void consuming all light",
+                "darkness as living entity",
+                "black as infinite depth",
+                "shadow swallowing form",
+                "absence made visible",
+                "black as primordial chaos",
+                "darkness of forgotten ages",
+                "black as cosmic emptiness",
+                "shadow of immense mass",
+                "darkness between stars",
+                "black as death's domain",
+                "shadow of the unknown",
+                "black as dreamless sleep",
+                "darkness of ocean trenches",
+                "black as ancient evil",
+                "shadow of time itself",
+                "black as final silence",
+                "darkness before creation",
+                "black as buried secrets",
+                "shadow of leviathan"
+            ]
+        },
+        "cosmic_horror_motifs": {
+            "description": "コズミックホラーの示唆",
+            "values": [
+                "geometry that disobeys human logic",
+                "impression of something older than stars",
+                "scale impossible to comprehend",
+                "sensation of being watched by the abyss itself",
+                "echo of forgotten prehuman rituals",
+                "hint of entities moving behind reality's veil",
+                "pressure whispering blasphemous truths",
+                "feeling that no gods will intervene",
+                "light bending around unseen mass",
+                "shadows hinting at non-Euclidean forms",
+                "metadata like ancient coordinates etched in flesh",
+                "presence that eclipses human significance",
+                "mind recoiling from what it almost recognizes",
+                "traces of starless origin across its hide",
+                "silence so profound it erases thought",
+                "abyss radiating quiet malevolence",
+                "dread that this is only a fragment of something vaster",
+                "memory of eons imprinted in skin",
+                "unknowable purpose beyond mortal comprehension",
+                "feeling reality thins around the body"
+            ]
+        },
+        "texture_details": {
+            "description": "テクスチャの詳細",
+            "values": [
+                "rough like volcanic rock",
+                "smooth as polished bone",
+                "ridged like ancient tree bark",
+                "pockmarked like meteor surface",
+                "striated muscle fibers visible",
+                "translucent skin showing veins",
+                "leathery and sun-beaten appearance",
+                "crystalline formations on skin",
+                "mucus-covered slick surface",
+                "desert-cracked dryness underwater",
+                "coral-like calcification",
+                "whale barnacle colonies",
+                "lamprey scar patterns",
+                "kelp-draped appendages",
+                "sand-embedded skin",
+                "pressure-adapted thick hide",
+                "thermal vent mineral deposits",
+                "ancient algae growth",
+                "parasitic worm trails",
+                "time-eroded smooth patches"
+            ]
+        },
+        "eye_descriptions": {
+            "description": "目の描写",
+            "values": [
+                "ancient clouded eye",
+                "milky cataract-covered orb",
+                "piercing bioluminescent gaze",
+                "dead black endless pupil",
+                "compound eye reflecting light",
+                "scarred blind socket",
+                "wise tired ancient stare",
+                "predatory calculating look",
+                "sorrowful knowing glance",
+                "alien incomprehensible vision",
+                "lidless unblinking watch",
+                "reflecting diver's light back",
+                "multiple eyes scattered",
+                "eye larger than human",
+                "barely visible in darkness",
+                "glowing faintly from within",
+                "filmed over with age",
+                "intelligent and aware",
+                "hollow empty sockets",
+                "ringed with scar tissue"
+            ]
+        },
+        "movement_qualities": {
+            "description": "動きの質感",
+            "values": [
+                "frozen in eternal stillness",
+                "slowly drifting with current",
+                "imperceptibly breathing",
+                "ancient and deliberate",
+                "patient beyond comprehension",
+                "suddenly alert",
+                "turning toward light source",
+                "retreating into darkness",
+                "emerging from black void",
+                "coiling around itself",
+                "extending toward viewer",
+                "suspended in water column",
+                "sinking into trench",
+                "rising from below",
+                "circling with curiosity",
+                "completely motionless",
+                "barely perceptible tremor",
+                "flowing like living shadow",
+                "unfolding massive form",
+                "contracted in defensive posture"
+            ]
+        }
+    },
+    "templates": {
+        "monochrome_leviathan": {
+            "description": "モノクロ深海の巨獣",
+            "text": "{artistic_styles} depicting {creature_bases} with {creature_features}. {color_modes} palette and {void_strategies} where {black_symbolism}. {lighting_scenarios} reveals creature at {distance_perspectives}. {water_particles} scatter light creating ethereal effect. {texture_details} visible on ancient hide. {eye_descriptions} meets the viewer with {cosmic_horror_motifs}. {atmospheres} pervades the scene. {movement_qualities} suggests timeless existence. Deep sea setting, no light except artificial source, crushing depth atmosphere. Black dominates as negative space and crushing pressure rather than simple shadow."
+        },
+        "chromatic_abyss": {
+            "description": "黒を基調とした彩色版",
+            "text": "{artistic_styles} of {creature_bases} bearing {creature_features}. {color_modes} color scheme with black as dominant force where {black_symbolism} and {void_strategies}. {lighting_scenarios} pierces the darkness at {distance_perspectives}. {water_particles} float through beam creating {atmospheres}. {texture_details} enhanced by {eye_descriptions}. {movement_qualities} in the lightless void. Ancient creature thousands of years old, nightmare given form and infused with {cosmic_horror_motifs}. Professional quality, dramatic composition, emotional impact through darkness and sparse color."
+        },
+        "intimate_terror": {
+            "description": "至近距離の部分描写",
+            "text": "Extreme close-up {artistic_styles} showing only portion of {creature_bases}. {distance_perspectives} revealing {creature_features} in unsettling detail. {color_modes} with {black_symbolism} and {void_strategies}. {lighting_scenarios} illuminates {texture_details}. {water_particles} between lens and subject. {eye_descriptions} dominates frame, suggesting {cosmic_horror_motifs}. {atmospheres} through proximity to ancient flesh. {movement_qualities}. Overwhelming scale implied by what extends beyond frame. Cannot see whole creature, only terrifying fragment swallowed by black."
+        },
+        "distant_silhouette": {
+            "description": "遠距離の全体描写",
+            "text": "{artistic_styles} capturing full form of {creature_bases} from {distance_perspectives}. Massive silhouette with {creature_features} visible even at distance. {color_modes} emphasizing {black_symbolism} and {void_strategies}. {lighting_scenarios} barely reaches subject. {water_particles} create depth and atmosphere. {atmospheres} through sheer impossible scale intertwined with {cosmic_horror_motifs}. {movement_qualities}. Creature so large it defines the composition, dwarfing all reference points. {eye_descriptions} somehow visible despite distance. Ancient god-like presence in eternal darkness."
+        },
+        "painterly_nightmare": {
+            "description": "筆写的表現",
+            "text": "{artistic_styles} interpretation of {creature_bases} with {creature_features}. Brushwork emphasizes {texture_details} and {eye_descriptions}. {color_modes} palette where {black_symbolism} and {void_strategies}. {lighting_scenarios} rendered with visible strokes at {distance_perspectives}. {water_particles} as painterly marks. {atmospheres} conveyed through artistic technique and {cosmic_horror_motifs}. {movement_qualities}. Traditional media texture, no digital smoothness, human hand evident in every mark. Nightmare creature from depths of subconscious rendered in classical technique with inescapable void."
+        },
+        "documentary_horror": {
+            "description": "実写的表現",
+            "text": "Photorealistic {artistic_styles} of {creature_bases} with {creature_features}. Authentic underwater photography aesthetic with {lighting_scenarios}. {color_modes} with natural {black_symbolism} and {void_strategies}. {distance_perspectives} as if captured by research vessel. {water_particles} scatter light realistically. {texture_details} in sharp focus. {eye_descriptions} caught by camera, hinting at {cosmic_horror_motifs}. {atmospheres} of genuine deep sea footage. {movement_qualities}. Looks like actual documentary still of impossible creature. Film grain, lens distortion, authentic underwater optical effects, light barely holding against infinite black."
+        },
+        "nightmare_emergence": {
+            "description": "悪夢的雰囲気強調",
+            "text": "{artistic_styles} of {creature_bases} emerging from absolute darkness. {creature_features} speak to unimaginable age. {color_modes} where {black_symbolism} dominates completely through {void_strategies}. {lighting_scenarios} at {distance_perspectives} creates {atmospheres}. {water_particles} like stars in void. {texture_details} suggests creature older than human memory. {eye_descriptions} holds ancient knowledge and {cosmic_horror_motifs}. {movement_qualities}. Nightmare logic where physics bend around creature's presence. Terror beyond rational comprehension, beauty in the horrific and inescapable black."
+        },
+        "abyssal_encounter": {
+            "description": "深淵との遭遇",
+            "text": "First contact scene in {artistic_styles} showing {creature_bases} with {creature_features}. {lighting_scenarios} reveals creature at {distance_perspectives} for first time. {color_modes} with {black_symbolism} and {void_strategies}. {water_particles} disturbed by creature's presence. {texture_details} shocking in its alien familiarity. {eye_descriptions} acknowledges observer, implying {cosmic_horror_motifs}. {atmospheres} of forbidden discovery. {movement_qualities}. Moment of mutual awareness between human technology and ancient life. Historical significance of impossible encounter captured in single frame, framed by devouring black."
+        }
+    }
+}

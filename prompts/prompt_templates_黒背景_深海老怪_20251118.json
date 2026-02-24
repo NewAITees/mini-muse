@@ -1,0 +1,156 @@
+{
+    "elements": {
+        "creature_bases": {
+            "description": "生物モチーフ（巨大・老体・古代）",
+            "values": [
+                "colossal abyssal whale",
+                "ancient leviathan octopus",
+                "prehistoric armored shark",
+                "massive anglerfish matriarch",
+                "primordial serpentine oarfish",
+                "titanic coelacanth elder",
+                "eldritch manta ray giant",
+                "gigantic trilobite revenant",
+                "abyssal isopod behemoth",
+                "fossil-plated dunkleosteus",
+                "megalodon relic with eroded teeth",
+                "ancient plesiosaur draped in algae",
+                "primordial crocodilian titan",
+                "giant eurypterid carcass revived",
+                "fossil spine leviathan",
+                "paleozoic ray with stone-like fins",
+                "ancient armored sturgeon giant",
+                "devonian lungfish titan"
+            ]
+        },
+        "artistic_styles": {
+            "description": "芸術スタイル（黒背景ホラー向け）",
+            "values": [
+                "photorealistic underwater photography",
+                "charcoal sketch with aggressive smudging",
+                "ink wash painting with severe contrast",
+                "graphite pencil hyperrealism",
+                "scratchboard illustration",
+                "mezzotint engraving",
+                "sumi-e brush painting with dry strokes",
+                "chiaroscuro oil painting",
+                "documentary film still",
+                "vintage deep-sea expedition photograph"
+            ]
+        },
+        "aging_details": {
+            "description": "老い・時間経過のディテール強調",
+            "values": [
+                "skin folded into countless wrinkles",
+                "deep fissures layered with silt",
+                "patches of translucent aged skin",
+                "long scars webbed across the body",
+                "calcified barnacle ridges",
+                "frayed fins and torn membranes",
+                "weathered suckers eroded by time",
+                "pitted shell plates crumbling at edges",
+                "ancient algae staining every crease",
+                "parasite trails etched like wrinkles",
+                "stone-like hide cracked like dried earth",
+                "fossil texture merging with flesh",
+                "sediment packed into century-old cracks",
+                "mineral veins threading through scar tissue",
+                "pressure-compressed scales flaking away"
+            ]
+        },
+        "lighting_scenarios": {
+            "description": "極低照度の照明（黒背景固定）",
+            "values": [
+                "single dying submersible lamp barely glowing",
+                "narrow flashlight beam fading into black",
+                "distant ROV headlights swallowed by void",
+                "bioluminescent pulse underexposed against black",
+                "thin emergency flare struggling in darkness"
+            ]
+        },
+        "visibility_constraints": {
+            "description": "見えないことへの恐怖演出",
+            "values": [
+                "most of the form lost in darkness",
+                "edges dissolve into pitch black",
+                "only wrinkles and scars barely discernible",
+                "details surfacing then drowning in shadow",
+                "negative space devouring the silhouette"
+            ]
+        },
+        "scale_markers": {
+            "description": "巨大さの示唆",
+            "values": [
+                "tiny submersible dwarfed near the body",
+                "diver floodlight a pinprick on the hide",
+                "only a single eye fills the entire frame",
+                "wrinkle patterns wider than a human",
+                "fathoms of flesh extending beyond view"
+            ]
+        },
+        "color_mode_locked": {
+            "description": "黒背景・低明度固定",
+            "values": [
+                "absolute black background with muted grays",
+                "pitch black negative space and low-key lighting",
+                "charcoal palette where highlights barely emerge",
+                "inky black field with sparse cold highlights",
+                "obsidian void swallowing all but faint texture"
+            ]
+        },
+        "atmospheres": {
+            "description": "雰囲気（深海の不気味さ）",
+            "values": [
+                "suffocating abyssal dread",
+                "primordial terror in crushing depth",
+                "cosmic insignificance before ancient mass",
+                "haunting stillness older than civilization",
+                "inevitable doom from unseen enormity"
+            ]
+        },
+        "eye_descriptions": {
+            "description": "目の描写（老いと巨大さ）",
+            "values": [
+                "ancient clouded eye faintly catching light",
+                "milky cataract orb reflecting a lone beam",
+                "dead black pupil larger than a human torso",
+                "scarred socket barely visible in shadow",
+                "bioluminescent ring dimmed by age"
+            ]
+        },
+        "movement_qualities": {
+            "description": "動き（重さと静寂）",
+            "values": [
+                "imperceptibly breathing as water shifts",
+                "massive form barely stirring the dark",
+                "ancient and deliberate, slower than thought",
+                "frozen in near-silence, time-stilled",
+                "emerging a fraction, then retreating to black"
+            ]
+        },
+        "water_particles": {
+            "description": "低明度で見える粒子",
+            "values": [
+                "sparse marine snow catching dim light",
+                "glittering plankton trails fading quickly",
+                "scattered air bubbles lost in black",
+                "drifting sediment outlining wrinkles",
+                "phosphorescent motes like distant stars"
+            ]
+        }
+    },
+    "templates": {
+        "blackback_elder_monochrome": {
+            "description": "黒背景固定・老体巨獣のモノクロ恐怖",
+            "text": "{artistic_styles} of {creature_bases} showing {aging_details}. Scene locked to {color_mode_locked}; background is pure black. {lighting_scenarios} reveals only fragments as {visibility_constraints}. {water_particles} mark the void. {scale_markers} communicate impossible size. {eye_descriptions} sinks into shadow. {atmospheres} dominates. {movement_qualities}. Emphasize wrinkles, scars, and time-worn texture as primary horror."
+        },
+        "blackback_fragment_close": {
+            "description": "至近距離で皺と質感を主役にした断片",
+            "text": "Extreme close-up {artistic_styles} focusing on {aging_details} of {creature_bases}. {color_mode_locked} with {visibility_constraints}. {lighting_scenarios} grazes the surface so wrinkles and fissures emerge from black. {water_particles} float between lens and skin. {eye_descriptions} may clip the frame, reinforcing {atmospheres}. {movement_qualities} feel barely alive. Fear comes from unseen mass and over-detailed aged flesh."
+        },
+        "blackback_scale_reveal": {
+            "description": "巨大さを黒に沈めつつ示すカット",
+            "text": "{artistic_styles} capturing {creature_bases} where {scale_markers} and {aging_details} break through the dark. {color_mode_locked} keeps background absolute black. {lighting_scenarios} provides minimal exposure, enforcing {visibility_constraints}. {water_particles} map depth. {eye_descriptions} hints at sentience. {atmospheres} pervades. {movement_qualities}. Composition uses negative space to make wrinkles and scars feel continent-sized."
+        }
+    }
+}

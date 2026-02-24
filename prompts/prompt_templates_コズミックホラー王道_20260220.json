@@ -1,0 +1,183 @@
+{
+  "elements": {
+    "art_mediums": {
+      "description": "画法と時代感",
+      "values": [
+        "monochrome pencil illustration, fine hatching, 19th century engraving style",
+        "ink drawing with obsessive crosshatching, antique illustration texture",
+        "woodcut print style, rough carved linework, stark black and white contrast",
+        "transparent watercolor wash, diluted ink bleeds, ghostly paper grain",
+        "ukiyo-e inspired line rhythm, dramatic wave forms, aged print texture",
+        "museum specimen plate style, scientific diagram aesthetics, archival ink"
+      ]
+    },
+    "monster_bases": {
+      "description": "怪物の核となるモチーフ",
+      "values": [
+        "eldritch cephalopod colossus",
+        "spider and abyssal fish hybrid titan",
+        "plant-insect oracle with root-like tendrils",
+        "winged invertebrate mass with gelatinous flesh",
+        "sentient coral cathedral organism",
+        "colossal brain-eye biomass entity"
+      ]
+    },
+    "hybrid_mutations": {
+      "description": "異形の混成要素",
+      "values": [
+        "asymmetric clusters of eyes and bioluminescent nodules",
+        "skeletal limbs fused with soft tentacular tissue",
+        "moss-covered carapace growing tumor-like ridges",
+        "coral branches replacing vertebrae and ribs",
+        "human cranial fragments embedded in chitinous growth",
+        "feather-like membranes coated in viscous slime"
+      ]
+    },
+    "anatomical_anomalies": {
+      "description": "解剖学的に不可能な特徴",
+      "values": [
+        "its boundaries dissolve into surrounding darkness",
+        "its body loops in non-euclidean folds",
+        "its silhouette never settles into a fixed anatomy",
+        "its internal organs are visible yet spatially impossible",
+        "its limbs emerge and retract from impossible angles",
+        "its surface shifts between rock, flesh, and mist"
+      ]
+    },
+    "spatial_domains": {
+      "description": "空間と舞台設定",
+      "values": [
+        "a cosmic abyss that feels both deep ocean and outer space",
+        "a ruined cathedral ceiling opening into a starless void",
+        "a collapsing library of forbidden astronomy manuscripts",
+        "hydrothermal vents in the black deep sea trench",
+        "an abandoned megacity swallowed by nebula-like fog",
+        "a desert horizon splitting open into an eldritch breach",
+        "a dream-geometry corridor with impossible perspective",
+        "a ritual chamber carved beneath cyclopean ruins"
+      ]
+    },
+    "atmosphere_particles": {
+      "description": "粒子・霧・渦などの空気感",
+      "values": [
+        "swirling ash-like particles and cold mist strands",
+        "nebular dust spirals and wet abyssal haze",
+        "smoke vortices that mimic tidal currents",
+        "faint drifting spores with static-like glitter",
+        "submerged sediment clouds and distant phosphorescence",
+        "fog layers that bend around unseen gravity"
+      ]
+    },
+    "lighting_moods": {
+      "description": "光の振る舞い",
+      "values": [
+        "an unclear light source glows from nowhere",
+        "backlit haze reveals only fragmented contours",
+        "dim rim light catches the wet edges of tendrils",
+        "flickering ritual light and cosmic underglow",
+        "monochrome chiaroscuro with deep engraved shadows",
+        "bioluminescent highlights piercing vast darkness"
+      ]
+    },
+    "composition_views": {
+      "description": "視点と構図",
+      "values": [
+        "low human viewpoint emphasizing impossible scale difference",
+        "top-down surveillance angle, as if the viewer is being watched",
+        "cross-sectional composition showing internal impossible geometry",
+        "spiral composition pulling the gaze into the center abyss",
+        "distant silhouette composition with tiny foreground witnesses",
+        "multi-entity swarm composition around one central deity-form"
+      ]
+    },
+    "narrative_frames": {
+      "description": "場面の物語文脈",
+      "values": [
+        "depicted as a forbidden page from an old sailor's logbook",
+        "presented as a scientist's field observation report",
+        "captured at the climax of an unfinished summoning ritual",
+        "rendered as an archaeological mural in ruined stone",
+        "shown as evidence recovered from a lost expedition",
+        "framed like a museum archive annotation with specimen numbering"
+      ]
+    },
+    "symbolic_marks": {
+      "description": "象徴・印・文字情報",
+      "values": [
+        "weathered occult sigils carved into surrounding surfaces",
+        "fragmented astronomical diagrams and impossible star charts",
+        "latin annotation fragments and specimen labels",
+        "eroded ritual circles stained with mineral residue",
+        "half-erased expedition notes in the margins",
+        "repeating eye motifs hidden in architecture"
+      ]
+    },
+    "color_schemes": {
+      "description": "色設計",
+      "values": [
+        "strict monochrome black and silver graphite tones",
+        "deep sea blue and bioluminescent green accents",
+        "muted sepia archive tone with cold black shadows",
+        "ashen grayscale with subtle toxic cyan glow",
+        "ink-black base with pale phosphor highlights",
+        "stormy indigo, algae green, and bone-white accents"
+      ]
+    },
+    "emotional_tones": {
+      "description": "感情トーン",
+      "values": [
+        "overwhelming cosmic dread and sacred beauty",
+        "beautiful horror with ancient unknowable presence",
+        "quiet terror and metaphysical melancholy",
+        "oppressive awe mixed with reverent fascination",
+        "dreamlike unease and existential vertigo",
+        "cold documentary detachment over impossible terror"
+      ]
+    },
+    "detail_density": {
+      "description": "描写密度",
+      "values": [
+        "ultra-detailed linework with obsessive micro-texture",
+        "balanced detail with clear focal hierarchy",
+        "dense edge detail fading into atmospheric abstraction",
+        "high-frequency hatching and rough tactile grain",
+        "careful engraving detail with controlled negative space",
+        "layered material textures with anatomical intricacy"
+      ]
+    }
+  },
+  "templates": {
+    "cosmic_monochrome_engraving": {
+      "description": "王道モノクロ版コズミックホラー",
+      "text": "{art_mediums}. A {monster_bases} with {hybrid_mutations}; {anatomical_anomalies}. Set in {spatial_domains}, filled with {atmosphere_particles}. {lighting_moods}. {composition_views}. {narrative_frames}. {symbolic_marks}. {color_schemes}. {detail_density}. Mood: {emotional_tones}."
+    },
+    "cathedral_summoning_horror": {
+      "description": "廃聖堂召喚シーン",
+      "text": "{art_mediums}. During a summoning rite in {spatial_domains}, a {monster_bases} manifests with {hybrid_mutations}, and {anatomical_anomalies}. {lighting_moods} through {atmosphere_particles}. {composition_views}. Include {symbolic_marks}. Keep {color_schemes} and {detail_density}. Evoke {emotional_tones}."
+    },
+    "abyssal_vent_encounter": {
+      "description": "深海熱水噴出孔での遭遇",
+      "text": "{art_mediums}. Expedition scene at {spatial_domains}: a {monster_bases} emerges, showing {hybrid_mutations}; {anatomical_anomalies}. Water and void blend via {atmosphere_particles}. {lighting_moods}. {composition_views}. Presented as {narrative_frames} with {symbolic_marks}. {color_schemes}, {detail_density}, {emotional_tones}."
+    },
+    "ruined_city_overwatch": {
+      "description": "廃墟都市上空の監視者",
+      "text": "{art_mediums}. Above {spatial_domains}, a {monster_bases} drifts with {hybrid_mutations}. {anatomical_anomalies}. Background filled by {atmosphere_particles}; {lighting_moods}. Use {composition_views} to stress scale. Frame as {narrative_frames}. Add {symbolic_marks}. {color_schemes}, {detail_density}, tone of {emotional_tones}."
+    },
+    "dream_geometry_entity": {
+      "description": "夢空間に現れる異形",
+      "text": "{art_mediums}. Inside {spatial_domains}, depict a {monster_bases} whose form carries {hybrid_mutations}; {anatomical_anomalies}. Surround with {atmosphere_particles} and {lighting_moods}. {composition_views}. Treated as {narrative_frames}. Embed {symbolic_marks}. {color_schemes}. {detail_density}. Convey {emotional_tones}."
+    },
+    "specimen_archive_plate": {
+      "description": "標本図譜・観察レポート風",
+      "text": "{art_mediums}. A specimen-plate depiction of {monster_bases} with {hybrid_mutations}; {anatomical_anomalies}. Recorded from {spatial_domains}. Background atmosphere uses {atmosphere_particles} and {lighting_moods}. {composition_views}. Explicitly framed as {narrative_frames} with {symbolic_marks}. Maintain {color_schemes}, {detail_density}, and {emotional_tones}."
+    },
+    "ukiyoe_cosmic_wave": {
+      "description": "浮世絵とコズミックホラーの融合",
+      "text": "{art_mediums}. A {monster_bases} rises like a mythic tide, with {hybrid_mutations}; {anatomical_anomalies}. Place it in {spatial_domains} shaped by {atmosphere_particles}. {lighting_moods}. {composition_views}. Describe as {narrative_frames}, enriched with {symbolic_marks}. Prefer {color_schemes}, keep {detail_density}, and preserve {emotional_tones}."
+    },
+    "desert_breach_manifestation": {
+      "description": "砂漠地平線の裂け目から出現",
+      "text": "{art_mediums}. From {spatial_domains}, a {monster_bases} crawls forth, showing {hybrid_mutations}; {anatomical_anomalies}. The air carries {atmosphere_particles} under {lighting_moods}. {composition_views}. Stylize as {narrative_frames} and include {symbolic_marks}. Keep {color_schemes}, {detail_density}, and a feeling of {emotional_tones}."
+    }
+  }
+}
