@@ -9,12 +9,13 @@
 """
 
 import re
+
 from mini_muse.prompt_generator import PromptGenerator
 
 
 def analyze_template(template_name: str, template_text: str):
     """テンプレートのプレースホルダーを分析"""
-    placeholders = re.findall(r'\{(\w+)\}', template_text)
+    placeholders = re.findall(r"\{(\w+)\}", template_text)
 
     # ユニークなプレースホルダー
     unique_placeholders = set(placeholders)
@@ -22,7 +23,7 @@ def analyze_template(template_name: str, template_text: str):
     # 番号付きプレースホルダーのベース名を抽出
     base_names = {}
     for ph in unique_placeholders:
-        base_name = re.sub(r'_\d+$', '', ph)
+        base_name = re.sub(r"_\d+$", "", ph)
         if base_name != ph:  # 番号付き
             if base_name not in base_names:
                 base_names[base_name] = []
@@ -36,10 +37,10 @@ def analyze_template(template_name: str, template_text: str):
     repeated = {k: v for k, v in placeholder_counts.items() if v > 1}
 
     return {
-        'unique_count': len(unique_placeholders),
-        'total_count': len(placeholders),
-        'numbered_bases': base_names,
-        'repeated': repeated
+        "unique_count": len(unique_placeholders),
+        "total_count": len(placeholders),
+        "numbered_bases": base_names,
+        "repeated": repeated,
     }
 
 
@@ -64,7 +65,7 @@ def test_template_file(template_file: str):
 
     for template_name in templates[:3]:  # 最初の3つをテスト
         template_info = generator.get_template_info(template_name)
-        template_text = template_info['text']
+        template_text = template_info["text"]
 
         analysis = analyze_template(template_name, template_text)
 
@@ -72,14 +73,14 @@ def test_template_file(template_file: str):
         print(f"   ユニークなプレースホルダー数: {analysis['unique_count']}")
         print(f"   総プレースホルダー数: {analysis['total_count']}")
 
-        if analysis['numbered_bases']:
-            print(f"   番号付きプレースホルダー:")
-            for base, numbered in analysis['numbered_bases'].items():
+        if analysis["numbered_bases"]:
+            print("   番号付きプレースホルダー:")
+            for base, numbered in analysis["numbered_bases"].items():
                 print(f"     - {base}: {', '.join(numbered)}")
 
-        if analysis['repeated']:
-            print(f"   複数回出現するプレースホルダー:")
-            for ph, count in analysis['repeated'].items():
+        if analysis["repeated"]:
+            print("   複数回出現するプレースホルダー:")
+            for ph, count in analysis["repeated"].items():
                 print(f"     - {{{ph}}}: {count}回")
 
     # ランダムテンプレート選択のテスト
@@ -90,7 +91,7 @@ def test_template_file(template_file: str):
     for i in range(3):
         print(f"\n🎲 テスト {i+1}:")
         prompt = generator.generate_prompt(template_name=None)
-        print(f"生成されたプロンプトの最初の200文字:")
+        print("生成されたプロンプトの最初の200文字:")
         print(prompt[:200] + "...")
 
     # 番号付きプレースホルダーのテスト
@@ -101,10 +102,10 @@ def test_template_file(template_file: str):
     # 番号付きプレースホルダーを含むテンプレートを探す
     for template_name in templates:
         template_info = generator.get_template_info(template_name)
-        template_text = template_info['text']
+        template_text = template_info["text"]
         analysis = analyze_template(template_name, template_text)
 
-        if analysis['numbered_bases']:
+        if analysis["numbered_bases"]:
             print(f"\n🔢 テンプレート: {template_name}")
             print(f"   番号付きプレースホルダー: {analysis['numbered_bases']}")
 
@@ -112,13 +113,13 @@ def test_template_file(template_file: str):
             prompt = generator.generate_prompt(template_name)
 
             # 各番号付きプレースホルダーの値を確認
-            for base, numbered_list in analysis['numbered_bases'].items():
+            for base, numbered_list in analysis["numbered_bases"].items():
                 print(f"\n   {base} グループの検証:")
                 for numbered_ph in numbered_list:
                     # プロンプト内で実際に使用された値を抽出（簡易版）
                     print(f"     - {{{numbered_ph}}} は正常に置換されました")
 
-            print(f"\n   生成されたプロンプトの最初の300文字:")
+            print("\n   生成されたプロンプトの最初の300文字:")
             print(f"   {prompt[:300]}...")
 
             # 最初の1つだけテスト
@@ -136,7 +137,7 @@ def main():
     # テストするファイル
     test_files = [
         "prompts/prompt_templates_抽象画_20250117.json",
-        "prompts/prompt_templates_抽象悪夢_20250122.json"
+        "prompts/prompt_templates_抽象悪夢_20250122.json",
     ]
 
     for test_file in test_files:
@@ -145,6 +146,7 @@ def main():
         except Exception as e:
             print(f"\n❌ エラー: {e}")
             import traceback
+
             traceback.print_exc()
 
     print("=" * 80)

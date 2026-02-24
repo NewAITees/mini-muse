@@ -3,14 +3,16 @@
 ComfyUI APIを使用して実際に画像を生成するテストスクリプト
 """
 
-from mini_muse.comfyui_client import ComfyUIClient
-from mini_muse.prompt_generator import PromptGenerator
 from datetime import datetime
 
+from mini_muse.comfyui_client import ComfyUIClient
+from mini_muse.prompt_generator import PromptGenerator
+
+
 def main():
-    print("="*70)
+    print("=" * 70)
     print("ComfyUI 画像生成テスト")
-    print("="*70)
+    print("=" * 70)
 
     # クライアント初期化（ポート8000に接続）
     print("\n[1] ComfyUIクライアントを初期化中...")
@@ -27,7 +29,7 @@ def main():
     # ランダムなプロンプトを生成
     print("\n[4] プロンプトを生成中...")
     prompt = prompt_gen.generate_prompt("abstract_art")
-    print(f"\n生成されたプロンプト:")
+    print("\n生成されたプロンプト:")
     print(f"{prompt[:200]}...")
 
     # 画像生成
@@ -47,7 +49,7 @@ def main():
             cfg=5.45,
             width=1024,
             height=1024,
-            save_path=output_path
+            save_path=output_path,
         )
 
         print(f"\n{'='*70}")
@@ -63,10 +65,12 @@ def main():
         print(f"{'='*70}")
         print(f"エラー: {e}")
         import traceback
+
         traceback.print_exc()
         return False
 
     return True
+
 
 if __name__ == "__main__":
     success = main()

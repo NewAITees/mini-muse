@@ -22,6 +22,7 @@ OLLAMA_HOST = "http://localhost:11434"
 OLLAMA_MODEL = "llava:7b"
 COMFY_HOST = "http://127.0.0.1:8000"
 
+
 def main():
     print("=" * 70)
     print("動画生成パイプライン統合テスト")
@@ -29,8 +30,9 @@ def main():
 
     # モジュールインポート
     try:
-        from mini_muse.ollama_video_prompt import analyze_image_with_ollama
         from mini_muse.comfy_video_generator import run_comfy_pipeline
+        from mini_muse.ollama_video_prompt import analyze_image_with_ollama
+
         print("✓ モジュールのインポート成功")
     except ImportError as e:
         print(f"✗ モジュールのインポートエラー: {e}")
@@ -42,6 +44,7 @@ def main():
     print("\n[事前確認] ComfyUIサーバーの接続確認...")
     try:
         import requests
+
         r = requests.get(f"{COMFY_HOST}/system_stats", timeout=5)
         if r.status_code == 200:
             print(f"✓ ComfyUIサーバー接続成功: {COMFY_HOST}")
@@ -52,10 +55,10 @@ def main():
             return 1
     except Exception as e:
         print(f"✗ ComfyUIサーバーに接続できません: {e}")
-        print(f"\n確認事項:")
+        print("\n確認事項:")
         print(f"  - ComfyUIサーバーが起動しているか: {COMFY_HOST}")
-        print(f"  - このテストはComfyUIサーバーが必要です")
-        print(f"\n⚠️  ComfyUIが起動していないため、Step 1のみ実行します")
+        print("  - このテストはComfyUIサーバーが必要です")
+        print("\n⚠️  ComfyUIが起動していないため、Step 1のみ実行します")
         comfy_available = False
     else:
         comfy_available = True
@@ -66,6 +69,7 @@ def main():
         print(f"✗ テスト用画像が見つかりません: {test_image}")
         print("\nテスト用画像を生成します...")
         from PIL import Image
+
         test_image.parent.mkdir(parents=True, exist_ok=True)
         img = Image.new("RGB", (640, 640), (100, 150, 200))
         img.save(test_image, "JPEG", quality=90)
@@ -82,12 +86,9 @@ def main():
     print("\n[Step 1] 画像からプロンプト生成中...")
     try:
         prompt = analyze_image_with_ollama(
-            test_image,
-            model=OLLAMA_MODEL,
-            host=OLLAMA_HOST,
-            timeout=60
+            test_image, model=OLLAMA_MODEL, host=OLLAMA_HOST, timeout=60
         )
-        print(f"✓ プロンプト生成成功")
+        print("✓ プロンプト生成成功")
         print(f"  生成されたプロンプト: {prompt}")
     except Exception as e:
         print(f"✗ プロンプト生成エラー: {e}")
@@ -107,10 +108,10 @@ def main():
                 workflow_path=workflow_path,
                 host=COMFY_HOST,
                 out_dir="output/test_pipeline",
-                timeout_s=600
+                timeout_s=600,
             )
-            print(f"✓ 動画生成成功")
-            print(f"  生成されたファイル:")
+            print("✓ 動画生成成功")
+            print("  生成されたファイル:")
             for f in output_files:
                 print(f"    - {f}")
         except Exception as e:
@@ -131,6 +132,7 @@ def main():
         print("⚠️  Step 2（動画生成）はスキップされました")
     print("=" * 70)
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

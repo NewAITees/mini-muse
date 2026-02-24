@@ -92,13 +92,13 @@ import json
 import sys
 import unittest
 from pathlib import Path
-from unittest.mock import MagicMock, mock_open, patch
+from unittest.mock import mock_open, patch
 
 # mini_museモジュールをインポートパスに追加
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
-from mini_muse.comfyui_client import ComfyUIClient
+from mini_muse.comfyui_client import ComfyUIClient  # noqa: E402
 
 
 class TestComfyUIClient(unittest.TestCase):

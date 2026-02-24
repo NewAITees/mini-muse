@@ -5,11 +5,14 @@ Ollama動画プロンプト生成モジュールのテスト
 """
 
 import os
+
 import pytest
+
 from mini_muse.ollama_video_prompt import analyze_image_with_ollama
 
 OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 MODEL = os.environ.get("OLLAMA_MODEL", "llava:7b")
+
 
 @pytest.mark.timeout(30)
 def test_analyze_returns_nonempty(tmp_path):
@@ -25,6 +28,7 @@ def test_analyze_returns_nonempty(tmp_path):
     """
     # テスト用の小画像を生成
     from PIL import Image
+
     p = tmp_path / "tiny.jpg"
     Image.new("RGB", (256, 256), (200, 160, 120)).save(p, "JPEG", quality=85)
 
@@ -33,6 +37,7 @@ def test_analyze_returns_nonempty(tmp_path):
     assert len(out) > 0
     # フォーマットの最低限チェック（カンマで区切られた要素があること）
     assert "," in out
+
 
 def test_error_when_missing_file():
     """

@@ -186,15 +186,15 @@ jobs:
 ================================================================================
 """
 
+import sys
 import unittest
 from pathlib import Path
-import sys
 
 # mini_museモジュールをインポートパスに追加
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
-from mini_muse.prompt_generator import PromptGenerator
+from mini_muse.prompt_generator import PromptGenerator  # noqa: E402
 
 
 class TestPromptGenerator(unittest.TestCase):
@@ -203,9 +203,9 @@ class TestPromptGenerator(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """テストクラス全体で1回だけ実行される初期化処理"""
-        print("\n" + "="*70)
+        print("\n" + "=" * 70)
         print("PromptGenerator テスト開始")
-        print("="*70)
+        print("=" * 70)
         cls.generator = PromptGenerator()
 
     def test_01_initialization(self):
@@ -311,7 +311,7 @@ class TestPromptGenerator(unittest.TestCase):
         self.assertIn("description", info)
         self.assertIn("japanese_description", info)
         self.assertIn("text", info)
-        print(f"✓ テンプレート情報取得成功")
+        print("✓ テンプレート情報取得成功")
         print(f"  説明: {info['description']}")
         print(f"  日本語説明: {info['japanese_description']}")
 
@@ -321,16 +321,17 @@ class TestPromptGenerator(unittest.TestCase):
         prompts = self.generator.generate_multiple_prompts("abstract_art", count=5)
         unique_prompts = set(prompts)
         # 5個中少なくとも3個は異なるプロンプトが生成されることを期待
-        self.assertGreaterEqual(len(unique_prompts), 3,
-                               "生成されたプロンプトの多様性が不足しています")
+        self.assertGreaterEqual(
+            len(unique_prompts), 3, "生成されたプロンプトの多様性が不足しています"
+        )
         print(f"✓ 5個中{len(unique_prompts)}個のユニークなプロンプトが生成されました")
 
     @classmethod
     def tearDownClass(cls):
         """テストクラス全体で1回だけ実行される終了処理"""
-        print("\n" + "="*70)
+        print("\n" + "=" * 70)
         print("PromptGenerator テスト完了")
-        print("="*70 + "\n")
+        print("=" * 70 + "\n")
 
 
 class TestPromptGeneratorEdgeCases(unittest.TestCase):
@@ -368,14 +369,14 @@ def run_tests():
     result = runner.run(suite)
 
     # 結果のサマリー
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("テスト結果サマリー")
-    print("="*70)
+    print("=" * 70)
     print(f"実行したテスト数: {result.testsRun}")
     print(f"成功: {result.testsRun - len(result.failures) - len(result.errors)}")
     print(f"失敗: {len(result.failures)}")
     print(f"エラー: {len(result.errors)}")
-    print("="*70)
+    print("=" * 70)
 
     return result.wasSuccessful()
 

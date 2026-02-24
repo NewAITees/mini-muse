@@ -6,14 +6,14 @@
 実際の画像生成フローが正しく動作することを確認します。
 """
 
-import unittest
-import sys
 import os
-from pathlib import Path
+import sys
+import unittest
 from datetime import datetime
+from pathlib import Path
 
 # プロジェクトのルートディレクトリをパスに追加
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from mini_muse.comfyui_client import ComfyUIClient
 from mini_muse.prompt_generator import PromptGenerator
@@ -25,9 +25,9 @@ class TestIntegration(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """テストクラスのセットアップ"""
-        print("\n" + "="*70)
+        print("\n" + "=" * 70)
         print("統合テスト開始")
-        print("="*70)
+        print("=" * 70)
 
         # ComfyUIクライアント初期化
         cls.client = ComfyUIClient("127.0.0.1:8000")
@@ -87,7 +87,7 @@ class TestIntegration(unittest.TestCase):
                 cfg=5.45,
                 width=1024,
                 height=1024,
-                save_path=str(output_path)
+                save_path=str(output_path),
             )
 
             self.assertIsInstance(image_data, bytes, "画像データはbytes型であること")
@@ -125,7 +125,7 @@ class TestIntegration(unittest.TestCase):
                     cfg=5.45,
                     width=1024,
                     height=1024,
-                    save_path=str(output_path)
+                    save_path=str(output_path),
                 )
 
                 self.assertGreater(len(image_data), 0, "画像データは空でないこと")
@@ -163,12 +163,12 @@ class TestIntegration(unittest.TestCase):
                     cfg=5.45,
                     width=1024,
                     height=1024,
-                    save_path=str(output_path)
+                    save_path=str(output_path),
                 )
 
                 self.assertGreater(len(image_data), 0, "画像データは空でないこと")
                 success_count += 1
-                print(f"    ✓ 成功")
+                print("    ✓ 成功")
 
             except Exception as e:
                 print(f"    ✗ 失敗: {e}")
@@ -193,7 +193,9 @@ class TestIntegration(unittest.TestCase):
         for i, (steps, cfg, width, height, desc) in enumerate(test_cases):
             print(f"  [{i+1}/{len(test_cases)}] {desc}: steps={steps}, cfg={cfg}")
 
-            output_path = self.test_output_dir / f"test_param_{desc.replace(' ', '_')}_{timestamp}.png"
+            output_path = (
+                self.test_output_dir / f"test_param_{desc.replace(' ', '_')}_{timestamp}.png"
+            )
 
             try:
                 image_data = self.client.generate_image(
@@ -205,11 +207,11 @@ class TestIntegration(unittest.TestCase):
                     cfg=cfg,
                     width=width,
                     height=height,
-                    save_path=str(output_path)
+                    save_path=str(output_path),
                 )
 
                 self.assertGreater(len(image_data), 0, "画像データは空でないこと")
-                print(f"    ✓ 成功")
+                print("    ✓ 成功")
 
             except Exception as e:
                 self.fail(f"パラメータ '{desc}' での画像生成に失敗: {e}")
@@ -217,10 +219,10 @@ class TestIntegration(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """テストクラスのクリーンアップ"""
-        print("\n" + "="*70)
+        print("\n" + "=" * 70)
         print("統合テスト完了")
         print(f"テスト出力先: {cls.test_output_dir}")
-        print("="*70)
+        print("=" * 70)
 
 
 def run_tests():

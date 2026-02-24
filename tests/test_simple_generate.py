@@ -5,9 +5,11 @@ UI形式のワークフローをAPI形式に変換して使用します
 """
 
 import json
-import requests
 import time
 from datetime import datetime
+
+import requests
+
 
 def convert_workflow_to_api_format(workflow):
     """
@@ -26,7 +28,7 @@ def convert_workflow_to_api_format(workflow):
                     "source_node": str(link[1]),
                     "source_slot": link[2],
                     "target_node": str(link[3]),
-                    "target_slot": link[4]
+                    "target_slot": link[4],
                 }
 
     # 各ノードをAPI形式に変換
@@ -38,14 +40,11 @@ def convert_workflow_to_api_format(workflow):
         if node_type == "Note":
             continue
 
-        api_node = {
-            "inputs": {},
-            "class_type": node_type
-        }
+        api_node = {"inputs": {}, "class_type": node_type}
 
         # inputsからリンク情報を取得
         if "inputs" in node:
-            for idx, input_item in enumerate(node["inputs"]):
+            for _idx, input_item in enumerate(node["inputs"]):
                 input_name = input_item.get("name", "")
                 if "link" in input_item and input_item["link"] is not None:
                     link_id = input_item["link"]
@@ -53,7 +52,7 @@ def convert_workflow_to_api_format(workflow):
                         source_info = links_map[link_id]
                         api_node["inputs"][input_name] = [
                             source_info["source_node"],
-                            source_info["source_slot"]
+                            source_info["source_slot"],
                         ]
 
         # widget_valuesを設定
@@ -89,14 +88,15 @@ def convert_workflow_to_api_format(workflow):
 
     return api_workflow
 
+
 def main():
-    print("="*70)
+    print("=" * 70)
     print("ComfyUI 簡易画像生成テスト")
-    print("="*70)
+    print("=" * 70)
 
     # ワークフローを読み込み
     print("\n[1] ワークフローを読み込み中...")
-    with open("workflows/sd3.5_large_turbo_upscale.json", "r", encoding="utf-8") as f:
+    with open("workflows/sd3.5_large_turbo_upscale.json", encoding="utf-8") as f:
         ui_workflow = json.load(f)
 
     # API形式に変換
@@ -149,15 +149,17 @@ def main():
 
                     # 画像情報を取得
                     outputs = history[prompt_id].get("outputs", {})
-                    for node_id, node_output in outputs.items():
+                    for _node_id, node_output in outputs.items():
                         if "images" in node_output:
                             for image_info in node_output["images"]:
                                 filename = image_info["filename"]
-                                print(f"\n[6] 画像を保存中...")
+                                print("\n[6] 画像を保存中...")
                                 print(f"  ファイル名: {filename}")
 
                                 # 画像をダウンロード
-                                image_url = f"http://127.0.0.1:8000/view?filename={filename}&type=output"
+                                image_url = (
+                                    f"http://127.0.0.1:8000/view?filename={filename}&type=output"
+                                )
                                 image_response = requests.get(image_url)
 
                                 if image_response.status_code == 200:
@@ -183,6 +185,7 @@ def main():
         print(f"\n✗ エラー: {response.status_code}")
         print(response.text)
         return False
+
 
 if __name__ == "__main__":
     success = main()

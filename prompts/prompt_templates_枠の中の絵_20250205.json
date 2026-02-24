@@ -3,8 +3,8 @@
         "abstract_elements": {
             "description": "抽象的な要素",
             "values": [
-                "geometric shapes", "color fields", "lines", "textures", "patterns", 
-                "forms", "spaces", "fractals", "pixels", "glitches", "vectors", 
+                "geometric shapes", "color fields", "lines", "textures", "patterns",
+                "forms", "spaces", "fractals", "pixels", "glitches", "vectors",
                 "3D primitives", "particle systems", "noise patterns", "mathematical curves"
             ]
         },
@@ -244,7 +244,7 @@
         "subjects": {
             "description": "主題",
             "values": [
-                "abstract shape", "natural form", "technological object", 
+                "abstract shape", "natural form", "technological object",
                 "symbolic representation", "conceptual idea", "emotional expression"
             ]
         },
@@ -306,7 +306,7 @@
         "mathematical_patterns": {
             "description": "数学的パターン",
             "values": [
-                "parametric curves", "wave equations", "Fourier transforms", 
+                "parametric curves", "wave equations", "Fourier transforms",
                 "golden ratio spirals", "symmetric patterns", "density gradients",
                 "radial emanations", "quantum wave functions", "probability fields",
                 "differential geometry", "topological transformations"
